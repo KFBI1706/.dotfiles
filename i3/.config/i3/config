@@ -1,0 +1,227 @@
+set $mod Mod4
+set $altMod Mod1
+set $mod3 Mod3
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:monospace 12
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec st
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec "rofi -show run"
+# "dmenu -nf '#F3F4F5' -nb '#2F343F' -sb '#1793D1' -sf '#f3f4f5' -fn 'monospace-16' -p 'run:'"
+bindsym $mod+s exec "albert show"
+
+bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+#bindsym $mod+d exec dmenu_run -fn 'DroidSansMono:bold:pixelsize=16' -nb '#fdf6e3' -nf '#586c75' -sf '#fdf6e3' -sb '#FFAF00'
+bindsym $mod+y exec passmenu
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# split in horizontal orientation
+bindsym $mod+v split h
+
+# split in vertical orientation
+bindsym $mod+b split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+#bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+mode "move ws" {
+ bindsym k move workspace to output up
+ bindsym j move workspace to output down
+ bindsym h move workspace to output left
+ bindsym l move workspace to output right
+
+ bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+m mode "move ws"
+
+# focus the parent container
+bindsym $mod+a focus parent
+#bindsym $mod+d focus child
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1: Web"
+set $ws2 "2: Dev"
+set $ws3 "3: Dev"
+set $ws4 "4: Chat"
+set $ws5 "5: Mail"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+bindsym $mod+Tab workspace back_and_forth
+workspace_auto_back_and_forth yes
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+bindsym $mod+u resize shrink width 10 px or 10 ppt
+bindsym $mod+i resize grow height 10 px or 10 ppt
+bindsym $mod+o resize shrink height 10 px or 10 ppt
+bindsym $mod+p resize grow width 10 px or 10 ppt
+
+bar {
+        tray_output primary
+		height 25
+        #status_command i3status
+        status_command i3blocks
+        position bottom
+		i3bar_command i3bar -t
+}
+#exec_always --no-startup-id ~/Projects/scripts/polybar.sh &
+for_window [class=".*"] border pixel 1
+for_window [class="scratchpad"] floating enable, scratchpad show, move position 0 px 0 px, resize set 1200 px 800 px;
+for_window [class="scratchpad"] move scratchpad;
+bindsym $mod+t exec "~/Projects/scripts/restartApps.sh"; [class="scratchpad"] scratchpad show;
+#Audio keybinds
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +10%; pkill -RTMIN+1 i3blocks"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -10%; pkill -RTMIN+1 i3blocks"
+bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -RTMIN+1 i3blocks"
+bindsym XF86AudioPlay exec "mpc toggle; pkill -RTMIN+10 i3blocks"
+bindsym XF86AudioNext exec "mpc next ; pkill -RTMIN+10 i3blocks"
+bindsym XF86AudioPrev exec "mpc prev ; pkill -RTMIN+10 i3blocks"
+
+bindsym XF86KbdBrightnessUp exec kb-light.py + 20
+bindsym XF86KbdBrightnessDown exec kb-light.py - 20
+#Power
+#really weird hack where the i3lock screen is shown on the next workspace switch, so i just do a quick workspace switch after i3lock has exited
+bindsym $mod+BackSpace exec i3lock -c 44bbff; workspace back_and_forth; focus;workspace back_and_forth;
+#Brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+#keyboard/mouse
+exec --no-startup-id ckb-next
+
+
+#Focus
+assign [class="discord"] $ws4
+assign [class="Slack"] $ws4
+assign [class="slackFirefox"] $ws4
+assign [class="IRC"] $ws4
+assign [class="messengerChromium"] $ws4
+for_window [class="messengerChromium"] fullscreen disable
+assign [class="Thunderbird"] $ws5
+assign [class="Firefox"] $ws2
+for_window [class="^.*"] border pixel $border_width
+for_window [class="albert"] border pixel 0
+for_window [class="Yad"] floating enable
+#no focus
+no_focus [class="Slack"]
+
+#application shortcuts
+bindsym $mod+Shift+f exec firefox -P Personal
+bindsym $mod+Shift+a exec pavucontrol
+bindsym $mod+Shift+w exec emacsclient -nc
+#command shortcuts
+bindsym --release $mod+Shift+x exec xkill
+bindsym --release $mod+n exec /home/kb/Projects/scripts/screenshot.sh
+bindsym --release $mod+Shift+n exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+#background
+exec_always --no-startup-id "feh --bg-scale /home/kb/Pictures/aenmiart/northern-lights.jpg  "
+#script shortcuts TODO: script variable
+bindsym $mod+Shift+p exec ~/Projects/scripts/selectScreen.sh
+bindsym $mod+Shift+s exec ~/Projects/scripts/workspaceSwitch.py
+bindsym $mod+Shift+b exec ~/Projects/scripts/bluetoothConnect.sh
+#audio / mic control
+bindsym $mod+m exec ~/Projects/scripts/micToggle.sh
+exec_always --no-startup-id pactl load-module module-loopback latency_msec=1
+###i3 layouts
+
+exec --no-startup-id "i3-msg 'workspace 2: Dev; append_layout ~/.i3/workspace-2.json'"
+exec --no-startup-id "i3-msg 'workspace 4: Chat; append_layout ~/.i3/workspace-4.json'"
+#i3 startup-programs
+exec --no-startup-id albert;
+#exec --no-startup-id /usr/bin/firefox -P Slack --class=slackFirefox; workspace $ws2;
+exec --no-startup-id firefox -P Personal --class=personal
+exec --no-startup-id st
+exec --no-startup-id thunderbird
+exec --no-startup-id nm-applet
+exec --no-startup-id pa-applet
+exec --no-startup-id mictray
+exec --no-startup-id blueman-applet
+exec --no-startup-id dropbox
+exec --no-startup-id compton
+exec --no-startup-id greenclip daemon
+#monitoring
+
+#i3 background programs
+exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec_always --no-startup-id /home/kb/Projects/scripts/dunst.sh
+#exec_always --no-startup-id unproductive | tee -a ~/activity-log.txt
+
+exec_always --no-startup-id discord
+exec_always --no-startup-id ~/Projects/scripts/restartApps.sh;
+#keyboard config
+exec_always --no-startup-id ~/Projects/scripts/keyboardSetup.sh
+#screen setup
+exec_always --no-startup-id ~/Projects/scripts/autorandr.sh;
+bindsym --release $Mod+apostrophe    exec --no-startup-id "sleep 0.1; xdotool key U00E6"
+bindsym --release $Mod+Shift+apostrophe    exec --no-startup-id "sleep 0.1 xdotool key U1D01"
+bindsym --release $Mod+semicolon     exec --no-startup-id "sleep 0.1; xdotool key U00F8"
+bindsym --release $Mod+Shift+semicolon     exec --no-startup-id "sleep 0.1; xdotool key U00D8"
+bindsym --release $Mod+bracketleft   exec --no-startup-id "sleep 0.1; xdotool key U00E5"
+bindsym --release $Mod+Shift+bracketleft   exec --no-startup-id "sleep 0.1; xdotool key U00E5"

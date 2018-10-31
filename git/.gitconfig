@@ -1,0 +1,33 @@
+[alias]
+    md = "!f() { git log origin/$1 ^origin --pretty=format:'    %h %s - %an'; }; f"
+[core]
+    editor = 'nvim'
+[user]
+	email = kb@kfbi.xyz
+	name = Kasper Furnes Bernhoff
+    signingkey = 9BEF81ADDA75009A71AB26A4FB89EEDFDF031185
+[commit]
+      template = ~/.gitmessage
+	gpgsign = true
+[includeIf "gitdir:~/Projects/uia"]
+	email = kaspeb17@student.uia.no
+[includeIf "gitdir:~/Projects/AutoAUR"]
+    email = kb@kfbi.xyz
+
+[mergetool "diffconflicts"]
+	cmd = vim -c \"DiffConflicts\" $MERGED $BASE $LOCAL $REMOTE
+	trustExitCode = true
+[merge]
+	tool = diffconflicts
+[mergetool]
+	keepBackup = false
+[push]
+    default = simple
+[alias]
+    st = status
+    ci = commit --verbose
+    co = checkout
+    df = diff
+    lg = log -p
+    ap = add --patch
+    track = add -N

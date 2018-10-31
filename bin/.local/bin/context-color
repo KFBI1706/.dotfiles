@@ -1,0 +1,147 @@
+#!/bin/bash
+#
+# context-color
+# Copyright (C) 2018 Guillaume Gelin
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+readonly PROGNAME=$(basename $0)
+readonly DEFAULT_CONTEXT="whoami; hostname"
+declare -a IGNORE=(3 11 226 227)
+
+__context_color_usage() {
+    cat <<- EOF
+usage: $PROGNAME [OPTIONS]
+
+Print a color sequence based on different context informations.
+
+OPTIONS:
+    --help, -h          Print this help.
+    --background, -b    Use a background sequence rather than foreground.
+    --prompt, -p        Declare the sequence as non-printable for prompts.
+
+    --context <command>, -c <command>
+                        Define the context command on which result the color
+                        will be generated.
+                        The default context is "$DEFAULT_CONTEXT".
+EOF
+}
+
+__context_color_count() {
+    printf "%d" $(infocmp -1 | sed -n -e "s/^\t*colors#\([0-9]x\?[0-9]*\),.*/\1/p")
+}
+
+__context_color_hash() {
+	eval "$CONTEXT" | sum | awk '{ gsub("0","",$1); print $1}'
+}
+
+__context_color_number() {
+    num=$((1 + $(__context_color_hash) % $(expr $(__context_color_count) - 1)))
+    echo $num
+}
+
+__context_color_ignore() {
+	return_code=0
+	num=$((1 + $(__context_color_hash) % $(expr $(__context_color_count) - 1)))
+    for i in "${IGNORE[@]}"; do
+        echo "$i $num" >> /tmp/out-$(whoami)
+		if [[ "$i" -eq "$num" ]]; then
+            echo "equals" >> /tmp/out-$(whoami)
+			return_code=1
+		fi
+	done
+	echo $return_code
+}
+
+__context_color_sequence() {
+    local capname="setaf"
+
+    if [ "$BACKGROUND" ]
+    then
+        capname="setab"
+    fi
+
+    local sequence="$(tput $capname $(__context_color_number))"
+
+    if [ "$PROMPT" ]
+    then
+        sequence="\[${sequence}\]"
+    fi
+    echo "$sequence"
+}
+
+__context_color_number() {
+	color=$(__context_color_ignore)
+	while [[ $color != 0 ]]; do
+		color=$(__context_color_ignore)
+		CONTEXT="$CONTEXT; whoami"
+	done
+	echo $((1 + $(__context_color_hash) % $(expr $(__context_color_count) - 1)))
+}
+
+
+context_color() {
+    if [ ! "$CONTEXT" ]
+    then
+        CONTEXT="$DEFAULT_CONTEXT"
+    fi
+
+    for arg
+    do
+        local delim=""
+        case "$arg" in
+            --help)
+                args="${args}-h "
+                ;;
+            --background)
+                args="${args}-b "
+                ;;
+            --prompt)
+                args="${args}-p "
+                ;;
+            --context)
+                args="${args}-c "
+                ;;
+            *)
+                args="$args $arg"
+                ;;
+        esac
+    done
+
+    eval set -- $args
+
+    while getopts "hbpc:" OPTION
+    do
+         case $OPTION in
+         h)
+             __context_color_usage
+             exit 0
+             ;;
+         b)
+             readonly BACKGROUND=1
+             ;;
+         p)
+             readonly PROMPT=1
+             ;;
+         c)
+             CONTEXT="$OPTARG"
+             ;;
+         esac
+    done
+
+    echo -n "$(__context_color_sequence)"
+    return 0
+}
+
+context_color "$@"

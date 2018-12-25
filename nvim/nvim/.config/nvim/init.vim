@@ -1,27 +1,26 @@
-" vim-bootstrap b990cad
+" vim-bootstrap b99cad
 
-"Note: Skip initialization for vim-tiny or vim-small.
-if 0 | endif
+""Note: Skip initialization for vim-tiny or vim-small.
+"if  | endif
 
 if &compatible
   set nocompatible
-  endif
+endif
 "*****************************************************************************
-"" Vim-PLug core
+"" Vim-Plug core
 "*****************************************************************************
 if has('vim_starting')
-  set nocompatible               " Be iMproved
+  set nocompatible               " Be improved
 endif
 
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 
-let g:vim_bootstrap_langs = "c,go,python"
-let g:vim_bootstrap_editor = "vim"				" nvim or vim
+let g:vim_bootstrap_langs = "go"
+let g:vim_bootstrap_editor = "nvim"				" nvim or vim
 
 if !filereadable(vimplug_exists)
   if !executable("curl")
     echoerr "You have to install curl or first install vim-plug yourself!"
-    execute "q!"
   endif
   echo "Installing Vim-Plug..."
   echo ""
@@ -37,115 +36,76 @@ call plug#begin(expand('~/.vim/plugged'))
 "*****************************************************************************
 "" Plug install packages
 "*****************************************************************************
+""discord
+""Plug 'anned20/vimsence'
+Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}
+
 ""syntax checkers
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'zchee/deoplete-go', { 'do': 'make'}
-  Plug 'jodosha/vim-godebug'
-  Plug 'sebdah/vim-delve'
-  Plug 'lambdalisue/suda.vim'
-else
-  if v:version >= 800
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
-    Plug 'roxma/vim-hug-neovim-rpc'
-  endif
-endif
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
+"Plug 'mdempsky/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+"Plug 'scrooloose/syntastic'
+Plug 'jodosha/vim-godebug'
+Plug 'sebdah/vim-delve'
+Plug 'lambdalisue/suda.vim'
+let g:deoplete#enable_at_startup = 1
 Plug 'w0rp/ale'
+"Plug 'scrooloose/syntastic'
+
 "Added by me
-Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'whiteinge/diffconflicts'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-surround'
-Plug 'wellle/targets.vim'
-Plug 'buoto/gotests-vim'
-""buffers
 Plug 'rbgrouleff/bclose.vim'
-Plug 'corntrace/bufexplorer'
-"git
-Plug 'gregsexton/gitv', {'on': ['Gitv']}
-"wiki
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 
 " end of added by me
 Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'tpope/vim-commentary'
-Plug 'scrooloose/nerdcommenter'
+"Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-scripts/grep.vim'
-Plug 'vim-scripts/CSApprox'
-Plug 'bronson/vim-trailing-whitespace'
+Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-scripts/grep.vim'
 Plug 'Raimondi/delimitMate'
-Plug 'majutsushi/tagbar'
-"Plug 'scrooloose/syntastic'
-Plug 'Yggdroot/indentLine'
+"Plug 'majutsushi/tagbar'
 Plug 'avelino/vim-bootstrap-updater'
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-if isdirectory('/usr/local/opt/fzf')
-  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-else
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-  Plug 'junegunn/fzf.vim'
-endif
-let g:make = 'gmake'
-if exists('make')
-        let g:make = 'make'
-endif
-Plug 'Shougo/vimproc.vim', {'do': g:make}
 
 "" Vim-Session
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
+"Plug 'xolox/vim-misc'
+"Plug 'xolox/vim-session'
+"
+Plug 'neomake/neomake'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+"if v:version >= 73
+"  Plug 'Shougo/vimshell.vim'
+"endif
 
-if v:version >= 703
-  Plug 'Shougo/vimshell.vim'
-endif
-
-if v:version >= 704
-  "" Snippets
-  Plug 'SirVer/ultisnips'
-endif
-
-Plug 'honza/vim-snippets'
+""if v:version >= 74
+""  "" Snippets
+""  Plug 'SirVer/ultisnips'
+""endif
 
 "" Color
 Plug 'tomasr/molokai'
+"Plug 'jdkanani/vim-material-theme'
+"Plug 'crucerucalin/peaksea.vim'
+"Plug 'liuchengxu/space-vim-dark'
 
 "*****************************************************************************
 "" Custom bundles
 "*****************************************************************************
-
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
-Plug 'ludwig/split-manpage.vim'
-
 
 " go
 "" Go Lang Bundle
 Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 Plug 'vim-scripts/go.vim'
-
-
-" python
-"" Python Bundle
-Plug 'davidhalter/jedi-vim'
-Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-
-
-"*****************************************************************************
-"*****************************************************************************
-
-"" Include user's extra bundle
-if filereadable(expand("~/.vimrc.local.bundles"))
-  source ~/.vimrc.local.bundles
-endif
 
 call plug#end()
 
@@ -153,8 +113,6 @@ autocmd VimEnter *
   \  if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
   \|   PlugInstall
   \| endif
-
-" Required:
 filetype plugin indent on
 
 
@@ -162,20 +120,21 @@ filetype plugin indent on
 "" Basic Setup
 "*****************************************************************************"
 set modifiable
-"" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
 set bomb
 set binary
-set ttyfast
+set lazyredraw                                   " enable lazyredraw
+set nocursorline                                 " disable cursorline
+set ttyfast                                      " enable fast terminal connection
 
 "" Fix backspace indent
 set backspace=indent,eol,start
 
 "" Tabs. May be overriten by autocmd rules
 set tabstop=4
-set softtabstop=0
+"set softtabstop=
 set shiftwidth=4
 set expandtab
 
@@ -194,6 +153,7 @@ set smartcase
 "" Directories for swp files
 set nobackup
 set noswapfile
+set undofile undodir=~/.vim/undo undolevels=9999 " undo options
 
 set fileformats=unix,dos,mac
 
@@ -204,77 +164,57 @@ else
 endif
 
 "deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete_ignore_sources = [ "buffer", "*.wiki" ]
+"let g:deoplete#sources={}
+"let g:deoplete#sources._=['buffer', 'member', 'tag', 'file', 'omni', 'ultisnips']
+"let g:deoplete_ignore_sources = [ "buffer", "*.wiki" ]
+"let g:deoplete#omni#input_patterns={}
+"let g:deoplete#enable_at_startup = 1
+"let g:deoplete#omni_patterns = {}
+"let g:deoplete#omni_patterns.scala = '[^. *\t]\.\w*\|: [A-Z]\w*'
+"let g:deoplete#omni#input_patterns.scala = ['[^. *\t-9]\.\w*',': [A-Z]\w', '[\[\t\( ][A-Za-z]\w*']
 "call deoplete#custom#source('_', 'converters',
 "      \ ['converter_auto_paren',
 "      \  'converter_auto_delimiter',
 "      \ 'converter_remove_overlap'])
 
-" session management
-let g:session_directory = "~/.vim/session"
-let g:session_autoload = "no"
-let g:session_autosave = "no"
-let g:session_command_aliases = 1
 
+" syntastic
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_style_error_symbol = '✗'
+let g:syntastic_style_warning_symbol = '⚠'
+let g:syntastic_auto_loc_list=1
+let g:syntastic_aggregate_errors = 1
 "*****************************************************************************
 "" Visual Settings
 "*****************************************************************************
-syntax on
+syntax enable
 set ruler
-set number
-
+set number relativenumber
+set background=dark
 let no_buffers_menu=1
-if !exists('g:not_finish_vimplug')
-  colorscheme molokai
-endif
+colorscheme molokai
 
 set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
-set gfn=Monospace\ 10
-
-if has("gui_running")
-  if has("gui_mac") || has("gui_macvim")
-    set guifont=Menlo:h12
-    set transparency=7
-  endif
-else
-  let g:CSApprox_loaded = 1
-
-  " IndentLine
-  let g:indentLine_enabled = 1
-  let g:indentLine_concealcursor = 0
-  let g:indentLine_char = '┆'
-  let g:indentLine_faster = 1
-
-  
-  if $COLORTERM == 'gnome-terminal'
-    set term=gnome-256color
-  else
-    if $TERM == 'xterm'
-      set term=xterm-256color
-    endif
-  endif
-  
-endif
-
+set gfn=Monospace\ 1
 
 if &term =~ '256color'
   set t_ut=
 endif
 
 
-"" Disable the blinking cursor.
-set gcr=a:blinkon0
-set scrolloff=20
+set scrolloff=2
+
 
 "" Status bar
 set laststatus=2
 
 "" Use modeline overrides
 set modeline
-set modelines=10
+set modelines=1
 
 set title
 set titleold="Terminal"
@@ -285,7 +225,7 @@ set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 "wiki
 let g:vimwiki_list = [{'path':'~/Projects/wiki/files', 'path_html':'~/Projects/wiki/export/html/'}]
 ""disable url shortening
-"let g:vimwiki_url_maxsave=0
+"let g:vimwiki_url_maxsave="
 autocmd BufNewFile,BufRead *.wiki nnoremap <leader>wb :Vimwiki2HTMLBrowse<CR>
 
 "curly bracket tab expansion inoremap
@@ -298,8 +238,6 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 " Search for currently selected
 vnoremap // y/\V<C-r>=escape(@",'/\')<CR><CR>
-" search and replace"
-vnoremap <C-r> <Esc>:%s/<c-r>=GetVisual()<cr>/
 
 if exists("*fugitive#statusline")
   set statusline+=%{fugitive#statusline()}
@@ -307,7 +245,7 @@ endif
 
 " vim-airline
 let g:airline_theme = 'powerlineish'
-"let g:airline#extensions#syntastic#enabled = 0
+let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
@@ -335,7 +273,7 @@ let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowBookmarks=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 30
+let g:NERDTreeWinSize = 3
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 map <leader>k :NERDTreeToggle<CR>
@@ -343,26 +281,8 @@ map <leader>k :NERDTreeToggle<CR>
 " find from fzf
 map <Leader>f :Ag<space>
 map <leader>O :FZF<CR>
-command! -bang -nargs=* Find call fzf#vim#grep( 'rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --color "always" '.shellescape(<q-args>), 1, <bang>0)
-"bclose.vim
+command! -bang -nargs=* Find call fzf#vim#grep( 'rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --color "always" '.shellescape(<q-args>), 1, <bang>)
 nnoremap <leader>bd :Bclose<CR>
-"bufexplore
-" grep.vim
-"nnoremap <silent> <leader>f :Rgrep<CR>
-"let Grep_Default_Options = '-IR'
-"let Grep_Skip_Files = '*.log *.db'
-"let Grep_Skip_Dirs = '.git node_modules'
-
-" vimshell.vim
-let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-let g:vimshell_prompt =  '$ '
-
-" terminal emulation
-if g:vim_bootstrap_editor == 'nvim'
-  nnoremap <silent> <leader>sh :terminal<CR>
-else
-  nnoremap <silent> <leader>sh :VimShellCreate<CR>
-endif
 
 "*****************************************************************************
 "" Functions
@@ -375,49 +295,13 @@ if !exists('*s:setupWrapping')
   endfunction
 endif
 
-" Escape special characters in a string for exact matching.
-" This is useful to copying strings from the file to the search tool
-" Based on this - http://peterodding.com/code/vim/profile/autoload/xolox/escape.vim
-function! EscapeString (string)
-  let string=a:string
-  " Escape regex characters
-  let string = escape(string, '^$.*\/~[]')
-  " Escape the line endings
-  let string = substitute(string, '\n', '\\n', 'g')
-  return string
-endfunction
-
-" Get the current visual block for search and replaces
-" This function passed the visual block through a string escape function
-" Based on this - https://stackoverflow.com/questions/676600/vim-replace-selected-text/677918#677918
-function! GetVisual() range
-  " Save the current register and clipboard
-  let reg_save = getreg('"')
-  let regtype_save = getregtype('"')
-  let cb_save = &clipboard
-  set clipboard&
-
-  " Put the current visual selection in the " register
-  normal! ""gvy
-  let selection = getreg('"')
-
-  " Put the saved registers and clipboards back
-  call setreg('"', reg_save, regtype_save)
-  let &clipboard = cb_save
-
-  "Escape any special characters in the selection
-  let escaped_selection = EscapeString(selection)
-
-  return escaped_selection
-endfunction
-
 "*****************************************************************************
 "" Autocmd Rules
 "*****************************************************************************
-"" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
+"" The PC is fast enough, do syntax highlight syncing from start unless 20 lines
 augroup vimrc-sync-fromstart
   autocmd!
-  autocmd BufEnter * :syntax sync maxlines=200
+  autocmd BufEnter * :syntax sync maxlines=20
 augroup END
 
 "" Remember cursor position
@@ -441,12 +325,15 @@ augroup END
 
 "" go build on save
 "autocmd BufWritePre *.go :GoBuild
+"
+"remove whitespaces
+autocmd BufWritePre * %s/\s\+$//e
 
 "focus
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
 autocmd FileChangedShellPost *
   \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
-set autoread
+set autoread                                     " reload on external file changes
 
 "*****************************************************************************
 "" Mappings
@@ -455,26 +342,26 @@ set autoread
 imap <expr> <tab>   pumvisible() ? "\<c-n>" : "\<tab>"
 imap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<tab>"
 imap <expr> <cr> pumvisible() ? deoplete#close_popup() : "\<cr>"
-""Find files
-nnoremap <leader>p :Files<CR>
 ""source vim
-nnoremap <leader>R :source ~/.vimrc<CR>
+nnoremap <leader>R :source ~/.nvimrc<CR>
 "nnoremap <leader>E :bufdo e<CR>
 
-"Hide/show 
-noremap <leader><esc>   :noh<CR>
-noremap <leader>`       :set number!<CR>
+"Hide/show
+nnoremap <leader><esc> :let @/=''<cr>:noh<cr>       " clear search
+noremap <leader>`       :set relativenumber!<CR>
+nnoremap <leader>p :set invpaste paste?<cr>     " toggle paste mode
 
 ""Write
 noremap <leader>w       :w !sudo tee %<CR>
 if has('nvim')
     noremap <leader>w   :w suda://%<CR>
 endif
-noremap <leader>p    :set paste
 
 "" Split
 noremap <Leader>b :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
+set splitbelow             " Open new windows below the current window.
+set splitright             " Open new windows right of the current window.
 "" Pane
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -507,6 +394,8 @@ nnoremap <silent> <S-w> :tabclose<CR>
 "" Set working directory
 nnoremap <leader>. :lcd %:p:h<CR>
 
+" Set the working directory to wherever the open file lives
+"set autochdir
 "" Opens an edit command with the path of the currently edited file filled in
 noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
@@ -522,72 +411,29 @@ let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>B :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
+"wildmode
+set wildmenu wildmode=longest:full,full          " wildmode settings
+"ale
+" Error and warning signs.
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+highlight ALEErrorSign ctermfg=25 ctermbg=236 guifg=#465457 guibg=#232526
+highlight ALEWarningSign ctermfg=25 ctermbg=236 guifg=#465457 guibg=#232526
+highlight ALEError ctermbg=none cterm=underline
+"relative number background
+highlight CursorLineNr ctermfg=15 ctermbg=236 guifg=#465457 guibg=#232526
+let g:ale_sign_error = '⤫'
+let g:ale_sign_warning = '⚠'
+"let g:ale_sign_error = '💣'
+"let g:ale_sign_warning = '🚩'
+let g:ale_open_list = 1
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+nmap <silent> <C-p> <Plug>(ale_previous_wrap)
+nmap <silent> <C-n> <Plug>(ale_next_wrap)
 
-" snippets
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsEditSplit="vertical"
-
-"" syntastic
-"let g:syntastic_always_populate_loc_list=1
-"let g:syntastic_error_symbol='✗'
-"let g:syntastic_warning_symbol='⚠'
-"let g:syntastic_style_error_symbol = '✗'
-"let g:syntastic_style_warning_symbol = '⚠'
-"let g:syntastic_auto_loc_list=1
-"let g:syntastic_aggregate_errors = 1
-"let g:syntastic_quiet_messages = {'level': ['warnings']}
-"fun! SyntasticToggleQuiet(k, v)
-"  let idx = index(g:syntastic_quiet_messages[a:k], a:v)
-"  if idx == -1
-"    call add(g:syntastic_quiet_messages[a:k], a:v)
-"    echom 'Syntastic: '.a:k.':'.a:v.' disabled (filtered).'
-"  else
-"    call remove(g:syntastic_quiet_messages[a:k], idx)
-"    echom 'Syntastic: '.a:k.':'.a:v.' enabled (not filtered).'
-"  endif
-"endfun
-"command! SyntasticToggleWarnings call SyntasticToggleQuiet('level', 'warnings')
-"nnoremap  <leader>W :SyntasticToggleWarnings<CR>:SyntasticCheck<CR>
-
-" Tagbar
-nmap <leader>L :TagbarToggle<CR>
-"let g:tagbar_autofocus = 1
-"let g:tagbar_ctags_bin="gotags"
-let g:tagbar_type_go = {
-        \ 'ctagstype' : 'go',
-        \ 'kinds'     : [
-            \ 'p:package',
-            \ 'i:imports:1',
-            \ 'c:constants',
-            \ 'v:variables',
-            \ 't:types',
-            \ 'n:interfaces',
-            \ 'w:fields',
-            \ 'e:embedded',
-            \ 'm:methods',
-            \ 'r:constructor',
-            \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-    \ }
-
-" Disable visualbell
-set noerrorbells visualbell t_vb=
-if has('autocmd')
-  autocmd GUIEnter * set visualbell t_vb=
-endif
+" Enable integration with airline.
+let g:airline#extensions#ale#enabled = 1
 
 "" Copy/Paste/Cut
 if has('unnamedplus')
@@ -595,7 +441,6 @@ if has('unnamedplus')
 endif
 
 noremap YY "+y<CR>
-noremap <leader>p "+gP<CR>
 noremap XX "+x<CR>
 
 if has('macunix')
@@ -624,9 +469,6 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
-"" resize windows
-nnoremap <silent> <Leader> :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
@@ -636,29 +478,123 @@ vmap > >gv
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-"" Open current line on GitHub
-nnoremap <Leader>o :.Gbrowse<CR>
-"gitgutter
-let g:gitgutter_map_keys=0
-
 "*****************************************************************************
 "" Custom configs
 "*****************************************************************************
+setlocal spell
 "gitcommit
 autocmd Filetype gitcommit setlocal spell textwidth=72
-
+"""LATEX
+	" Word count:
+	autocmd FileType tex map <F3> :w !detex \| wc -w<CR>
+	autocmd FileType tex inoremap <F3> <Esc>:w !detex \| wc -w<CR>
+	" Compile document using xelatex:
+	autocmd FileType tex inoremap <leader><CR> <Esc>:!xelatex<space><c-r>%<Enter>a
+	autocmd FileType tex nnoremap <leader><CR> :!xelatex<space><c-r>%<Enter>
+	" Code snippets
+	autocmd FileType tex inoremap ,fr \begin{frame}<Enter>\frametitle{}<Enter><Enter><++><Enter><Enter>\end{frame}<Enter><Enter><++><Esc>6kf}i
+	autocmd FileType tex inoremap ,fi \begin{fitch}<Enter><Enter>\end{fitch}<Enter><Enter><++><Esc>3kA
+	autocmd FileType tex inoremap ,exe \begin{exe}<Enter>\ex<Space><Enter>\end{exe}<Enter><Enter><++><Esc>3kA
+	autocmd FileType tex inoremap ,em \emph{}<++><Esc>T{i
+	autocmd FileType tex inoremap ,bf \textbf{}<++><Esc>T{i
+	autocmd FileType tex vnoremap , <ESC>`<i\{<ESC>`>2la}<ESC>?\\{<Enter>a
+	autocmd FileType tex inoremap ,it \textit{}<++><Esc>T{i
+	autocmd FileType tex inoremap ,ct \textcite{}<++><Esc>T{i
+	autocmd FileType tex inoremap ,cp \parencite{}<++><Esc>T{i
+	autocmd FileType tex inoremap ,glos {\gll<Space><++><Space>\\<Enter><++><Space>\\<Enter>\trans{``<++>''}}<Esc>2k2bcw
+	autocmd FileType tex inoremap ,x \begin{xlist}<Enter>\ex<Space><Enter>\end{xlist}<Esc>kA<Space>
+	autocmd FileType tex inoremap ,ol \begin{enumerate}<Enter><Enter>\end{enumerate}<Enter><Enter><++><Esc>3kA\item<Space>
+	autocmd FileType tex inoremap ,ul \begin{itemize}<Enter><Enter>\end{itemize}<Enter><Enter><++><Esc>3kA\item<Space>
+	autocmd FileType tex inoremap ,li <Enter>\item<Space>
+	autocmd FileType tex inoremap ,ref \ref{}<Space><++><Esc>T{i
+	autocmd FileType tex inoremap ,tab \begin{tabular}<Enter><++><Enter>\end{tabular}<Enter><Enter><++><Esc>4kA{}<Esc>i
+	autocmd FileType tex inoremap ,ot \begin{tableau}<Enter>\inp{<++>}<Tab>\const{<++>}<Tab><++><Enter><++><Enter>\end{tableau}<Enter><Enter><++><Esc>5kA{}<Esc>i
+	autocmd FileType tex inoremap ,can \cand{}<Tab><++><Esc>T{i
+	autocmd FileType tex inoremap ,con \const{}<Tab><++><Esc>T{i
+	autocmd FileType tex inoremap ,v \vio{}<Tab><++><Esc>T{i
+	autocmd FileType tex inoremap ,a \href{}{<++>}<Space><++><Esc>2T{i
+	autocmd FileType tex inoremap ,sc \textsc{}<Space><++><Esc>T{i
+	autocmd FileType tex inoremap ,chap \chapter{}<Enter><Enter><++><Esc>2kf}i
+	autocmd FileType tex inoremap ,sec \section{}<Enter><Enter><++><Esc>2kf}i
+	autocmd FileType tex inoremap ,ssec \subsection{}<Enter><Enter><++><Esc>2kf}i
+	autocmd FileType tex inoremap ,sssec \subsubsection{}<Enter><Enter><++><Esc>2kf}i
+	autocmd FileType tex inoremap ,st <Esc>F{i*<Esc>f}i
+	autocmd FileType tex inoremap ,beg \begin{DELRN}<Enter><++><Enter>\end{DELRN}<Enter><Enter><++><Esc>4kfR:MultipleCursorsFind<Space>DELRN<Enter>c
+	autocmd FileType tex inoremap ,up <Esc>/usepackage<Enter>o\usepackage{}<Esc>i
+	autocmd FileType tex nnoremap ,up /usepackage<Enter>o\usepackage{}<Esc>i
+	autocmd FileType tex inoremap ,tt \texttt{}<Space><++><Esc>T{i
+	autocmd FileType tex inoremap ,bt {\blindtext}
+	autocmd FileType tex inoremap ,nu $\varnothing$
+	autocmd FileType tex inoremap ,col \begin{columns}[T]<Enter>\begin{column}{.5\textwidth}<Enter><Enter>\end{column}<Enter>\begin{column}{.5\textwidth}<Enter><++><Enter>\end{column}<Enter>\end{columns}<Esc>5kA
+autocmd FileType tex inoremap ,rn (\ref{})<++><Esc>F}i
 " c
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
 
 
-" go
-" neosnippet
-" Plugin key-mappings.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+" vim-go
+" run :GoBuild or :GoTestCompile based on the go file
+"let g:go_version_warning =
+
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build()
+  endif
+endfunction
+
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+
+let g:go_auto_type_info = 1
+let g:go_list_type = "quickfix"
+let g:go_fmt_command = "goimports"
+let g:go_updatetime = 2000
+let g:go_info_mode = 'gocode'
+let g:go_fmt_fail_silently = 1
+let g:syntastic_go_checkers = ['golint', 'govet','test','build']
+let g:syntastic_mode_map = { 'mode': 'active' }
+
+
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_extra_types = 1
+"
+let g:go_term_enabled = 1
+let g:go_list_type = "quickfix"
+let g:go_auto_sameids = 1
+
+let g:go_addtags_transform = "camelcase"
+
+set completeopt+=noselect
+"let g:go_gocode_unimported_packages = 1
+"let g:deoplete#sources#go#gocode_binary = $HOME.'/Projects/go/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:deoplete#sources#go#source_importer = 1
+"autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+"
+imap <expr><TAB>
+	 \ neosnippet#expandable_or_jumpable() ?
+	 \    "\<Plug>(neosnippet_expand_or_jump)" :
+         \ 	  pumvisible() ? "\<C-n>" : "\<TAB>"
+""snipets
+let g:neosnippet#snippets_directory = ['~/.config/nvim/snippets/']
+let g:go_snippet_engine = "neosnippet"
+imap <C-e>     <Plug>(neosnippet_expand_or_jump)
+smap <C-e>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-e>     <Plug>(neosnippet_expand_target)
 
 " SuperTab like snippets behavior.
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
@@ -673,65 +609,59 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
-" vim-go
-" run :GoBuild or :GoTestCompile based on the go file
-let g:go_version_warning = 0
 
-function! s:build_go_files()
-  let l:file = expand('%')
-  if l:file =~# '^\f\+_test\.go$'
-    call go#test#Test(0, 1)
-  elseif l:file =~# '^\f\+\.go$'
-    call go#cmd#Build(0)
-  endif
-endfunction
-
-let g:go_snippet_engine = "neosnippet"
-let g:go_auto_type_info = 1
-let g:go_list_type = "quickfix"
-let g:go_fmt_command = "goimports"
-let g:go_fmt_fail_silently = 1
-let g:syntastic_go_checkers = ['golint', 'govet','test','build']
-let g:syntastic_mode_map = { 'mode': 'active' }
-
-
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_generate_tags = 1
-let g:go_highlight_space_tab_error = 0
-let g:go_highlight_array_whitespace_error = 0
-let g:go_highlight_trailing_whitespace_error = 0
-let g:go_highlight_extra_types = 1
-let g:go_auto_sameids = 1
 
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 augroup completion_preview_close
   autocmd!
-  if v:version > 703 || v:version == 703 && has('patch598')
+  if v:version > 73 || v:version == 703 && has('patch598')
     autocmd CompleteDone * if !&previewwindow && &completeopt =~ 'preview' | silent! pclose | endif
   endif
 augroup END
 
+" vim-go
+augroup vg
+  "au FileType go nmap <leader>b :GoBuild<CR>
+  " au FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+  au FileType go nmap <leader>c :GoCallers<CR>
+  au FileType go  nmap <leader>ce :GoCallees<CR>
+  "au FileType go Shortcut GoCoverageToggle nmap <leader>? :GoCoverageToggle<CR>
+  "au FileType go Shortcut GoDefPop nmap <leader>D :GoDefPop<CR>
+  "au FileType go Shortcut GoImplements nmap <leader>v :GoImplements<CR>
+  "au FileType go Shortcut GoImports nmap <leader>I :GoImports<CR>
+  "au FileType go Shortcut GoInstall nmap <leader>i :GoInstall<CR>
+  "au FileType go Shortcut GoPlay nmap <leader>y :GoPlay<CR>
+  au FileType go  nmap <leader>' :GoDocBrowser<CR>
+  "au FileType go Shortcut GoToggleBreakpoint nmap <leader>b :GoToggleBreakpoint<CR>
+  au FileType go nmap <leader>D :GoDebug<CR>
+  "au FileType go Shortcut GoRefactor nmap <leader>e :Refactor extract
+  au FileType go nmap <leader>st <Plug>(go-run-tab)
+  au FileType go nmap <leader>sp <Plug>(go-run-split)
+  au FileType go nmap <leader>vs <Plug>(go-run-vertical)
+  "au FileType go Shortcut GoAlternate nmap <leader>. :GoAlternate<CR>
+  "au FileType go nmap <leader>T :GoTestFunc
+  au FileType go nmap <leader>t :GoTest
+  "au FileType go Shortcut GoReferrers nmap <leader>r :GoReferrers<CR>
+  "au FileType go Shortcut GoReferrers nmap gr :GoReferrers<CR>
+  "au FileType go Shortcut GoChannelPeers nmap <leader>p :GoChannelPeers<CR>
+  au FileType go nmap <leader>df :GoDef<CR>
+  au FileType go nmap <leader>k :GoInfo<CR>
+  au FileType go nnoremap <leader>e :GoIfErr<CR>
+augroup END
+
 augroup go
-
   au!
-
-
-  au Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
-  au Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
-  au Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
-  au Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+  au Filetype go command! -bang A call go#alternate#Switch(<bang>, 'edit')
+  au Filetype go command! -bang AV call go#alternate#Switch(<bang>, 'vsplit')
+  au Filetype go command! -bang AS call go#alternate#Switch(<bang>, 'split')
+  au Filetype go command! -bang AT call go#alternate#Switch(<bang>, 'tabe')
 
   au FileType go nmap <Leader>dd <Plug>(go-def-vertical)
   au FileType go nmap <Leader>dv <Plug>(go-doc-vertical)
   au FileType go nmap <Leader>db <Plug>(go-doc-browser)
 
+  au FileType go nmap <leader>rb  <Plug>(go-build)
   au FileType go nmap <leader>r  <Plug>(go-run)
   au FileType go nmap <leader>gl  <Plug>(go-lint)
   au FileType go nmap <leader>l :bnext<CR>
@@ -743,12 +673,9 @@ augroup go
 "  au FileType go nmap <leader>dr :GoDeclsDir<cr>
   au FileType go imap <C-g> <esc>:<C-u>GoDecls<cr>
 "  au FileType go imap <leader>dr <esc>:<C-u>GoDeclsDir<cr>
-  au FileType go nmap <leader>rb :<C-u>call <SID>build_go_files()<CR>
-
+  "au FileType go nmap <leader>rb :<C-u>call <SID>build_go_files()<CR>
 augroup END
 
-map <C-n> :cnext<CR>
-map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
 
 
@@ -761,36 +688,16 @@ augroup vimrc-python
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
-" jedi-vim
-let g:jedi#popup_on_dot = 0
-let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#goto_definitions_command = "<leader>d"
-let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>n"
-let g:jedi#rename_command = "<leader>r"
-let g:jedi#show_call_signatures = "0"
-let g:jedi#completions_command = "<C-Space>"
-let g:jedi#smart_auto_mappings = 0
-
-" syntastic
-let g:syntastic_python_checkers=['python', 'flake8']
-
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
 
 " Syntax highlight
 " Default highlight is better than polyglot
-let g:polyglot_disabled = ['python']
-let python_highlight_all = 1
-
-
-"*****************************************************************************
-"*****************************************************************************
-
-"" Include user's local vim config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
+"
+if exists('g:loaded_polyglot')
+    let g:polyglot_disabled = ['go','python']
 endif
+let python_highlight_all = 1
 
 "*****************************************************************************
 "" Convenience variables

@@ -6,4 +6,5 @@ XAUTHORITY=$HOME/.Xauthority
 export DISPLAY HOME XAUTHORITY
 setxkbmap -option ctrl:nocaps
 xcape -e 'Caps_Lock=Escape;Control_L=Escape;Control_R=Escape'
+xset r rate 200 30
 setxkbmap us

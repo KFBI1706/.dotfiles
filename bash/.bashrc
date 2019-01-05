@@ -4,7 +4,6 @@ HISTIGNORE='ls:bg:fg:history'
 HISTTIMEFORMAT='%F %T '
 PROMPT_COMMAND='history -a'
 export CLICOLOR=1
-
 function RGBcolor {
     echo "16 + $1 * 36 + $2 * 6 + $3" | bc
 }
@@ -29,9 +28,12 @@ _ssh()
     return 0
 }
 
-PATH="~/.local/bin:~/.gem/ruby/2.5.0/bin:$PATH"
+function peek {
+    tmux split-window -p 33 "$EDITOR" "$@"
+}
+
+PATH="~/.bin:~/.cargo/bin:~/.local/bin:~/.gem/ruby/2.5.0/bin:$PATH"
 PATH="$HOME/.config/composer/vendor/bin:$PATH"
-PATH="$HOME/.local/bin:$PATH"
 #custom functions
 if [ -d $HOME/Projects/scripts/functions ]; then
     for f in $HOME/Projects/scripts/functions/*; do
@@ -54,6 +56,7 @@ fi
 shopt -s checkwinsize
 shopt -s cmdhist
 shopt -s autocd
+shopt -s histappend
 #PS1="\[\033[36m\]\u\[\033[1;31m\]@\[\033[0;32m\]\h\[\033[m\]:\[\033[33m\]\w\[\033[m\]> "
 PROMPT_COMMAND='COLOR=$(context-color)'
 PS1='\[\e[1m\]\u\[$COLOR\]@\[\e[0m\]\[\e[1;32m\]\W\[\e[0m\]: '
@@ -71,8 +74,11 @@ alias gtop='gotop'
 alias less='less -R'
 alias ls='ls --color=always'
 alias suod='echo NO NO NO && sleep 10'
-alias wiki='nvim +VimwikiIndex'
+alias e='emacsclient -cn'
+alias wiki='echo "Just use org-mode 4Head"'
 alias msfconsole="msfconsole --quiet -x \"db_connect postgres@msf\""
 alias shrug="echo -n \¯\\\_\(\ツ\)\_\/\¯ | xclip -sel clipboard"
 
 complete -F _ssh ssh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

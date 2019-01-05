@@ -401,39 +401,6 @@ augroup completion_preview_close
   endif
 augroup END
 
-" vim-go
-augroup vg
-  au FileType go nmap <leader>c :GoCallers<CR>
-  au FileType go  nmap <leader>ce :GoCallees<CR>
-
-  au FileType go  nmap <leader>' :GoDocBrowser<CR>
-
-  au FileType go nmap <leader>D :GoDebug<CR>
-  au FileType go nmap <leader>st <Plug>(go-run-tab)
-  au FileType go nmap <leader>sp <Plug>(go-run-split)
-  au FileType go nmap <leader>vs <Plug>(go-run-vertical)
-  au FileType go nmap <leader>t :GoTest
-  au FileType go nmap <leader>df :GoDef<CR>
-  au FileType go nmap <leader>k :GoInfo<CR>
-  au FileType go nnoremap <leader>e :GoIfErr<CR>
-
-  "au FileType go nmap <leader>b :GoBuild<CR>
-  " au FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-  "au FileType go Shortcut GoCoverageToggle nmap <leader>? :GoCoverageToggle<CR>
-  "au FileType go Shortcut GoDefPop nmap <leader>D :GoDefPop<CR>
-  "au FileType go Shortcut GoImplements nmap <leader>v :GoImplements<CR>
-  "au FileType go Shortcut GoImports nmap <leader>I :GoImports<CR>
-  "au FileType go Shortcut GoInstall nmap <leader>i :GoInstall<CR>
-  "au FileType go Shortcut GoPlay nmap <leader>y :GoPlay<CR>
-  "au FileType go Shortcut GoToggleBreakpoint nmap <leader>b :GoToggleBreakpoint<CR>
-  "au FileType go Shortcut GoReferrers nmap <leader>r :GoReferrers<CR>
-  "au FileType go Shortcut GoReferrers nmap gr :GoReferrers<CR>
-  "au FileType go Shortcut GoChannelPeers nmap <leader>p :GoChannelPeers<CR>
-  "au FileType go Shortcut GoAlternate nmap <leader>. :GoAlternate<CR>
-  "au FileType go nmap <leader>T :GoTestFunc
-  "au FileType go Shortcut GoRefactor nmap <leader>e :Refactor extract
-augroup END
-
 augroup go
   au!
   au Filetype go command! -bang A call go#alternate#Switch(<bang>, 'edit')
@@ -450,6 +417,7 @@ augroup go
   au FileType go nmap <leader>gl  <Plug>(go-lint)
   au FileType go nmap <leader>l :bnext<CR>
   au FileType go nmap <leader>t  <Plug>(go-test)
+  au FileType go nmap <leader>T  <Plug>(go-test-func)
   au FileType go nmap <Leader>gt <Plug>(go-coverage-toggle)
   au FileType go nmap <Leader>i <Plug>(go-info)
   au FileType go nmap <silent> <Leader>l <Plug>(go-metalinter)
@@ -460,8 +428,8 @@ augroup go
   "au FileType go nmap <leader>rb :<C-u>call <SID>build_go_files()<CR>
 augroup END
 
+"close quickfix windows
 nnoremap <leader>a :cclose<CR>
-
 
 " python
 " vim-python
@@ -472,56 +440,4 @@ augroup vimrc-python
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
-" vim-airline
-let g:airline#extensions#virtualenv#enabled = 1
-
-" Syntax highlight
-" Default highlight is better than polyglot
-"
-if exists('g:loaded_polyglot')
-    let g:polyglot_disabled = ['go','python']
-endif
-let python_highlight_all = 1
-
-"*****************************************************************************
-"" Convenience variables
-"*****************************************************************************
-
-" vim-airline
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
-if !exists('g:airline_powerline_fonts')
-  let g:airline#extensions#tabline#left_sep = ' '
-  let g:airline#extensions#tabline#left_alt_sep = '|'
-  let g:airline_left_sep          = '▶'
-  let g:airline_left_alt_sep      = '»'
-  let g:airline_right_sep         = '◀'
-  let g:airline_right_alt_sep     = '«'
-  let g:airline#extensions#branch#prefix     = '⤴' "➔, ➥, ⎇
-  let g:airline#extensions#readonly#symbol   = '⊘'
-  let g:airline#extensions#linecolumn#prefix = '¶'
-  let g:airline#extensions#paste#symbol      = 'ρ'
-  let g:airline_symbols.linenr    = '␊'
-  let g:airline_symbols.branch    = '⎇'
-  let g:airline_symbols.paste     = 'ρ'
-  let g:airline_symbols.paste     = 'Þ'
-  let g:airline_symbols.paste     = '∥'
-  let g:airline_symbols.whitespace = 'Ξ'
-else
-  let g:airline#extensions#tabline#left_sep = ''
-  let g:airline#extensions#tabline#left_alt_sep = ''
-
-  " powerline symbols
-  let g:airline_left_sep = ''
-  let g:airline_left_alt_sep = ''
-  let g:airline_right_sep = ''
-  let g:airline_right_alt_sep = ''
-  let g:airline_symbols.branch = ''
-  let g:airline_symbols.readonly = ''
-  let g:airline_symbols.linenr = ''
-endif
-
-""set Mouse
 set mouse-=c

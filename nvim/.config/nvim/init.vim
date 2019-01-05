@@ -38,7 +38,7 @@ Plug 'tomasr/molokai'
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 " go
-Plug 'fatih/vim-go', {'do': ':GoInstallBinaries','for':['go']}
+Plug 'fatih/vim-go', {'do': ':GoInstallBinaries','for':['go'], 'tag': '*'}
 Plug 'vim-scripts/go.vim', {'for': ['go']}
 Plug 'buoto/gotests-vim', {'for': ['go']}
 Plug 'jodosha/vim-godebug', {'for': ['go']}
@@ -74,6 +74,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+set history=10000
+
 "" Map leader to space
 let mapleader=' '
 
@@ -107,7 +109,7 @@ set nocursorcolumn
 set scrolljump=10
 set synmaxcol=180
 
-syntax enable
+syntax on
 set ruler
 "set number relativenumber
 set background=dark
@@ -415,6 +417,7 @@ augroup go
   au FileType go nmap <leader>rb  <Plug>(go-build)
   au FileType go nmap <leader>r  <Plug>(go-run)
   au FileType go nmap <leader>gl  <Plug>(go-lint)
+  au FileType go nmap <leader>gn  <Plug>(go-rename)
   au FileType go nmap <leader>l :bnext<CR>
   au FileType go nmap <leader>t  <Plug>(go-test)
   au FileType go nmap <leader>T  <Plug>(go-test-func)

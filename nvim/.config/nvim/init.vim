@@ -1,22 +1,8 @@
-" vim-bootstrap b99cad
-
-""Note: Skip initialization for vim-tiny or vim-small.
-"if  | endif
-
 if &compatible
   set nocompatible
 endif
-"*****************************************************************************
-"" Vim-Plug core
-"*****************************************************************************
-if has('vim_starting')
-  set nocompatible               " Be improved
-endif
 
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
-
-let g:vim_bootstrap_langs = "go"
-let g:vim_bootstrap_editor = "nvim"				" nvim or vim
 
 if !filereadable(vimplug_exists)
   if !executable("curl")
@@ -26,24 +12,18 @@ if !filereadable(vimplug_exists)
   echo ""
   silent !\curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   let g:not_finish_vimplug = "yes"
-
   autocmd VimEnter * PlugInstall
 endif
 
-" Required:
 call plug#begin(expand('~/.vim/plugged'))
 
-"*****************************************************************************
-"" Plug install packages
-"*****************************************************************************
-""discord
 Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
-
+let g:deoplete#enable_at_startup = 1
+Plug 'w0rp/ale'
 Plug 'sebdah/vim-delve'
 Plug 'lambdalisue/suda.vim'
-Plug 'w0rp/ale'
 Plug 'whiteinge/diffconflicts'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'rbgrouleff/bclose.vim'
@@ -58,12 +38,11 @@ Plug 'tomasr/molokai'
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 " go
-Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
-Plug 'vim-scripts/go.vim'
-Plug 'buoto/gotests-vim'
-Plug 'jodosha/vim-godebug'
+Plug 'fatih/vim-go', {'do': ':GoInstallBinaries','for':['go']}
+Plug 'vim-scripts/go.vim', {'for': ['go']}
+Plug 'buoto/gotests-vim', {'for': ['go']}
+Plug 'jodosha/vim-godebug', {'for': ['go']}
 
-let g:deoplete#enable_at_startup = 1
 call plug#end()
 
 autocmd VimEnter *
@@ -95,7 +74,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-"" Map leader to ,
+"" Map leader to space
 let mapleader=' '
 
 "" Enable hidden buffers
@@ -120,29 +99,6 @@ else
     set shell=/bin/sh
 endif
 
-"deoplete
-"let g:deoplete#sources={}
-"let g:deoplete#sources._=['buffer', 'member', 'tag', 'file', 'omni', 'ultisnips']
-"let g:deoplete_ignore_sources = [ "buffer", "*.wiki" ]
-"let g:deoplete#omni#input_patterns={}
-"let g:deoplete#enable_at_startup = 1
-"let g:deoplete#omni_patterns = {}
-"let g:deoplete#omni_patterns.scala = '[^. *\t]\.\w*\|: [A-Z]\w*'
-"let g:deoplete#omni#input_patterns.scala = ['[^. *\t-9]\.\w*',': [A-Z]\w', '[\[\t\( ][A-Za-z]\w*']
-"call deoplete#custom#source('_', 'converters',
-"      \ ['converter_auto_paren',
-"      \  'converter_auto_delimiter',
-"      \ 'converter_remove_overlap'])
-
-
-" syntastic
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol = '✗'
-let g:syntastic_style_warning_symbol = '⚠'
-let g:syntastic_auto_loc_list=1
-let g:syntastic_aggregate_errors = 1
 "*****************************************************************************
 "" Visual Settings
 "*****************************************************************************
@@ -150,7 +106,7 @@ let g:syntastic_aggregate_errors = 1
 set nocursorcolumn
 set scrolljump=10
 set synmaxcol=180
-"
+
 syntax enable
 set ruler
 "set number relativenumber
@@ -167,9 +123,7 @@ if &term =~ '256color'
   set t_ut=
 endif
 
-
 set scrolloff=2
-
 
 "" Status bar
 set laststatus=2
@@ -182,13 +136,7 @@ set title
 set titleold="Terminal"
 set titlestring=%F
 
-set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
-
-"wiki
-let g:vimwiki_list = [{'path':'~/Projects/wiki/files', 'path_html':'~/Projects/wiki/export/html/'}]
-""disable url shortening
-"let g:vimwiki_url_maxsave="
-autocmd BufNewFile,BufRead *.wiki nnoremap <leader>wb :Vimwiki2HTMLBrowse<CR>
+set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ %p%%\ col\ %l:%c)
 
 "curly bracket tab expansion inoremap
 inoremap {<cr> {<cr>}<c-o>O

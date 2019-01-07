@@ -415,7 +415,7 @@ augroup go
   au FileType go nmap <Leader>db <Plug>(go-doc-browser)
 
   au FileType go nmap <leader>rb  <Plug>(go-build)
-  au FileType go nmap <leader>r  <Plug>(go-run)
+  au FileType go nmap <leader>r  <Plug>(go-run-split)
   au FileType go nmap <leader>gl  <Plug>(go-lint)
   au FileType go nmap <leader>gn  <Plug>(go-rename)
   au FileType go nmap <leader>l :bnext<CR>

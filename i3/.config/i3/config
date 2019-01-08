@@ -198,7 +198,6 @@ bindsym $mod+Shift+b exec ~/Projects/scripts/bluetoothConnect.sh
 bindsym $mod+m exec ~/Projects/scripts/micToggle.sh
 ###i3 layouts
 
-
 exec --no-startup-id "i3-msg 'workspace 2: Dev; append_layout ~/.i3/workspace-2.json'"
 exec --no-startup-id "i3-msg 'workspace 4: Chat; append_layout ~/.i3/workspace-4.json'"
 

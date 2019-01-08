@@ -205,7 +205,7 @@ exec --no-startup-id "i3-msg 'workspace 4: Chat; append_layout ~/.i3/workspace-4
 #exec --no-startup-id /usr/bin/firefox -P Slack --class=slackFirefox; workspace $ws2;
 exec --no-startup-id albert;
 exec --no-startup-id slack
-exec --no-startup-id $term --class=Terminal -e ~/Projects/scripts/TmuxNewOrReattach.sh
+exec --no-startup-id sleep 2 && $term --class=Terminal -e ~/Projects/scripts/TmuxNewOrReattach.sh
 exec --no-startup-id thunderbird
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet

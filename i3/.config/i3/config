@@ -205,7 +205,7 @@ exec --no-startup-id "i3-msg 'workspace 4: Chat; append_layout ~/.i3/workspace-4
 #exec --no-startup-id /usr/bin/firefox -P Slack --class=slackFirefox; workspace $ws2;
 exec --no-startup-id albert;
 exec --no-startup-id slack
-exec --no-startup-id $term -e ~/Projects/scripts/TmuxNewOrReattach.sh
+exec --no-startup-id $term --class=Terminal -e ~/Projects/scripts/TmuxNewOrReattach.sh
 exec --no-startup-id thunderbird
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
@@ -230,7 +230,6 @@ exec_always --no-startup-id ~/Projects/scripts/restartApps.sh;
 #keyboard config
 exec_always --no-startup-id ~/Projects/scripts/keyboardSetup.sh
 #screen setup
-exec_always --no-startup-id ~/Projects/scripts/autorandr.sh;
 bindsym --release $Mod+apostrophe    exec --no-startup-id "sleep 0.1; xdotool key U00E6"
 bindsym --release $Mod+Shift+apostrophe    exec --no-startup-id "sleep 0.1 xdotool key U1D01"
 bindsym --release $Mod+semicolon     exec --no-startup-id "sleep 0.1; xdotool key U00F8"

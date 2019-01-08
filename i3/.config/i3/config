@@ -10,8 +10,8 @@ font pango:monospace 12
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal, #release because my fast repeat rate and terminal spawn time made the terminal open multiple times
-bindsym --release $mod+Return exec $term
+# start a terminal
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill

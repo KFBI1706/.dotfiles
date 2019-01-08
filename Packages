@@ -386,6 +386,7 @@ shadow
 shellcheck
 sl
 sleuthkit
+smartmontools
 snapper
 sniff-probe-req
 socat

@@ -215,7 +215,7 @@ exec --no-startup-id dropbox
 exec --no-startup-id compton
 exec --no-startup-id greenclip daemon
 
-exec --no-startup-id "profile-cleaner f; firefox -P Personal"
+exec --no-startup-id "firefox -P Personal"
 #exec --no-startup-id 'profile-cleaner f; firefox' #-P Personal --class=personal'
 #exec --no-startup-id 'emacsclient -nc' #-P Personal --class=personal'
 

@@ -104,6 +104,8 @@ endif
 "*****************************************************************************
 "" Visual Settings
 "*****************************************************************************
+" do not hide markdown
+set conceallevel=0
 "responsiveness
 set nocursorcolumn
 set scrolljump=10

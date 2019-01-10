@@ -271,6 +271,7 @@ let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/
 
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>B :Buffers<CR>
+nnoremap <leader>E :Explore<CR>
 "wildmode
 set wildmenu wildmode=longest:full,full          " wildmode settings
 "ale
@@ -430,6 +431,13 @@ augroup go
 "  au FileType go imap <leader>dr <esc>:<C-u>GoDeclsDir<cr>
   "au FileType go nmap <leader>rb :<C-u>call <SID>build_go_files()<CR>
 augroup END
+
+"netrw - super simple fileBrowser
+let g:netrw_banner=0
+"let g:netrw_browse_split=4
+let g:netrw_altv=1
+"let g:netrw_liststyle = 3
+let g:netrw_winsize = 25
 
 "close quickfix windows
 nnoremap <leader>a :cclose<CR>

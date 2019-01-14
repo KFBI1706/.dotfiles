@@ -69,7 +69,6 @@ python-zipstream-gns3
 python2-qrtools
 python35
 python36
-qemu-user-static
 quicksynergy
 restic-git
 ripgrep-git

@@ -203,17 +203,20 @@ exec --no-startup-id "i3-msg 'workspace 4: Chat; append_layout ~/.i3/workspace-4
 
 #i3 startup-programs
 #exec --no-startup-id /usr/bin/firefox -P Slack --class=slackFirefox; workspace $ws2;
-exec --no-startup-id albert;
+
+exec --no-startup-id birdtray
+exec --no-startup-id thunderbird
 exec --no-startup-id slack
 exec --no-startup-id discord
 exec --no-startup-id sleep 2 && $term --class=Terminal -e ~/Projects/scripts/TmuxNewOrReattach.sh
-exec --no-startup-id thunderbird
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
+exec --no-startup-id mictray
 exec --no-startup-id blueman-applet
 exec --no-startup-id dropbox
 exec --no-startup-id compton
 exec --no-startup-id greenclip daemon
+exec --no-startup-id albert;
 
 exec --no-startup-id "firefox -P Personal"
 #exec --no-startup-id 'profile-cleaner f; firefox' #-P Personal --class=personal'

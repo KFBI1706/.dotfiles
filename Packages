@@ -93,6 +93,7 @@ docker
 docker-compose
 doge
 dosfstools
+dotnet-sdk
 dunst
 e2fsprogs
 eapeak

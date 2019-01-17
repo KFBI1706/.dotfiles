@@ -47,6 +47,7 @@ m68k-elf-toolchain
 mictray
 minikube-bin
 modprobed-db
+msbuild-stable
 nodejs-nativefier
 pa-applet-git
 pass-import

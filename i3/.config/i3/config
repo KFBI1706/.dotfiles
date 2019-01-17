@@ -204,7 +204,7 @@ exec --no-startup-id "i3-msg 'workspace 4: Chat; append_layout ~/.i3/workspace-4
 #i3 startup-programs
 #exec --no-startup-id /usr/bin/firefox -P Slack --class=slackFirefox; workspace $ws2;
 
-exec --no-startup-id birdtray
+exec --no-startup-id sleep 20 && birdtray
 exec --no-startup-id thunderbird
 exec --no-startup-id slack
 exec --no-startup-id discord

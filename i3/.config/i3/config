@@ -215,6 +215,7 @@ exec --no-startup-id discord
 exec --no-startup-id sleep 2 && $term --class=Terminal -e ~/Projects/scripts/TmuxNewOrReattach.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
+exec --no-startup-id pasystray
 exec --no-startup-id mictray
 exec --no-startup-id blueman-applet
 exec --no-startup-id dropbox

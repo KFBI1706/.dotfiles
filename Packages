@@ -279,6 +279,7 @@ networkmanager
 networkmanager-openvpn
 networkmanager-strongswan
 networkmanager-vpnc
+newsboat
 nfs-utils
 ngrep
 nmap

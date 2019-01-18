@@ -161,7 +161,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 #Floating
 #for_window [class="mpv"] floating enable, sticky enable, border pixel 0, move position 1080 px 1460 px, resize set 1200 px 800 px;
-for_window [class="mpv"] focus firefox;
+#for_window [class="mpv"] focus parent, focus left, layout splitv;
 #no_focus [class="mpv"]
 
 #Focus

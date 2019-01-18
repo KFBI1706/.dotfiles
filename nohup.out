@@ -1,0 +1,292 @@
+Playing: https://www.youtube.com/watch?v=C2a7jJTh3kU
+ (+) Video --vid=1 (*) (h264 1920x1080 30.000fps)
+ (+) Audio --aid=1 (*) 'DASH audio' (aac 2ch 44100Hz) (external)
+AO: [pulse] 44100Hz stereo 2ch float
+VO: [gpu] 1920x1080 yuv420p
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.007 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.007 Dropped: 1 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.033 Dropped: 2 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.001 Dropped: 3 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 3 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 3 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 3 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 3 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 3 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 3 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 4 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 4 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 4 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 4 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 4 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 4 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 4 Cache: 26s+1MB
+[ffmpeg] NULL: Invalid NAL unit size (1007 > 836).
+[ffmpeg] NULL: missing picture in access unit with size 840
+
+
+Exiting... (Quit)
+Playing: https://www.youtube.com/watch?v=C2a7jJTh3kU
+ (+) Video --vid=1 (*) (h264 1920x1080 30.000fps)
+ (+) Audio --aid=1 (*) 'DASH audio' (aac 2ch 44100Hz) (external)
+AO: [pulse] 44100Hz stereo 2ch float
+VO: [gpu] 1920x1080 yuv420p
+AV: 00:00:00 / 00:11:59 (0%) A-V: -0.000 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.013 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 27s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.014 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 30s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 29s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 29s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Cache: 29s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.016 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 29s+1MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 31s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 31s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 31s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 31s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 31s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 31s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 31s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 31s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 31s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 31s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 31s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 31s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+2MB
+AV: 00:00:02 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+1MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+1MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+1MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+1MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+1MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+1MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+1MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+1MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+1MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+1MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+1MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+1MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 30s+1MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:03 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.002 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:04 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 33s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:05 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 32s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 34s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 34s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 34s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 34s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 34s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 34s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 34s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 34s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 34s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 34s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 34s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 34s+2MB
+AV: 00:00:06 / 00:11:59 (0%) A-V:  0.000 Dropped: 1 Cache: 34s+2MB
+[ffmpeg] NULL: Invalid NAL unit size (380807 > 60001).
+[ffmpeg] NULL: missing picture in access unit with size 60014
+
+
+Exiting... (Quit)
+Playing: https://www.youtube.com/watch?v=C2a7jJTh3kU
+ (+) Video --vid=1 (*) (h264 1920x1080 30.000fps)
+ (+) Audio --aid=1 (*) 'DASH audio' (aac 2ch 44100Hz) (external)
+AO: [pulse] 44100Hz stereo 2ch float
+VO: [gpu] 1920x1080 yuv420p
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.050 Cache: 26s+1MB
+[input] No key binding found for key 'k'.
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.033 Dropped: 1 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.005 Dropped: 2 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 26s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 25s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 25s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 25s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 27s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:00 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+AV: 00:00:01 / 00:11:59 (0%) A-V:  0.000 Dropped: 2 Cache: 28s+1MB
+[ffmpeg] NULL: Invalid NAL unit size (905 > 285).
+[ffmpeg] NULL: missing picture in access unit with size 289
+
+
+Exiting... (Quit)

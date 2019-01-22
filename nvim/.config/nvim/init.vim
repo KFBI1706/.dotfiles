@@ -329,6 +329,12 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 
+"" Resize windows
+nnoremap <silent> <Leader>J :exe "resize " . (winheight(0) + 20)<CR>
+nnoremap <silent> <Leader>K :exe "resize " . (winheight(0) - 20)<CR>
+nnoremap <silent> <Leader>H :exe "vertical resize " . (winwidth(0) - 30)<CR>
+nnoremap <silent> <Leader>L :exe "vertical resize " . (winwidth(0) + 30)<CR>
+
 "" Move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv

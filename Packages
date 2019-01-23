@@ -16,6 +16,7 @@ aphopper
 apnbf
 arandr
 arch-wiki-docs
+archiso
 arm-none-eabi-binutils
 arm-none-eabi-gcc
 arm-none-eabi-gdb
@@ -290,7 +291,6 @@ noto-fonts-cjk
 noto-fonts-emoji
 npm
 offlineimap
-openbsd-netcat
 opencv
 opencv-samples
 openssh

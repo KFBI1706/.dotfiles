@@ -311,7 +311,8 @@ if has('macunix')
 endif
 
 "Better commenting style
-"highlight if there's a letter straight after // ,basically // and not space
+highlight CommentsWithoutSpace ctermbg=236
+match CommentsWithoutSpace /\/\/ \@!/
 
 "" Buffer nav
 noremap <leader>z :bp<CR>

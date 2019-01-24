@@ -310,6 +310,9 @@ if has('macunix')
   vmap <C-c> :w !pbcopy<CR><CR>
 endif
 
+"Better commenting style
+"highlight if there's a letter straight after // ,basically // and not space
+
 "" Buffer nav
 noremap <leader>z :bp<CR>
 noremap <leader>q :bp<CR>

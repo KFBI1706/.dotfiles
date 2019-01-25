@@ -1,4 +1,4 @@
-auto-reload yes
+#auto-reload yes
 
 browser firefox
 cleanup-on-quit yes

@@ -26,9 +26,7 @@ gdb-multiarch
 genymotion
 gns3-converter
 gns3-gui
-gns3-gui-git
 gns3-server
-gns3-server-git
 go-luks-suspend
 gotop-bin
 hopper

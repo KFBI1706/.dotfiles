@@ -41,6 +41,7 @@ libc++
 libc++abi
 libdeflate-git
 libidn-133-compat
+libinput-gestures-git
 libmodbus
 logmein-hamachi
 m68k-elf-toolchain

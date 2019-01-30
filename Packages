@@ -59,9 +59,10 @@ bulk-extractor
 bully
 burpsuite
 bzip2
+ca-certificates
+ca-certificates-mozilla
 cdrtools
 cgmanager
-chromium
 cmatrix
 code
 composer
@@ -183,7 +184,6 @@ hub
 hubbit-sniffer
 hwk
 hydra
-i3-gaps
 i3blocks
 i3lock
 i3status

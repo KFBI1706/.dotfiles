@@ -18,7 +18,6 @@ downgrade
 dropbox
 earlyoom
 etcher-bin
-etcher-cli
 evdi
 gdb-multiarch
 genymotion
@@ -54,7 +53,6 @@ pcre-static
 pktstat
 plex-media-player-git
 polybar
-postman
 profile-cleaner
 profile-sync-daemon
 pulseaudio-equalizer-ladspa-git

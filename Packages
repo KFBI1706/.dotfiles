@@ -337,6 +337,7 @@ python-fonttools
 python-future
 python-gmpy2
 python-keyring
+python-llfuse
 python-lz4
 python-matplotlib
 python-neovim
@@ -354,6 +355,7 @@ python-virtualenv
 python-xdg
 python2-construct
 python2-neovim
+python2-pandas
 python2-pip
 python2-pyelftools
 python2-pyliblzma

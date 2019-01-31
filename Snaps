@@ -1,4 +1,4 @@
 Name     Version  Rev   Tracking  Publisher     Notes
 core     16-2.37  6259  stable    canonical*    core
-discord  0.0.5    82    stable    snapcrafters  disabled
+discord           82    stable    snapcrafters  disabled,broken
 slack    3.3.7    11    stable    slack*        classic

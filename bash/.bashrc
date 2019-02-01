@@ -79,6 +79,9 @@ alias msfconsole="msfconsole --quiet -x \"db_connect postgres@msf\""
 alias shrug="echo -n \¯\\\_\(\ツ\)\_\/\¯ | xclip -sel clipboard"
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+#ignore snap devices
+alias df="df -x squashfs"
+
 complete -F _ssh ssh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

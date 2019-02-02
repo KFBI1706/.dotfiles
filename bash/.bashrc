@@ -81,6 +81,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 #ignore snap devices
 alias df="df -x squashfs"
+alias lsblk="lsblk | grep -v loop"
 
 complete -F _ssh ssh
 

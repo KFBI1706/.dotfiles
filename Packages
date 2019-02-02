@@ -33,6 +33,7 @@ automake
 avr-binutils
 avr-gcc
 avr-libc
+aws-cli
 bash
 bat
 batctl

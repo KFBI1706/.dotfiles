@@ -348,6 +348,7 @@ python-numpy
 python-pip
 python-progressbar
 python-pycryptodome
+python-pyjwt
 python-pywal
 python-ropper
 python-scruffington
@@ -361,6 +362,7 @@ python2-neovim
 python2-pandas
 python2-pip
 python2-pyelftools
+python2-pyjwt
 python2-pyliblzma
 python2-redis
 python2-selenium

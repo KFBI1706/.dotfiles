@@ -233,6 +233,7 @@ linssid
 linux
 linux-headers
 linux-lts
+linux-lts-headers
 lldb
 logrotate
 lolcat

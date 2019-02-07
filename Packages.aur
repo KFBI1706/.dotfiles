@@ -44,6 +44,7 @@ libdeflate-git
 libidn-133-compat
 libinput-gestures-git
 libmodbus
+libnm-gtk
 logmein-hamachi
 m68k-elf-toolchain
 mictray

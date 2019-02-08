@@ -278,7 +278,10 @@ nnoremap <silent> <leader>B :Buffers<CR>
 nnoremap <leader>E :Explore<CR>
 "wildmode
 set wildmenu wildmode=longest:full,full          " wildmode settings
-"ale
+" ale
+
+" rainbow
+let g:rainbow_active = 1
 " Error and warning signs.
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign

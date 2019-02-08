@@ -281,9 +281,17 @@ set wildmenu wildmode=longest:full,full          " wildmode settings
 " ale
 
 " rainbow
-let g:rainbow_active = 1
+"let g:rainbow#max_level = 16
+"let g:rainbow#pairs = [['(', ')'], ['[', ']']]
+"let g:rainbow#blacklist = [233, 234]
+"augroup rainbow_parentheses
+"    autocmd!
+"    autocmd FileType go RainbowParentheses
+"augroup END
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 let g:rainbow_conf = {
-\	'ctermfgs': ['green', 'cyan', 'magenta'],
+\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+\	'ctermfgs': ['darkcyan', 'green', 'blue', 'magenta','red', 'yellow', 'lightmagenta'],
 \	'operators': '_,_',
 \	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
 \	'separately': {
@@ -379,7 +387,7 @@ vmap > >gv
 "*****************************************************************************
 "" Custom configs
 "*****************************************************************************
-setlocal spell
+"setlocal spell
 
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab

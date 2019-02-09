@@ -281,29 +281,27 @@ set wildmenu wildmode=longest:full,full          " wildmode settings
 " ale
 " fold
 " toggle iferr block folding
-"function ToggleIfErr()
-"    if !exists("b:IfErr") || !b:IfErr
-"        " set status
-"        let b:IfErr = 1
-"
-"        " fold all iferr blocks
-"        %g/if .*err != nil.*{\_.\{-\}}/.,/}/fo
-"    else
-"        " set status
-"        let b:IfErr = 0
-"
-"        " unfold all
-"        normal zR
-"    endif
-"endfunction
-"
-"nn <leader>gf :call ToggleIfErr()<cr>:<bs>
+function ToggleIfErr()
+    if !exists("b:IfErr") || !b:IfErr
+        " set status
+        let b:IfErr = 1
+
+        " fold all iferr blocks
+        %g/if .*err != nil.*{\_.\{-\}}/.,/}/fo
+    else
+        " set status
+        let b:IfErr = 0
+
+        " unfold all
+        normal zR
+    endif
+endfunction
+nn <leader>gf :call ToggleIfErr()<cr>:<bs>
 
 highlight Folded ctermbg=NONE
 
 let g:go_fmt_experimental = 1
 
-autocmd BufWritePost *.go normal! zv
 " rainbow
 "let g:rainbow#max_level = 16
 "let g:rainbow#pairs = [['(', ')'], ['[', ']']]

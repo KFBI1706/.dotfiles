@@ -279,9 +279,6 @@ nnoremap <leader>E :Explore<CR>
 "wildmode
 set wildmenu wildmode=longest:full,full          " wildmode settings
 " ale
-"folding
-set foldmethod=expr
-set foldexpr=get(split(getline(v:lnum-1)),0,'')!=get(split(getline(v:lnum)),0,'if')?'>1':'='
 " rainbow
 "let g:rainbow#max_level = 16
 "let g:rainbow#pairs = [['(', ')'], ['[', ']']]

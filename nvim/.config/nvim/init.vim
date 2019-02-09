@@ -313,7 +313,7 @@ let g:go_fmt_experimental = 1
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 let g:rainbow_conf = {
 \	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-\	'ctermfgs': ['darkcyan', 'green', 'blue', 161, 208, 8,'magenta',15, 'red', 'yellow', 'brown'],
+\	'ctermfgs': ['green', 'blue', 161, 208, 8,'magenta',15, 'red', 'yellow', 'darkcyan', 'brown'],
 \	'operators': '_,_',
 \	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
 \	'separately': {

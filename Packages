@@ -91,6 +91,7 @@ diffutils
 dirb
 dirbuster
 diskus
+ditaa
 docker
 docker-compose
 doge
@@ -396,6 +397,7 @@ screen
 screenfetch
 scrot
 seahorse
+searchsploit
 sed
 setconf
 shadow

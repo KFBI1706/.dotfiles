@@ -53,6 +53,12 @@ nodejs-nativefier
 pa-applet-git
 pass-import
 pcre-static
+perl-check-isa
+perl-class-isa
+perl-module-util
+perl-term-size
+perl-test-most
+perl-treedumper
 pktstat
 plex-media-player
 polybar

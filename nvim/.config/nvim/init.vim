@@ -494,7 +494,7 @@ augroup go
   au FileType go nmap <leader>t  <Plug>(go-test)
   "au FileType go nmap <leader>T  <Plug>(go-test-func)
   au FileType go nmap <Leader>gt <Plug>(go-coverage-toggle)
-  au FileType go nmap <Leader>i <Plug>(go-info)
+  au FileType go nmap <Leader>/ <Plug>(go-info)
   au FileType go nmap <silent> <Leader>l <Plug>(go-metalinter)
   au FileType go nmap <C-g> :GoDecls<cr>
 "  au FileType go nmap <leader>dr :GoDeclsDir<cr>

@@ -32,6 +32,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Raimondi/delimitMate'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'EinfachToll/DidYouMean'   "Vim plugin which asks for the right file to open.
 Plug 'neomake/neomake'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'

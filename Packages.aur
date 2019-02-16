@@ -29,6 +29,7 @@ gns3-gui
 gns3-server
 go-luks-suspend
 gotop-bin
+heroku-cli
 hopper
 hunspell-nb
 hyperfine
@@ -50,6 +51,7 @@ minikube-bin
 modprobed-db
 msbuild-stable
 nodejs-nativefier
+nvm
 pa-applet-git
 pass-import
 pcre-static

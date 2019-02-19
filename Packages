@@ -359,7 +359,6 @@ python-unicorn
 python-virtualenv
 python-xdg
 python2-construct
-python2-neovim
 python2-pandas
 python2-pip
 python2-pyelftools

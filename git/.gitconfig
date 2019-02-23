@@ -31,3 +31,5 @@
     lg = log -p
     ap = add --patch
     track = add -N
+[credential]
+	helper = cache

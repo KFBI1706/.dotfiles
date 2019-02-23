@@ -70,7 +70,11 @@ pulseaudio-equalizer-ladspa-git
 pulseaudio-git
 python-aiohttp-cors-gns3
 python-aiohttp-gns3
+python-ana-git
+python-archinfo-git
 python-async-timeout-gns3
+python-cooldict-git
+python-mulpyplexer-git
 python-multidict-gns3
 python-prompt_toolkit-gns3
 python-pytesseract-git

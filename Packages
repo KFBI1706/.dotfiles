@@ -8,6 +8,7 @@ airpwn
 alacritty
 alsa-utils
 android-apktool
+android-sdk-platform-tools
 android-udev
 angr
 angr-py2

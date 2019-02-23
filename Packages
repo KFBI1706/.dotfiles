@@ -339,6 +339,7 @@ pulseaudio-alsa
 pulseeffects
 pwntools
 pyrit
+python-flask-sqlalchemy
 python-fonttools
 python-future
 python-gmpy2

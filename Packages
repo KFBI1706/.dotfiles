@@ -477,6 +477,7 @@ vi
 vim
 virt-manager
 virtualbox
+virtualbox-guest-iso
 virtualbox-host-modules-arch
 volatility
 voltron

@@ -50,6 +50,7 @@ modprobed-db
 msbuild-stable
 nodejs-nativefier
 nvm
+openswan
 pa-applet-git
 pass-import
 pcre-static

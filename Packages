@@ -252,6 +252,7 @@ make
 man-db
 man-pages
 mana
+mariadb-clients
 mdadm
 mdk3
 mesa

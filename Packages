@@ -105,12 +105,14 @@ e2fsprogs
 eapeak
 eaphammer
 eapmd5pass
+easy-creds
 edb
 efibootmgr
 emacs
 eog
 eog-plugins
 etckeeper
+ettercap-gtk
 evince
 evolution
 evtest
@@ -263,6 +265,7 @@ mimikatz
 minicom
 mitmap
 mitmproxy
+morpheus
 mosh
 mousejack
 mpc
@@ -492,7 +495,6 @@ wfuzz
 wget
 which
 whois
-wi-feye
 wifi-honey
 wifi-pumpkin
 wifichannelmonitor

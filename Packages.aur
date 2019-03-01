@@ -79,6 +79,7 @@ python-pytesseract-git
 python-sphinx-issues
 python-yarl-gns3
 python-zipstream-gns3
+python2-construct
 python2-neovim
 python35
 python36

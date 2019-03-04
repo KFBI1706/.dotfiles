@@ -79,7 +79,10 @@ python-pytesseract-git
 python-sphinx-issues
 python-yarl-gns3
 python-zipstream-gns3
+python2-guidata
+python2-guiqwt
 python2-neovim
+python2-pythonqwt
 python35
 python36
 quicksynergy

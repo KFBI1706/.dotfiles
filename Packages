@@ -374,6 +374,7 @@ python2-pip
 python2-pyelftools
 python2-pyjwt
 python2-pyliblzma
+python2-qtpy
 python2-redis
 python2-selenium
 python2-vine

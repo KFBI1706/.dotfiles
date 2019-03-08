@@ -35,14 +35,11 @@ hyperfine
 inxi
 jetbrains-toolbox
 kubernetes-bin
-lcms
 libc++
 libc++abi
 libdeflate-git
-libidn-133-compat
 libinput-gestures-git
 libmodbus
-libnm-gtk
 logmein-hamachi
 mictray
 minikube-bin
@@ -53,13 +50,6 @@ nodejs-nativefier
 nvm
 pa-applet-git
 pass-import
-pcre-static
-perl-check-isa
-perl-class-isa
-perl-module-util
-perl-term-size
-perl-test-most
-perl-treedumper
 pktstat
 polybar
 profile-cleaner
@@ -76,7 +66,6 @@ python-mulpyplexer-git
 python-multidict-gns3
 python-prompt_toolkit-gns3
 python-pytesseract-git
-python-sphinx-issues
 python-yarl-gns3
 python-zipstream-gns3
 python2-guidata

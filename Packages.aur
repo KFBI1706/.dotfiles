@@ -40,6 +40,7 @@ libc++
 libc++abi
 libdeflate-git
 libinput-gestures-git
+libldac
 libmodbus
 logmein-hamachi
 mictray
@@ -56,7 +57,7 @@ polybar
 profile-cleaner
 profile-sync-daemon
 pulseaudio-equalizer-ladspa-git
-pulseaudio-git
+pulseaudio-modules-bt-git
 python-aiohttp-cors-gns3
 python-aiohttp-gns3
 python-ana-git

@@ -30,6 +30,7 @@ gns3-server
 go-luks-suspend
 gotop-bin
 heroku-cli
+hexdiff
 hopper
 hunspell-nb
 hyperfine

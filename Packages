@@ -99,6 +99,7 @@ ditaa
 docker
 docker-compose
 doge
+dos2unix
 dosfstools
 dotnet-sdk
 dunst

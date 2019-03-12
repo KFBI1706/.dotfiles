@@ -1,5 +1,5 @@
 Name     Version    Rev   Tracking  Publisher     Notes
-core     16-2.37.2  6405  stable    canonical*    core
+core     16-2.37.4  6531  stable    canonical*    core
 discord             82    stable    snapcrafters  disabled,broken
 postman  6.7.1      81    stable    postman-inc*  -
 slack    3.3.7      11    stable    slack*        classic

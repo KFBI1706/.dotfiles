@@ -43,6 +43,7 @@ fi
 export GOPATH=$HOME/Projects/go
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 export PATH=$PATH:/snap/bin
+export PATH="$(yarn global bin):$PATH"
 export EDITOR=vim
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 

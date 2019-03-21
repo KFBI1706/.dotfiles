@@ -23,8 +23,6 @@ facetimehd-firmware
 fiddler
 gdb-multiarch
 gns3-converter
-gns3-gui
-gns3-server
 go-luks-suspend
 gotop-bin
 heroku-cli

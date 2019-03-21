@@ -25,6 +25,7 @@ arm-none-eabi-gdb
 arm-none-eabi-newlib
 armitage
 aspell-en
+aspell-nb
 aspell-uk
 at
 atear
@@ -513,7 +514,7 @@ wifite
 wine
 wireguard-tools
 wireless-ids
-wireshark-gtk
+wireshark-qt
 wirouter-keyrec
 wkhtmltopdf
 wlan2eth

@@ -44,7 +44,7 @@ Plug 'fatih/vim-go', {'do': ':GoInstallBinaries','for':['go'], 'tag': '*'}
 Plug 'vim-scripts/go.vim', {'for': ['go']}
 Plug 'buoto/gotests-vim', {'for': ['go']}
 Plug 'jodosha/vim-godebug', {'for': ['go']}
-Plug 'stamblerre/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+"Plug 'stamblerre/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 
 call plug#end()
 

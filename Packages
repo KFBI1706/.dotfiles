@@ -51,7 +51,6 @@ binwalk
 bison
 blackarch-keyring
 bleah
-bless
 blueman
 bluez-tools
 boopsuite
@@ -376,6 +375,7 @@ python-xdg
 python2-construct
 python2-pandas
 python2-pip
+python2-pplpy
 python2-pyelftools
 python2-pyjwt
 python2-pyliblzma
@@ -457,7 +457,6 @@ texinfo
 texlive-core
 tftp-hpa
 the_silver_searcher
-thermald
 thunar
 thunar-volman
 thunderbird

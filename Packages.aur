@@ -8,6 +8,7 @@ betterdiscord
 bfg
 binaryninja-personal
 birdtray
+bless
 bluez-git
 cava
 ckb-next
@@ -21,6 +22,7 @@ etcher-cli
 evdi
 facetimehd-firmware
 fiddler
+gamin
 gdb-multiarch
 gns3-converter
 go-luks-suspend
@@ -76,6 +78,7 @@ python2-usbrevue
 python35
 python36
 q
+qt5-styleplugins
 quicksynergy
 restic-git
 ripgrep-git
@@ -90,6 +93,7 @@ spectrumyzer
 speedtest-cli-git
 stegsnow
 telegram-purple
+thermald
 tmate
 tripwire-git
 ttf-google-fonts-git

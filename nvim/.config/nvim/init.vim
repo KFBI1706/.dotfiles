@@ -88,10 +88,18 @@ let mapleader=' '
 "" Enable hidden buffers
 set hidden
 
+let g:LanguageClient_rootMarkers = {
+        \ 'go': ['.git', 'go.mod'],
+        \ }
+"    \ 'go': ['gopls'],
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'go': ['gopls'],
+    \ 'go': ['bingo'],
     \ }
+nmap <buffer> gd <plug>(lsp-definition)
+
+nmap <silent> <C-p> <Plug>(lsp-previous-error)
+nmap <silent> <C-n> <plug>(lsp-next-error)
 
 "" Searching
 set hlsearch
@@ -310,6 +318,7 @@ nn <leader>gf :call ToggleIfErr()<cr>:<bs>
 
 highlight Folded ctermbg=NONE
 
+let g:go_def_mode='gopls'
 let g:go_fmt_experimental = 1
 
 " rainbow
@@ -359,8 +368,8 @@ let g:ale_sign_warning = '⚠'
 let g:ale_open_list = 1
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
-nmap <silent> <C-p> <Plug>(ale_previous_wrap)
-nmap <silent> <C-n> <Plug>(ale_next_wrap)
+"nmap <silent> <C-p> <Plug>(ale_previous_wrap)
+"nmap <silent> <C-n> <Plug>(ale_next_wrap)
 
 "" Copy/Paste/Cut
 if has('unnamedplus')

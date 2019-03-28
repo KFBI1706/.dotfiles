@@ -425,7 +425,7 @@ let g:go_auto_type_info = 1
 let g:go_list_type = "quickfix"
 let g:go_fmt_command = "goimports"
 let g:go_updatetime = 2000
-let g:go_info_mode = 'gocode'
+"let g:go_info_mode = 'gocode'
 let g:go_fmt_fail_silently = 1
 let g:syntastic_go_checkers = ['golint', 'govet','test','build']
 let g:syntastic_mode_map = { 'mode': 'active' }
@@ -447,7 +447,7 @@ let g:go_auto_sameids = 1
 let g:go_addtags_transform = "camelcase"
 
 set completeopt+=noselect
-let g:go_gocode_unimported_packages = 1
+"let g:go_gocode_unimported_packages = 1
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 let g:deoplete#sources#go#source_importer = 1
 

@@ -16,13 +16,16 @@ if !filereadable(vimplug_exists)
 endif
 
 call plug#begin(expand('~/.vim/plugged'))
-
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 "Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+"Plug 'zchee/deoplete-go', { 'do': 'make'}
 let g:deoplete#enable_at_startup = 1
 Plug 'luochen1990/rainbow'
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 Plug 'sebdah/vim-delve'
 Plug 'lambdalisue/suda.vim'
 Plug 'whiteinge/diffconflicts'
@@ -84,6 +87,11 @@ let mapleader=' '
 
 "" Enable hidden buffers
 set hidden
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'go': ['gopls'],
+    \ }
 
 "" Searching
 set hlsearch
@@ -214,6 +222,7 @@ augroup END
 
 "" go build on save
 "autocmd BufWritePre *.go :GoBuild
+autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
 "
 "remove whitespaces
 autocmd BufWritePre * %s/\s\+$//e

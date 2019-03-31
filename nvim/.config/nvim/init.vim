@@ -319,7 +319,6 @@ nn <leader>gf :call ToggleIfErr()<cr>:<bs>
 
 highlight Folded ctermbg=NONE
 
-let g:go_def_mode='gopls'
 let g:go_fmt_experimental = 1
 
 " rainbow

@@ -55,6 +55,7 @@ blueman
 bluez-tools
 boopsuite
 borg
+broadcom-wl-ck-broadwell
 bsd-games
 btrfs-progs
 bulk-extractor
@@ -243,6 +244,8 @@ linenum
 linset
 linssid
 linux
+linux-ck-broadwell
+linux-ck-broadwell-headers
 linux-headers
 linux-lts
 linux-lts-headers

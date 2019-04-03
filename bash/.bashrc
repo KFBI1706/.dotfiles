@@ -31,8 +31,9 @@ function peek {
     tmux split-window -p 33 "$EDITOR" "$@"
 }
 
-PATH="~/.bin:~/.cargo/bin:~/.local/bin:~/.gem/ruby/2.5.0/bin:$PATH"
+PATH="~/.bin:~/.cargo/bin:~/.local/bin:$PATH"
 PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
 #custom functions
 if [ -d $HOME/Projects/scripts/functions ]; then
     for f in $HOME/Projects/scripts/functions/*; do
@@ -88,10 +89,10 @@ complete -F _ssh ssh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 source /usr/share/nvm/init-nvm.sh
 export http_proxy=''
 export https_proxy=''
 export ftp_proxy=''
 export socks_proxy=''
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

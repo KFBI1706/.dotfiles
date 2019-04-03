@@ -3,7 +3,6 @@ ananicy-git
 autorandr-git
 autosuspend
 bcwc-pcie-git
-betterdiscord
 bfg
 binaryninja-personal
 birdtray
@@ -11,7 +10,6 @@ bless
 bluez-git
 cava
 ckb-next
-discord
 displaylink
 downgrade
 dropbox
@@ -35,8 +33,6 @@ hyperfine
 inxi
 jetbrains-toolbox
 kubernetes-bin
-libc++
-libc++abi
 libdeflate-git
 libinput-gestures-git
 libldac

@@ -12,7 +12,7 @@ function localMigrate {
     sudo su $1 -c "cd $home; mkdir -p $home/.local/bin $home/.terminfo/${TERM:0:1}"
     sudo cp -r ~/.terminfo/${TERM:0:1}/* $home/.terminfo/${TERM:0:1}/
     sudo cp {~,$home}/.local/bin/context-color
-    sudo cp ~/.{vimrc,bashrc,tmux.conf} $home
+    sudo cp ~/.{bashrc,tmux.conf} $home
 }
 
 _ssh()

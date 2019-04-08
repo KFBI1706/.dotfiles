@@ -26,7 +26,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'zchee/deoplete-go', { 'do': 'make'}
 let g:deoplete#enable_at_startup = 1
 Plug 'luochen1990/rainbow'
-"Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 Plug 'sebdah/vim-delve'
 Plug 'lambdalisue/suda.vim'
 Plug 'whiteinge/diffconflicts'
@@ -42,6 +42,7 @@ Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'tomasr/molokai'
 Plug 'posva/vim-vue'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 " go
@@ -88,8 +89,8 @@ set history=10000
 let mapleader=' '
 
 ""Javascript
-autocmd FileType javascript set formatprg=prettier\ --stdin
-autocmd BufWritePre *.js :normal gggqG
+"autocmd FileType javascript set formatprg=prettier\ --stdin
+"autocmd BufWritePre *.js :normal gggqG
 "" Enable hidden buffers
 set hidden
 
@@ -100,9 +101,8 @@ let g:LanguageClient_rootMarkers = {
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'go': ['bingo'],
-    \ 'python': ['/usr/bin/mspyls'],
-    \ 'vue': ['vls']
-    \ }
+    \ 'python': ['/usr/bin/mspyls']}
+""    \ 'vue': ['vls']
 nmap <buffer> gd <plug>(lsp-definition)
 
 nmap <silent> <C-p> <Plug>(lsp-previous-error)
@@ -374,6 +374,10 @@ let g:ale_sign_warning = '⚠'
 let g:ale_open_list = 1
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
+let g:ale_fixers = {
+ \ 'javascript': ['eslint']
+ \ }
+let g:ale_fix_on_save = 1
 "nmap <silent> <C-p> <Plug>(ale_previous_wrap)
 "nmap <silent> <C-n> <Plug>(ale_next_wrap)
 

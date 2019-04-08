@@ -41,6 +41,7 @@ Plug 'neomake/neomake'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'tomasr/molokai'
+Plug 'posva/vim-vue'
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 " go
@@ -86,6 +87,9 @@ set history=10000
 "" Map leader to space
 let mapleader=' '
 
+""Javascript
+autocmd FileType javascript set formatprg=prettier\ --stdin
+autocmd BufWritePre *.js :normal gggqG
 "" Enable hidden buffers
 set hidden
 
@@ -97,6 +101,7 @@ let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'go': ['bingo'],
     \ 'python': ['/usr/bin/mspyls'],
+    \ 'vue': ['vls']
     \ }
 nmap <buffer> gd <plug>(lsp-definition)
 

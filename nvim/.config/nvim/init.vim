@@ -101,8 +101,8 @@ let g:LanguageClient_rootMarkers = {
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'go': ['bingo'],
-    \ 'python': ['/usr/bin/mspyls']}
-""    \ 'vue': ['vls']
+    \ 'python': ['/usr/bin/mspyls'],
+    \ 'vue': ['vls']}
 nmap <buffer> gd <plug>(lsp-definition)
 
 nmap <silent> <C-p> <Plug>(lsp-previous-error)
@@ -375,7 +375,8 @@ let g:ale_open_list = 1
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_fixers = {
- \ 'javascript': ['eslint']
+ \ 'javascript': ['eslint'],
+ \ 'vue': ['eslint']
  \ }
 let g:ale_fix_on_save = 1
 "nmap <silent> <C-p> <Plug>(ale_previous_wrap)

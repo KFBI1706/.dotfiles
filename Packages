@@ -96,6 +96,8 @@ dirbuster
 dirsearch
 diskus
 ditaa
+docbook-xml
+docbook-xsl
 docker
 docker-compose
 doge
@@ -162,6 +164,7 @@ git
 glances
 glew
 glew1.10
+glib2-docs
 glibc
 gnome-disk-utility
 gnome-system-monitor
@@ -176,6 +179,7 @@ gqrx
 graphicsmagick
 grep
 groff
+gtk-doc
 gvfs-afc
 gzip
 hash-extender
@@ -266,6 +270,7 @@ mdadm
 mdk3
 mesa
 mesa-vdpau
+meson
 mfcuk
 mfoc
 mimikatz
@@ -353,12 +358,14 @@ pulseaudio-alsa
 pulseeffects
 pwntools
 pyrit
+python-anytree
 python-flask-sqlalchemy
 python-fonttools
 python-future
 python-gmpy2
 python-keyring
 python-llfuse
+python-lxml
 python-lz4
 python-matplotlib
 python-neovim
@@ -428,6 +435,7 @@ snapper
 sniff-probe-req
 socat
 sonic-visualiser
+source-highlight
 spectools
 speedpwn
 sqlitebrowser
@@ -485,6 +493,7 @@ upx
 usbutils
 util-linux
 vagrant
+vala
 valgrind
 vi
 vim

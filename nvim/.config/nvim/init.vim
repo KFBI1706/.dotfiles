@@ -190,7 +190,8 @@ cnoreabbrev Qall qall
 
 " find from fzf
 map <Leader>f :Ag<space>
-map <leader>O :FZF<CR>
+"map <leader>O :FZF<CR>
+map <leader>O :GFiles<CR>
 command! -bang -nargs=* Find call fzf#vim#grep( 'rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --color "always" '.shellescape(<q-args>), 1, <bang>)
 " buffer close while keeping the window
 nnoremap <leader>bd :Bclose<CR>

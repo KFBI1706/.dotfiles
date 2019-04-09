@@ -46,7 +46,7 @@ export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 export PATH=$PATH:/snap/bin
 export PATH="/home/kb/.yarn/bin:$PATH"
 export EDITOR=vim
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude node_modules'
 
 export WORKON_HOME=~/.venvs
  #System-wide .bashrc file for interactive bash(1) shells.

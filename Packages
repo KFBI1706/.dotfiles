@@ -111,6 +111,7 @@ eapmd5pass
 easy-creds
 edb
 efibootmgr
+electron2
 emacs
 eog
 eog-plugins
@@ -337,10 +338,17 @@ pavucontrol
 pciutils
 pepper-flash
 perl
+perl-alien-build
+perl-alien-libxml2
 perl-anyevent-i3
+perl-capture-tiny
 perl-clone
 perl-exporter-tiny
+perl-ffi-checklib
+perl-file-chdir
+perl-file-which
 perl-image-exiftool
+perl-path-tiny
 php
 pidense
 pixiewps

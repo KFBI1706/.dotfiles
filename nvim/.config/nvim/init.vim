@@ -117,7 +117,7 @@ set smartcase
 "" Directories for swp files
 set nobackup
 set noswapfile
-set undofile undodir=~/.vim/undo undolevels=9999 " undo options
+set undofile undodir=~/.vim/undo undolevels=999999 " undo options
 
 set fileformats=unix,dos,mac
 

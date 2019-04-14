@@ -57,9 +57,10 @@ fi
 shopt -s checkwinsize
 shopt -s cmdhist
 shopt -s autocd
+export HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 #PS1="\[\033[36m\]\u\[\033[1;31m\]@\[\033[0;32m\]\h\[\033[m\]:\[\033[33m\]\w\[\033[m\]> "
-PROMPT_COMMAND='COLOR=$(context-color)'
+PROMPT_COMMAND='${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r; COLOR=$(context-color)'
 PS1='\[\e[1m\]\u\[$COLOR\]@\[\e[0m\]\[\e[1;32m\]\W\[\e[0m\]: '
 #PS1='\e[1;33m\e[\e[48;5;236m\h\e[90m\[\e[0m\]\e[1;32m\e[48;5;237m\W\[\e[0m\]'
 # Make bash check its window size after a process completes

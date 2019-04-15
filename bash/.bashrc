@@ -128,7 +128,7 @@ complete -F _ssh ssh
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-source /usr/share/nvm/init-nvm.sh
+#source /usr/share/nvm/init-nvm.sh
 export http_proxy=''
 export https_proxy=''
 export ftp_proxy=''

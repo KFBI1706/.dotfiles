@@ -1,5 +1,45 @@
-HISTSIZE= HISTFILESIZE=
+HISTSIZE=-1 HISTFILESIZE=-1
 HISTIGNORE='ls:bg:fg:history'
+export HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+
+update_history () {
+  history -a ${HISTFILE}.$$
+  history -c
+  history -r  # load common history file
+  # load histories of other sessions
+  for f in `ls ${HISTFILE}.[0-9]* 2>/dev/null | grep -v "${HISTFILE}.$$\$"`; do
+    history -r $f
+  done
+  history -r "${HISTFILE}.$$"  # load current session history
+}
+if [[ "$PROMPT_COMMAND" != *update_history* ]]; then
+  export PROMPT_COMMAND="update_history; $PROMPT_COMMAND"
+fi
+
+merge_session_history () {
+  if [ -e ${HISTFILE}.$$ ]; then
+    cat ${HISTFILE}.$$ >> $HISTFILE
+    \rm ${HISTFILE}.$$
+  fi
+}
+trap merge_session_history EXIT
+
+active_shells=$(pgrep `ps -p $$ -o comm=`)
+grep_pattern=`for pid in $active_shells; do echo -n "-e \.${pid}\$ "; done`
+orphaned_files=`ls $HISTFILE.[0-9]* 2>/dev/null | grep -v $grep_pattern`
+
+if [ -n "$orphaned_files" ]; then
+  echo Merging orphaned history files:
+  for f in $orphaned_files; do
+    echo "  `basename $f`"
+    cat $f >> $HISTFILE
+    \rm $f
+  done
+  echo "done."
+fi
+
+
 HISTTIMEFORMAT='%F %T '
 PROMPT_COMMAND='history -a'
 export CLICOLOR=1
@@ -57,8 +97,6 @@ fi
 shopt -s checkwinsize
 shopt -s cmdhist
 shopt -s autocd
-export HISTCONTROL=ignoredups:erasedups
-shopt -s histappend
 #PS1="\[\033[36m\]\u\[\033[1;31m\]@\[\033[0;32m\]\h\[\033[m\]:\[\033[33m\]\w\[\033[m\]> "
 PROMPT_COMMAND='COLOR=$(context-color)'
 PS1='\[\e[1m\]\u\[$COLOR\]@\[\e[0m\]\[\e[1;32m\]\W\[\e[0m\]: '

@@ -408,6 +408,12 @@ endif
 highlight CommentsWithoutSpace ctermbg=236
 match CommentsWithoutSpace /\/\/ \@!/
 
+"explorer
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_browse_split = 2
+noremap <leader>k :Vexplore<CR>
+
 "" Buffer nav
 noremap <leader>z :bp<CR>
 noremap <leader>q :bp<CR>

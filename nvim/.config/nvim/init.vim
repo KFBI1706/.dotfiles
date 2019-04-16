@@ -40,6 +40,7 @@ Plug 'EinfachToll/DidYouMean'   "Vim plugin which asks for the right file to ope
 Plug 'neomake/neomake'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'patstockwell/vim-monokai-tasty'
 Plug 'tomasr/molokai'
 Plug 'posva/vim-vue'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -142,7 +143,8 @@ set ruler
 "set number relativenumber
 set background=dark
 let no_buffers_menu=1
-colorscheme molokai
+"colorscheme molokai
+colorscheme vim-monokai-tasty
 
 set mousemodel=popup
 set t_Co=256
@@ -158,6 +160,11 @@ set scrolloff=2
 "" Status bar
 set laststatus=2
 
+"hi TabLineFill ctermfg=Black ctermbg=DarkGrey
+"hi TabLine ctermfg=Blue ctermbg=Black
+"hi TabLineSel ctermfg=Red ctermbg=Yellow
+"hi Title ctermfg=LightBlue ctermbg=Magenta
+"
 "" Use modeline overrides
 set modeline
 set modelines=1

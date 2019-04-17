@@ -143,8 +143,8 @@ set ruler
 "set number relativenumber
 set background=dark
 let no_buffers_menu=1
-"colorscheme molokai
-colorscheme vim-monokai-tasty
+colorscheme molokai
+"colorscheme vim-monokai-tasty
 
 set mousemodel=popup
 set t_Co=256

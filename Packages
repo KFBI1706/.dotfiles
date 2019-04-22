@@ -419,6 +419,7 @@ rfdump
 rfidiot
 rfidtool
 rofi
+routersploit
 rsactftool
 rsatool
 rsync
@@ -591,6 +592,7 @@ xorg-xkbutils
 xorg-xkill
 xorg-xlsatoms
 xorg-xlsclients
+xorg-xmag
 xorg-xpr
 xorg-xprop
 xorg-xrandr

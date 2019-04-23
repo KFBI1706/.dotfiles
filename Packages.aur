@@ -33,6 +33,7 @@ jetbrains-toolbox
 libdeflate-git
 libinput-gestures-git
 libldac
+libmagick
 libmodbus
 logmein-hamachi
 microsoft-python-language-server

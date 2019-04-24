@@ -28,6 +28,8 @@ hunspell-nb
 hyperfine
 inxi
 jetbrains-toolbox
+libc++
+libc++abi
 libdeflate-git
 libinput-gestures-git
 libldac

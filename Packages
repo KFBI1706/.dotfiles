@@ -37,6 +37,7 @@ avr-binutils
 avr-gcc
 avr-libc
 aws-cli
+baobab
 bash
 bat
 batctl

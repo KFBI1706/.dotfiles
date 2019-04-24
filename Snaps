@@ -1,7 +1,6 @@
 Name               Version          Rev   Tracking  Publisher     Notes
 code               51b0b281         6     stable    vscode*       classic
 core               16-2.38          6673  stable    canonical*    core
-discord            0.0.9            93    stable    snapcrafters  -
 gnome-3-26-1604    3.26.0.20190228  82    stable    canonical*    -
 gtk-common-themes  0.1-16-g2287c87  1198  stable    canonical*    -
 postman            6.7.1            81    stable    postman-inc*  -

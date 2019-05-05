@@ -43,7 +43,6 @@ minikube-bin
 modprobed-db
 motion
 msbuild-stable
-nessus
 networkmanager-l2tp
 nodejs-nativefier
 nvm

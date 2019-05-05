@@ -391,6 +391,7 @@ python-uncompyle6
 python-unicorn
 python-virtualenv
 python-xdg
+python2-binplist
 python2-construct
 python2-pandas
 python2-pip

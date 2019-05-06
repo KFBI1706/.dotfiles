@@ -135,3 +135,49 @@ export ftp_proxy=''
 export socks_proxy=''
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+
+# Docker functions - crez Duniel
+dip() {
+        # docker - get IP address for container
+        local c_id="$(docker ps -q -f name=$1)"
+        if [ ! -z "$c_id" ]; then
+                local c_ip="$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $1)"
+                echo "$c_ip"
+        fi
+}
+
+dua() {
+    # docker - update all images
+    local images=$(docker images | tail -n +2 | awk '{print $1}')
+    for i in $images; do
+        docker pull $i | cat
+    done
+        unset images
+}
+
+drm () {
+    # docker - remove all dead containers
+    docker rm "$(docker ps -qaf status=exited)"
+}
+
+dri() {
+    # docker - remove all images
+    docker rmi "$(docker images -q)"
+}
+
+drd() {
+    # docker - remove dangling images
+    docker rmi $(docker images -f "dangling=true" -q)
+    #docker rmi "$(docker images -qaf dangling=true)"
+}
+
+dbd() {
+    # docker - build from Dockerfile in $CWD
+    docker build -t "$1"
+}
+
+dki() {
+    # docker - run container and enter interactively
+    docker run -tiP "$1" /bin/sh
+}

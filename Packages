@@ -383,6 +383,7 @@ python-pip
 python-progressbar
 python-pycryptodome
 python-pyjwt
+python-pysocks
 python-pywal
 python-ropper
 python-scruffington

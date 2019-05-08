@@ -234,6 +234,7 @@ kismet-earth
 kismet2earth
 kismon
 kubectl
+lastpass-cli
 less
 lib32-glibc
 lib32-libcurl-gnutls
@@ -388,6 +389,7 @@ python-pywal
 python-ropper
 python-scruffington
 python-selenium
+python-tldextract
 python-uncompyle6
 python-unicorn
 python-virtualenv

@@ -31,6 +31,7 @@ hyperfine
 icu63
 inxi
 jetbrains-toolbox
+laptop-mode-tools
 libc++
 libc++abi
 libdeflate-git

@@ -1,2 +1,2 @@
-c.tabs.position = "top"
+c.tabs.position = "bottom"
 c.completion.shrink = True

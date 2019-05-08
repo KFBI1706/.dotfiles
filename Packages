@@ -66,7 +66,6 @@ ca-certificates-mozilla
 cdrtools
 cgmanager
 cmatrix
-cms-few
 composer
 compton
 coreutils
@@ -410,6 +409,7 @@ python2-xmltodict
 qemu
 qemu-arch-extra
 qt5-charts
+qutebrowser
 radamsa
 ranger
 rclone

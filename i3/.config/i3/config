@@ -27,7 +27,7 @@ bindsym $mod+grave exec --no-startup-id ~/Projects/scripts/emoji.sh
 #bindsym $mod+d exec dmenu_run -fn 'DroidSansMono:bold:pixelsize=16' -nb '#fdf6e3' -nf '#586c75' -sf '#fdf6e3' -sb '#FFAF00'
 
 bindsym $mod+Shift+y exec dmenu-lpass
-#bindsym $mod+Shift+y exec passmenu
+bindsym $mod+backslash exec passmenu
 
 # change focus
 bindsym $mod+h focus left

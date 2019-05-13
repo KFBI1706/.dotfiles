@@ -363,6 +363,7 @@ pngcheck
 polkit-gnome
 postgresql
 powertop
+privoxy
 procps-ng
 psmisc
 pulseaudio-alsa

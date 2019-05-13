@@ -32,6 +32,7 @@ audacity
 autoconf
 autofs
 automake
+autossh
 avr-binutils
 avr-gcc
 avr-libc

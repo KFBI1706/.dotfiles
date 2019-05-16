@@ -71,6 +71,7 @@ cmatrix
 composer
 compton
 coreutils
+corkscrew
 cower
 cowsay
 cpio
@@ -323,6 +324,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 npm
 offlineimap
+openbsd-netcat
 opencv
 opencv-samples
 openssh

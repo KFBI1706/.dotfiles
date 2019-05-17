@@ -1,5 +1,5 @@
 Name               Version          Rev   Tracking  Publisher     Notes
-code               51b0b281         6     stable    vscode*       classic
+code               a622c65b         7     stable    vscode*       classic
 core               16-2.38.1        6818  stable    canonical*    core
 core18             20190409         941   stable    canonical*    base
 gnome-3-26-1604    3.26.0.20190228  82    stable    canonical*    -

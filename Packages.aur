@@ -24,6 +24,7 @@ gdb-multiarch
 go-luks-suspend
 google-cloud-sdk
 gotop-bin
+hadolint-bin
 hexdiff
 hopper
 hunspell-nb

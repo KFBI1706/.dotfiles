@@ -264,7 +264,7 @@ imap <expr> <tab>   pumvisible() ? "\<c-n>" : "\<tab>"
 imap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<tab>"
 imap <expr> <cr> pumvisible() ? deoplete#close_popup() : "\<cr>"
 ""source vim
-nnoremap <leader>R :source ~/.nvimrc<CR>
+nnoremap <leader>R :source ~/.nvimrc<CR>:w<CR>
 
 "Hide/show
 nnoremap <leader><esc> :let @/=''<cr>:noh<cr>       " clear search
@@ -314,7 +314,7 @@ set wildmenu wildmode=longest:full,full          " wildmode settings
 " ale
 " fold
 " toggle iferr block folding
-function ToggleIfErr()
+function! ToggleIfErr()
     if !exists("b:IfErr") || !b:IfErr
         " set status
         let b:IfErr = 1
@@ -413,14 +413,16 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_browse_split = 2
 noremap <leader>k :Vexplore<CR>
+" buffer list
+nmap <silent> <leader>l :windo if &buftype == "quickfix" || &buftype == "locationlist" | lclose | endif<CR>
 
 "" Buffer nav
 noremap <leader>z :bp<CR>
 noremap <leader>q :bp<CR>
 noremap <leader>x :bn<CR>
 noremap <leader>T :tabnew %<cr>
-noremap <leader>l :bnext<CR>
-noremap <leader>h :bprevious<CR>
+"noremap <leader>l :bnext<CR>
+"noremap <leader>h :bprevious<CR>
 nmap <leader>bl :ls<CR>
 noremap <leader>C :bd<CR>
 

@@ -262,6 +262,7 @@ lldb
 logrotate
 lolcat
 lorcon
+lsd
 lshw
 lsof
 ltrace

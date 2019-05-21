@@ -414,7 +414,12 @@ let g:netrw_banner = 0
 let g:netrw_browse_split = 2
 noremap <leader>k :Vexplore<CR>
 " buffer list
-nmap <silent> <leader>l :windo if &buftype == "quickfix" || &buftype == "locationlist" | lclose | endif<CR>
+
+function! CloseQuickAndLocation()
+    windo if &buftype == "quickfix" || &buftype == "locationlist" | lclose | endif
+endfunction
+"
+nmap <silent> <leader>l :call CloseQuickAndLocation()<CR>
 
 "" Buffer nav
 noremap <leader>z :bp<CR>

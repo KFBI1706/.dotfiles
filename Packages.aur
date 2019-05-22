@@ -61,11 +61,16 @@ pulseaudio-equalizer-ladspa-git
 pulseaudio-modules-bt-git
 python-ana-git
 python-archinfo-git
+python-binaryornot
+python-cookiecutter
 python-cooldict-git
+python-jinja-time
 python-mulpyplexer-git
 python-multidict-gns3
+python-poyo
 python-prompt_toolkit-gns3
 python-pytesseract-git
+python-whichcraft
 python-yarl-gns3
 python2-guidata
 python2-guiqwt

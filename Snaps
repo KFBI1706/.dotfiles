@@ -4,6 +4,6 @@ core               16-2.39          6964  stable    canonical*    core
 core18             20190508         970   stable    canonical*    base
 gnome-3-26-1604    3.26.0.20190228  82    stable    canonical*    -
 gtk-common-themes  0.1-16-g2287c87  1198  stable    canonical*    -
-heroku             v7.24.3          3766  stable    heroku*       classic
+heroku             v7.24.4          3768  stable    heroku*       classic
 postman            6.7.1            81    stable    postman-inc*  -
 slack              3.4.0            13    stable    slack*        classic

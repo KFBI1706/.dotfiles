@@ -166,6 +166,16 @@ dri() {
     docker rmi "$(docker images -q)"
 }
 
+dka() {
+    # docker - kill all containers
+    docker kill $(docker ps -q)
+}
+
+dra() {
+    # docker - delete all stopped containers
+    docker rm $(docker ps -a -q)
+}
+
 drd() {
     # docker - remove dangling images
     docker rmi $(docker images -f "dangling=true" -q)

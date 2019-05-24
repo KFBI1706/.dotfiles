@@ -106,6 +106,8 @@ PS1='\[\e[1m\]\u\[$COLOR\]@\[\e[0m\]\[\e[1;32m\]\W\[\e[0m\]: '
 [ -r "/etc/bashrc_$TERM_PROGRAM" ] && . "/etc/bashrc_$TERM_PROGRAM"
 
 alias v="vim"
+alias d="docker"
+alias k="kubectl"
 if command -v nvim >/dev/null 2>&1; then
     alias vim="nvim"
 fi
@@ -163,7 +165,7 @@ drm () {
 
 dri() {
     # docker - remove all images
-    docker rmi "$(docker images -q)"
+    docker rmi $(docker images -q)
 }
 
 dka() {

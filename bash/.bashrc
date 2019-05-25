@@ -111,7 +111,7 @@ alias k="kubectl"
 if command -v nvim >/dev/null 2>&1; then
     alias vim="nvim"
 fi
-alias grep='grep --color=always'
+alias grep='grep --color=no'
 alias gtop='gotop'
 alias less='less -R'
 alias ls='ls --color=always'

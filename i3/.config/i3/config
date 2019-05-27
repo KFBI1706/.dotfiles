@@ -121,7 +121,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Alt+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Ctrl+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 bindsym $mod+u resize shrink width 10 px or 10 ppt
@@ -211,8 +211,7 @@ exec --no-startup-id "i3-msg 'workspace 4: Chat; append_layout ~/.i3/workspace-4
 #i3 startup-programs
 #exec --no-startup-id /usr/bin/firefox -P Slack --class=slackFirefox; workspace $ws2;
 
-exec --no-startup-id sleep 20 && birdtray
-exec --no-startup-id thunderbird
+exec --no-startup-id thunderbird #&& birdtray
 exec --no-startup-id slack
 exec --no-startup-id discord
 exec --no-startup-id sleep 2 && $term --class=Terminal -e ~/Projects/scripts/TmuxNewOrReattach.sh
@@ -238,7 +237,7 @@ exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-ag
 exec_always --no-startup-id /home/kb/Projects/scripts/dunst.sh
 #exec_always --no-startup-id unproductive | tee -a ~/activity-log.txt
 
-exec_always --no-startup-id ~/Projects/scripts/restartApps.sh;
+exec_always --no-startup-id sleep 30 && ~/Projects/scripts/restartApps.sh;
 #keyboard config
 exec_always --no-startup-id ~/Projects/scripts/keyboardSetup.sh
 bindsym --release $Mod+apostrophe    exec --no-startup-id "sleep 0.1; xdotool key U00E6"

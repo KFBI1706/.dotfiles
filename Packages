@@ -455,6 +455,7 @@ set
 setconf
 shadow
 shellcheck
+simplify
 sl
 sleuthkit
 smartmontools

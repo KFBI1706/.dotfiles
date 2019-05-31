@@ -193,6 +193,7 @@ hash-extender
 hashcat
 hashcat-utils
 hashpump
+haskell-splitmix
 hcxtools
 hdf5
 hexedit

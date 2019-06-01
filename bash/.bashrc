@@ -173,6 +173,10 @@ dka() {
     docker kill $(docker ps -q)
 }
 
+dps() {
+    docker ps -a
+}
+
 dra() {
     # docker - delete all stopped containers
     docker rm $(docker ps -a -q)

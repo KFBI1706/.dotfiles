@@ -66,6 +66,7 @@ burpsuite
 bzip2
 ca-certificates
 ca-certificates-mozilla
+caprine
 cdrtools
 cgmanager
 chromium
@@ -380,6 +381,7 @@ pulseeffects
 pwntools
 pyrit
 python-anytree
+python-cookiecutter
 python-flask-sqlalchemy
 python-fonttools
 python-future
@@ -450,7 +452,6 @@ screen
 screenfetch
 scrot
 seahorse
-searchsploit
 sed
 set
 setconf

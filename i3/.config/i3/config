@@ -170,7 +170,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 assign [class="discord"] $ws4
 assign [class="Slack"] $ws4
 assign [class="slackFirefox"] $ws4
-assign [class="caprine"] $ws4
+assign [class="Caprine"] $ws4
 assign [class="IRC"] $ws4
 assign [class="messengerChromium"] $ws4
 for_window [class="messengerChromium"] fullscreen disable

@@ -2,47 +2,10 @@ HISTSIZE=-1 HISTFILESIZE=-1
 HISTIGNORE='ls:bg:fg:history'
 export HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
-
-update_history () {
-  history -a ${HISTFILE}.$$
-  history -c
-  history -r  # load common history file
-  # load histories of other sessions
-  for f in `ls ${HISTFILE}.[0-9]* 2>/dev/null | grep -v "${HISTFILE}.$$\$"`; do
-    history -r $f
-  done
-  history -r "${HISTFILE}.$$"  # load current session history
-}
-if [[ "$PROMPT_COMMAND" != *update_history* ]]; then
-  export PROMPT_COMMAND="update_history; $PROMPT_COMMAND"
-fi
-
-merge_session_history () {
-  if [ -e ${HISTFILE}.$$ ]; then
-    cat ${HISTFILE}.$$ >> $HISTFILE
-    \rm ${HISTFILE}.$$
-  fi
-}
-trap merge_session_history EXIT
-
-active_shells=$(pgrep `ps -p $$ -o comm=`)
-grep_pattern=`for pid in $active_shells; do echo -n "-e \.${pid}\$ "; done`
-orphaned_files=`ls $HISTFILE.[0-9]* 2>/dev/null | grep -v $grep_pattern`
-
-if [ -n "$orphaned_files" ]; then
-  echo Merging orphaned history files:
-  for f in $orphaned_files; do
-    echo "  `basename $f`"
-    cat $f >> $HISTFILE
-    \rm $f
-  done
-  echo "done."
-fi
-
-
 HISTTIMEFORMAT='%F %T '
 PROMPT_COMMAND='history -a'
 export CLICOLOR=1
+
 function RGBcolor {
     echo "16 + $1 * 36 + $2 * 6 + $3" | bc
 }
@@ -112,7 +75,7 @@ fi
 alias grep='grep --color=always'
 alias gtop='gotop'
 alias less='less -R'
-alias ls='ls --color=always'
+#alias ls='ls --color=always'
 alias suod='echo NO NO NO && sleep 10'
 alias e='emacsclient -cn'
 alias wiki='echo "Just use org-mode 4Head"'

@@ -330,6 +330,12 @@ you should place your code here."
   (setq org-wiki-location "~/Projects/org/")
   (setq deft-directory "~/Projects/org/")
 
+  (setq org-bullets-bullet-list '("◎" "❍" "◉" "❑" "⬜" "▫" "▲" "▶"))
+
+  (setq org-todo-keywords
+        (quote ((sequence "☛ TODO(t)" "IN_PROGRESS(i)" "|" "✔ DONE(d)")
+                (sequence "⚑ WAITING(w@/)" "HOLD(h@/)" "|" "✘ CANCELLED(c@/)"))))
+
   )
 
 (setq org-capture-templates '(("t" "Todo [inbox]" entry

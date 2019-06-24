@@ -27,6 +27,7 @@ hexdiff
 hopper
 hunspell-nb
 hyperfine
+icu63
 inxi
 jetbrains-toolbox
 libc++
@@ -36,6 +37,7 @@ libinput-gestures-git
 libldac
 libmodbus
 logmein-hamachi
+mbpfan-git
 microsoft-python-language-server
 mictray
 minikube-bin
@@ -63,15 +65,12 @@ python-pytesseract-git
 python-yarl-gns3
 python2-guidata
 python2-guiqwt
-python2-neovim
 python2-pythonqwt
-python2-usbrevue
 python35
 python36
 q
 quicksynergy
 restic-git
-ripcord
 ripgrep-git
 rofi-dmenu
 rofi-greenclip

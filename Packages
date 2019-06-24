@@ -66,6 +66,7 @@ ca-certificates-mozilla
 cdrtools
 cgmanager
 cmatrix
+cms-few
 composer
 compton
 coreutils
@@ -173,6 +174,7 @@ gnuradio
 gnuradio-companion
 gnuradio-osmosdr
 go
+gobuster
 gparted
 gpg-crypter
 gqrx
@@ -382,6 +384,7 @@ python-pip
 python-progressbar
 python-pycryptodome
 python-pyjwt
+python-pysocks
 python-pywal
 python-ropper
 python-scruffington
@@ -390,6 +393,7 @@ python-uncompyle6
 python-unicorn
 python-virtualenv
 python-xdg
+python2-binplist
 python2-construct
 python2-pandas
 python2-pip
@@ -406,7 +410,6 @@ python2-xmltodict
 qemu
 qemu-arch-extra
 qt5-charts
-qutebrowser
 radamsa
 ranger
 rclone
@@ -542,6 +545,7 @@ wireshark-qt
 wirouter-keyrec
 wkhtmltopdf
 wlan2eth
+wordlistctl
 wpa-bruteforcer
 wpa2-halfhandshake-crack
 wpa_supplicant

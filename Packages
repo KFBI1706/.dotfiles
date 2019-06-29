@@ -189,6 +189,8 @@ grep
 groff
 gtk-doc
 gvfs-afc
+gvfs-gphoto2
+gvfs-mtp
 gzip
 hash-extender
 hashcat
@@ -298,6 +300,7 @@ mpv
 msmtp
 mtd-utils
 mtools
+mtpfs
 mtr
 mtscan
 nano

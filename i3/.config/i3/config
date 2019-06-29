@@ -180,10 +180,7 @@ assign [class="Gcr-prompter"] $ws2
 for_window [class="Gcr-prompter"] move position 0 px 0 px
 for_window [class="^.*"] border pixel $border_width
 for_window [class="albert"] border pixel 0
-for_window [class="Yad"] floating enable
-#no focus
-#no_focus [class=".*"]
-#preventing slack from stealing focus upon restarts
+for_window [class="Yad"] floating enable #no focus #no_focus [class=".*"] #preventing slack from stealing focus upon restarts
 #focus_on_window_activation none
 #no_focus [tiling]
 
@@ -242,9 +239,9 @@ exec_always --no-startup-id /home/kb/Projects/scripts/dunst.sh
 exec_always --no-startup-id sleep 30 && ~/Projects/scripts/restartApps.sh;
 #keyboard config
 exec_always --no-startup-id ~/Projects/scripts/keyboardSetup.sh
-bindsym --release $Mod+apostrophe    exec --no-startup-id "sleep 0.1; xdotool key U00E6"
-bindsym --release $Mod+Shift+apostrophe    exec --no-startup-id "sleep 0.1 xdotool key U1D01"
-bindsym --release $Mod+semicolon     exec --no-startup-id "sleep 0.1; xdotool key U00F8"
-bindsym --release $Mod+Shift+semicolon     exec --no-startup-id "sleep 0.1; xdotool key U00D8"
-bindsym --release $Mod+bracketleft   exec --no-startup-id "sleep 0.1; xdotool key U00E5"
-bindsym --release $Mod+Shift+bracketleft   exec --no-startup-id "sleep 0.1; xdotool key U00E5"
+bindsym --release $altMod+apostrophe    exec --no-startup-id "sleep 0.1; xdotool key U00E6"
+bindsym --release $altMod+Shift+apostrophe    exec --no-startup-id "sleep 0.1; xdotool key U00C6"
+bindsym --release $altMod+o     exec --no-startup-id "sleep 0.1; xdotool key U00F8"
+bindsym --release $altMod+Shift+o     exec --no-startup-id "sleep 0.1; xdotool key U00D8"
+bindsym --release $altMod+a   exec --no-startup-id "sleep 0.1; xdotool key U00E5"
+bindsym --release $altMod+Shift+a   exec --no-startup-id "sleep 0.1; xdotool key U00C5"

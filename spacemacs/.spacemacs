@@ -333,8 +333,8 @@ you should place your code here."
   (setq org-bullets-bullet-list '("◎" "❍" "◉" "❑" "⬜" "▫" "▲" "▶"))
 
   (setq org-todo-keywords
-        (quote ((sequence "☛ TODO(t)" "NEXT(n)" "IN_PROGRESS(i)" "|" "✔ DONE(d)")
-                (sequence "⚑ WAITING(w@/)" "HOLD(h@/)" "|" "✘ CANCELLED(c@/)"))))
+        (quote ((sequence "TODO(t)" "NEXT(n)" "IN_PROGRESS(i)" "|" "DONE(d)")
+                (sequence "WAITING(w@/)" "HOLD(h@/)" "|" "CANCELLED(c@/)"))))
 
   )
 

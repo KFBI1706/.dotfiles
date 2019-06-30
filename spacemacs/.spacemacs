@@ -333,28 +333,25 @@ you should place your code here."
   (setq org-bullets-bullet-list '("◎" "❍" "◉" "❑" "⬜" "▫" "▲" "▶"))
 
   (setq org-todo-keywords
-        (quote ((sequence "☛ TODO(t)" "IN_PROGRESS(i)" "|" "✔ DONE(d)")
+        (quote ((sequence "☛ TODO(t)" "NEXT(n)" "IN_PROGRESS(i)" "|" "✔ DONE(d)")
                 (sequence "⚑ WAITING(w@/)" "HOLD(h@/)" "|" "✘ CANCELLED(c@/)"))))
 
   )
 
 (setq org-capture-templates '(("t" "Todo [inbox]" entry
-                               (file+headline "~/Projects/org/gtd/inbox.org" "Tasks")
-                               "* TODO %i%?")
-                              ("s" "Todo [someday]" entry
-                               (file+headline "~/Projects/org/gtd/someday.org" "Ideas")
+                               (file+headline "~/Dropbox/org/inbox.org" "Tasks")
                                "* TODO %i%?")
                               ("T" "Tickler" entry
-                               (file+headline "~/Projects/org/gtd/tickler.org" "Tickler")
+                               (file+headline "~/Dropbox/org/tickler.org" "Tickler")
                                "* %i%? \n %U")))
 (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w) RUNNING(t) BACK(t) IDEA(t)" "|" "DONE(d)" "CANCELLED(c)")))
 
 
 (global-visual-line-mode 1) ; wrap line by default
 (setq org-refile-targets '((org-agenda-files . (:maxlevel . 4))
-                           ("~/Projects/org/gtd/gtd.org" :maxlevel . 3)
-                           ("~/Projects/org/gtd/someday.org" :level . 1)
-                           ("~/Projects/org/gtd/tickler.org" :maxlevel . 2)
+                           ("~/Dropbox/org/gtd.org" :maxlevel . 3)
+                           ("~/Dropbox/org/someday.org" :level . 1)
+                           ("~/Dropbox/org/tickler.org" :maxlevel . 2)
                            )) ; set refile targets
 (setq org-agenda-start-on-weekday nil) ; org-agenda view starts today and +7
 

@@ -355,6 +355,8 @@ you should place your code here."
                            )) ; set refile targets
 (setq org-agenda-start-on-weekday nil) ; org-agenda view starts today and +7
 
+(setq vc-follow-symlinks t)
+
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-variables

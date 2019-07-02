@@ -28,7 +28,6 @@ google-cloud-sdk
 gotop-bin
 hadolint-bin
 hexdiff
-hopper
 hunspell-nb
 hyperfine
 i3-gnome
@@ -80,6 +79,7 @@ quicksynergy
 restic-git
 rofi-dmenu
 rofi-greenclip
+ropgadget2
 rustsym
 scalpel-git
 searchsploit

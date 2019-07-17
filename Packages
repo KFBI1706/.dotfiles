@@ -613,6 +613,7 @@ xorg-setxkbmap
 xorg-smproxy
 xorg-x11perf
 xorg-xbacklight
+xorg-xclock
 xorg-xcmsdb
 xorg-xcursorgen
 xorg-xdpyinfo

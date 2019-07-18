@@ -6,4 +6,4 @@ gnome-3-26-1604    3.26.0.20190705  90    stable    canonical*    -
 gtk-common-themes  0.1-22-gab0a26b  1313  stable    canonical*    -
 heroku                              3776  stable    heroku*       broken
 postman            6.7.1            81    stable    postman-inc*  -
-slack              3.4.2            14    stable    slack*        classic
+slack              4.0.0            15    stable    slack*        classic

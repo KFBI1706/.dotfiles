@@ -496,6 +496,7 @@ task
 tcpdump
 tcpflow
 termite
+terraform
 tesseract
 tesseract-data-eng
 tesseract-data-nor

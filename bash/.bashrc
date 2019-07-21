@@ -71,7 +71,7 @@ function peek {
     tmux split-window -p 33 "$EDITOR" "$@"
 }
 
-PATH="/home/kb/.bin:/home/kb/.cargo/bin:/home/kb/.local/bin:$PATH"
+PATH="$HOME/.bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 #custom functions
@@ -84,7 +84,7 @@ fi
 export GOPATH=$HOME/Projects/go
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 export PATH=$PATH:/snap/bin
-#export PATH="/home/kb/.yarn/bin:$PATH"
+#export PATH="$HOME/.yarn/bin:$PATH"
 export EDITOR=vim
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude node_modules'
 

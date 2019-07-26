@@ -8,6 +8,7 @@ airpwn
 alacritty
 albert
 alsa-utils
+androbugs
 android-apktool
 android-sdk-platform-tools
 android-udev
@@ -427,6 +428,7 @@ python2-selenium
 python2-vine
 python2-virtualenv
 python2-xmltodict
+qark
 qemu
 qemu-arch-extra
 qt5-charts

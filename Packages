@@ -241,6 +241,8 @@ jdk7-openjdk
 jfsutils
 jhead
 john
+jre11-openjdk
+jre11-openjdk-headless
 killerbee
 kismet
 kismet-earth

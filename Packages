@@ -97,6 +97,7 @@ dex2jar
 dfu-util
 dhclient
 dhcpcd
+dhcping
 dialog
 diffutils
 dirb

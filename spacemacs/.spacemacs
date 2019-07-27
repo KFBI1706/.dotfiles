@@ -345,6 +345,7 @@ you should place your code here."
                               ("T" "Tickler" entry
                                (file+headline "~/Dropbox/org/tickler.org" "Tickler")
                                "* %i%? \n %U")))
+
 (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w) RUNNING(t) BACK(t) IDEA(t)" "|" "DONE(d)" "CANCELLED(c)")))
 
 

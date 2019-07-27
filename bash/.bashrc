@@ -1,3 +1,4 @@
+#history
 HISTSIZE=-1 HISTFILESIZE=-1
 HISTIGNORE='ls:bg:fg:history'
 export HISTCONTROL=ignoredups:erasedups

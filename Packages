@@ -41,6 +41,7 @@ avr-libc
 aws-cli
 baobab
 bash
+bash-completion
 bat
 batctl
 batman-adv

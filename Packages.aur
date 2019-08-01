@@ -29,7 +29,6 @@ gotop-bin
 hadolint-bin
 hexdiff
 hunspell-nb
-hyperfine
 i3-gnome
 icu63
 inxi
@@ -90,7 +89,6 @@ spectrumyzer
 speedtest-cli-git
 stegsnow
 telegram-purple
-tmate
 tripwire-git
 ttf-google-fonts-git
 ttf-merriweather

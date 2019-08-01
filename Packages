@@ -216,6 +216,7 @@ hub
 hubbit-sniffer
 hwk
 hydra
+hyperfine
 i3-gaps
 i3blocks
 i3lock
@@ -528,6 +529,7 @@ tigervnc
 timegen
 tk
 tldr
+tmate
 tmux
 torsocks
 traceroute

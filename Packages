@@ -200,6 +200,7 @@ hash-extender
 hashcat
 hashcat-utils
 hashpump
+haskell-diff
 haskell-splitmix
 hcxtools
 hdf5

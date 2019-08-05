@@ -2,7 +2,7 @@ Name               Version          Rev   Tracking  Publisher     Notes
 code               2213894e         11    stable    vscode*       classic
 core               16-2.39.3        7270  stable    canonical*    core
 core18             20190709         1066  stable    canonical*    base
-gnome-3-26-1604    3.26.0.20190705  90    stable    canonical*    -
+gnome-3-26-1604                     90    stable    canonical*    broken
 gtk-common-themes  0.1-22-gab0a26b  1313  stable    canonical*    -
 heroku             v7.27.1          3784  stable    heroku*       classic
 postman            6.7.1            81    stable    postman-inc*  -

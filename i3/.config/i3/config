@@ -155,6 +155,8 @@ bindsym XF86AudioPrev exec "mpc prev ; pkill -RTMIN+10 i3blocks"
 bindsym XF86KbdBrightnessUp exec kb-light.py + 20
 bindsym XF86KbdBrightnessDown exec kb-light.py - 20
 #Power
+bindsym XF86PowerOff exec zenity --question --text "Power off?" --default-cancel
+
 #really weird hack where the i3lock screen is shown on the next workspace switch, so i just do a quick workspace switch after i3lock has exited
 bindsym $mod+BackSpace exec i3lock -c 44bbff; workspace back_and_forth; focus;workspace back_and_forth;
 #Brightness

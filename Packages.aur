@@ -69,6 +69,7 @@ python-sphinx-issues
 python-yarl-gns3
 python2-guidata
 python2-guiqwt
+python2-pandas
 python2-pythonqwt
 python35
 python36
@@ -104,6 +105,5 @@ tuxboot
 ubridge
 unetbootin
 virtualbox-ext-oracle
-watchman
 woeusb
 yad

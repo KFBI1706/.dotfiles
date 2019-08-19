@@ -423,7 +423,6 @@ python-virtualenv
 python-xdg
 python2-binplist
 python2-construct
-python2-pandas
 python2-pip
 python2-pplpy
 python2-pyelftools
@@ -567,6 +566,7 @@ vte3
 w3m
 waidps
 watchexec
+watchman
 wavemon
 wepbuster
 wfuzz

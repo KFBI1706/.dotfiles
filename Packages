@@ -508,6 +508,7 @@ terraform
 tesseract
 tesseract-data-eng
 tesseract-data-nor
+testssl.sh
 texinfo
 texlive-bibtexextra
 texlive-core

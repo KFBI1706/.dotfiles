@@ -1,5 +1,4 @@
 [alias]
-    md = "!f() { git log origin/$1 ^origin --pretty=format:'    %h %s - %an'; }; f"
 [core]
     editor = 'nvim'
 [user]
@@ -24,6 +23,7 @@
 [push]
     default = simple
 [alias]
+    b = branch
     st = status
     ci = commit --verbose
     co = checkout
@@ -31,5 +31,8 @@
     lg = log -p
     ap = add --patch
     track = add -N
+    md = "!f() { git log origin/$1 ^origin --pretty=format:'    %h %s - %an'; }; f"
+    ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+
 [credential]
 	helper = cache

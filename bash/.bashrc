@@ -133,7 +133,7 @@ drm () {
 
 dri() {
     # docker - remove all images
-    docker rmi $(docker images -q)
+    docker rmi -f $(docker images -q)
 }
 
 dka() {

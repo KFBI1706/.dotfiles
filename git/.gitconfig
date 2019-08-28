@@ -32,6 +32,7 @@
     ap = add --patch
     track = add -N
     md = "!f() { git log origin/$1 ^origin --pretty=format:'    %h %s - %an'; }; f"
+    dog = log --pretty=format:'%C(cyan ul)%h%Creset - %C(yellow)%ad%Creset -%Cred%d %Cgreen%s%C(magenta) [%cn]' --decorate --date=relative --graph
     ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 
 [credential]

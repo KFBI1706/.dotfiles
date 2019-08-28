@@ -239,6 +239,7 @@ exec_always --no-startup-id ~/Projects/scripts/autorandr.sh;
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec_always --no-startup-id /home/kb/Projects/scripts/dunst.sh
 #exec_always --no-startup-id unproductive | tee -a ~/activity-log.txt
+exec_always --no-startup-id rescuetime
 
 exec_always --no-startup-id sleep 30 && ~/Projects/scripts/restartApps.sh;
 #keyboard config

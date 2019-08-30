@@ -1,0 +1,40 @@
+set surround
+set clipboard+=unnamed
+
+let mapleader = " "
+
+map <Leader>s :action ReformatCode<CR>:w<CR>
+
+map <Leader>i :action GotoImplementation<CR>
+map <Leader>m :action GotoImplementation<CR>
+map <Leader>d :action GotoImplementation<CR>
+
+map <Leader>f :action FindUsages<CR>
+map <leader>F :action ReformatCode<CR>
+
+map <Leader>g :action Generate<CR>
+
+map <Leader>w :action JumpToLastWindow<CR>
+map <Leader>r :action Run<CR>
+
+map <leader>v :action SplitVertically<CR>
+map <leader>b :action SplitHorizontally<CR>
+
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
+
+noremap <leader>R :source ~/.ideavimrc<CR>
+
+imap <C-v> <Esc>:action $Paste<CR>
+
+map <Leader>[ :action EditorCodeBlockStart<CR>
+map <Leader>] :action EditorCodeBlockEnd<CR>
+
+map <C-s> :action EditorSelectWord<CR>
+
+map <Leader>l <C-S><F12>
+
+imap <C-l> <Esc>bgUawea
+

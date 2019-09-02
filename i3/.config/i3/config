@@ -198,7 +198,7 @@ bindsym --release $mod+Shift+x exec xkill
 bindsym --release $mod+n exec /home/kb/Projects/scripts/screenshot.sh
 bindsym --release $mod+Shift+n exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
 #background
-exec_always --no-startup-id "feh --bg-scale --randomize ~/Pictures/aenmiart/*"
+exec_always --no-startup-id "feh --bg-scale --randomize ~/Pictures/aenmiart4k/*"
 #script shortcuts TODO: script variable
 bindsym $mod+Shift+p exec ~/Projects/scripts/selectScreen.sh
 bindsym $mod+Shift+s exec ~/Projects/scripts/workspaceSwitch.py

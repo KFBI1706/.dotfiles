@@ -1,7 +1,7 @@
 Name               Version          Rev   Tracking  Publisher              Notes
 code               f06011ac         13    stable    vscode*                classic
 core               16-2.40          7396  stable    canonical*             core
-core18             20190723         1074  stable    canonical*             base
+core18             20190827         1098  stable    canonical*             base
 gnome-3-26-1604    3.26.0.20190705  90    stable    canonical*             -
 gtk-common-themes  0.1-22-gab0a26b  1313  stable    canonical*             -
 heroku             v7.29.0          3799  stable    heroku*                classic

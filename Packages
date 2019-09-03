@@ -407,12 +407,12 @@ python-llfuse
 python-lxml
 python-lz4
 python-matplotlib
-python-neovim
 python-numpy
 python-pip
 python-progressbar
 python-pycryptodome
 python-pyjwt
+python-pynvim
 python-pysocks
 python-pywal
 python-ropper

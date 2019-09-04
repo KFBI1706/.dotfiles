@@ -35,6 +35,7 @@ autoconf
 autofs
 automake
 autossh
+avaloniailspy
 avr-binutils
 avr-gcc
 avr-libc
@@ -431,6 +432,7 @@ python-virtualenv
 python-xdg
 python2-binplist
 python2-construct
+python2-frida-tools
 python2-pip
 python2-pplpy
 python2-pyelftools

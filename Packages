@@ -156,6 +156,7 @@ freeglut
 freeimage
 freerdp
 freewifi
+frida
 fuzzap
 fzf
 g72x++
@@ -403,6 +404,8 @@ python-anytree
 python-cookiecutter
 python-flask-sqlalchemy
 python-fonttools
+python-frida
+python-frida-tools
 python-future
 python-gmpy2
 python-keyring

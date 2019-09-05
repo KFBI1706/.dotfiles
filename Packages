@@ -418,6 +418,7 @@ python-numpy
 python-pip
 python-progressbar
 python-pycryptodome
+python-pyenchant
 python-pyjwt
 python-pynvim
 python-pysocks

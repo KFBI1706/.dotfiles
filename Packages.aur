@@ -62,6 +62,7 @@ pulseaudio-modules-bt-git
 python-ana-git
 python-archinfo-git
 python-cooldict-git
+python-imutils
 python-mulpyplexer-git
 python-multidict-gns3
 python-prompt_toolkit-gns3

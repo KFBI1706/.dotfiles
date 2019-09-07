@@ -200,6 +200,7 @@ gvfs-afc
 gvfs-gphoto2
 gvfs-mtp
 gzip
+handbrake
 hash-extender
 hashcat
 hashcat-utils

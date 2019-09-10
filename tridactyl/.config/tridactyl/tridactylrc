@@ -30,8 +30,13 @@
 " NB: If you want "vim-like" behaviour where removing a line from
 " here makes the setting disappear, uncomment the line below.
 
-"sanitise tridactyllocal tridactylsync
+sanitise tridactyllocal tridactylsync
 
+
+colorscheme summerfruit-dark
+
+set hintfiltermode vimperator
+set hintchars 1234567890
 "
 " Binds
 "
@@ -85,7 +90,7 @@ set searchurls.julia https://www.google.com/search?q=site:http://docs.julialang.
 "
 
 " set editorcmd to suckless terminal, or use the defaults on other platforms
-js tri.browserBg.runtime.getPlatformInfo().then(os=>{const editorcmd = os.os=="linux" ? "st vim" : "auto"; tri.config.set("editorcmd", editorcmd)})
+js tri.browserBg.runtime.getPlatformInfo().then(os=>{const editorcmd = os.os=="linux" ? "st nvim" : "auto"; tri.config.set("editorcmd", editorcmd)})
 
 " set profile dir on Windows
 jsb browser.runtime.getPlatformInfo().then(os=>{const profiledir = os.os=="win" ? "C:\\Users\\olie\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\gwm76nmk.default" : "auto"; tri.config.set("profiledir", profiledir)})

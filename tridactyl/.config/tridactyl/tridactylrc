@@ -64,10 +64,12 @@ bindurl www.google.com f hint -Jc .rc > .r > a
 bindurl www.google.com F hint -Jtc .rc>.r>a
 
 " Allow Ctrl-a to select all in the commandline
-unbind --mode=ex <C-a>
+unbind <C-a>
 
 " Allow Ctrl-c to copy in the commandline
-unbind --mode=ex <C-c>
+unbind <C-c>
+
+unbind <C-f>
 
 " Handy multiwindow/multitasking binds
 bind gd tabdetach

@@ -72,6 +72,7 @@ ca-certificates-mozilla
 caprine
 cdrtools
 cgmanager
+chaosreader
 chromium
 cmatrix
 composer
@@ -515,6 +516,7 @@ systemd-sysvcompat
 tar
 task
 tcpdump
+tcpextract
 tcpflow
 telegram-desktop
 terminus-font

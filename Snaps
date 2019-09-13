@@ -6,5 +6,5 @@ gnome-3-26-1604    3.26.0.20190830  92    stable    canonical*             -
 gtk-common-themes  0.1-22-gab0a26b  1313  stable    canonical*             -
 heroku             v7.29.0          3799  stable    heroku*                classic
 postman            6.7.1            81    stable    postman-inc*           -
-powershell         6.2.2            36    stable    microsoft-powershell*  classic
+powershell         6.2.3            39    stable    microsoft-powershell*  classic
 slack              4.0.2            17    stable    slack*                 classic

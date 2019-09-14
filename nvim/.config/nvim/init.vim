@@ -21,7 +21,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
-Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}
+"Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'zchee/deoplete-go', { 'do': 'make'}
 let g:deoplete#enable_at_startup = 1

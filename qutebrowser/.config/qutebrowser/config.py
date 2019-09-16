@@ -22,12 +22,14 @@ c.aliases = {
     "pass": "spawn -d pass -c",
 }
 
+config.bind(',p', 'spawn --userscript qute-lastpass')
+
 
 monospace = "14px 'Hack'"
 
 c.editor.command = ['alacritty', '-e', 'nvim', '{}']
 
-c.fonts.hints = "16px 'Hack'"
+c.fonts.hints = "18px 'Hack'"
 
 # Font used in the completion categories.
 c.fonts.completion.category = f"bold {monospace}"

@@ -21,8 +21,7 @@ c.aliases = {
     "mpv": "spawn -d mpv --force-window=immediate {url}",
     "pass": "spawn -d pass -c",
 }
-
-config.bind(',p', 'spawn --userscript qute-lastpass')
+config.bind(' p', 'spawn --userscript qute-pass --dmenu-invocation dmenu')
 
 
 monospace = "14px 'Hack'"

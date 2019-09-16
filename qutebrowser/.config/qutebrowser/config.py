@@ -23,7 +23,6 @@ c.aliases = {
 }
 config.bind(' p', 'spawn --userscript qute-pass --dmenu-invocation dmenu')
 
-
 monospace = "14px 'Hack'"
 
 c.editor.command = ['alacritty', '-e', 'nvim', '{}']

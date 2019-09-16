@@ -10,3 +10,4 @@ c.url.searchengines = {
    "w": 'https://en.wikipedia.org/wiki/={}',
    "y": 'https://www.youtube.com/results?search_query={}',
 }
+c.fonts.hints = "bold 16px 'Hack'"

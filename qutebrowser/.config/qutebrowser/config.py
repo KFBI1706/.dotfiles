@@ -1,3 +1,6 @@
+
+c.colors.hints.fg = "black"
+
 c.tabs.position = "bottom"
 c.completion.shrink = True
 c.url.searchengines = {
@@ -11,9 +14,20 @@ c.url.searchengines = {
     "y": 'https://www.youtube.com/results?search_query={}',
 }
 
-monospace = "16px 'Hack'"
+c.aliases = {
+    "q": "tab-close",
+    "w": "session-save",
+    "wq": "quit --save",
+    "mpv": "spawn -d mpv --force-window=immediate {url}",
+    "pass": "spawn -d pass -c",
+}
 
-c.fonts.hints = monospace
+
+monospace = "14px 'Hack'"
+
+c.editor.command = ['alacritty', '-e', 'nvim', '{}']
+
+c.fonts.hints = "16px 'Hack'"
 
 # Font used in the completion categories.
 c.fonts.completion.category = f"bold {monospace}"
@@ -48,9 +62,6 @@ c.fonts.statusbar = monospace
 # Font used in the tab bar.
 c.fonts.tabs = monospace
 
-# Font used for the hints.
-c.fonts.hints = "bold 13px 'DejaVu Sans Mono'"
-
 # Chars used for hint strings.
 c.hints.chars = "asdfghjklie"
 
@@ -64,3 +75,5 @@ c.input.insert_mode.auto_load = True
 c.url.start_pages = "https://news.ycombinator.com"
 
 c.zoom.default = '175%'
+
+c.auto_save.session = True

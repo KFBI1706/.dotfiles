@@ -44,6 +44,7 @@ Plug 'patstockwell/vim-monokai-tasty'
 Plug 'tomasr/molokai'
 Plug 'posva/vim-vue'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'mbbill/undotree'
 " c
 Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 " go

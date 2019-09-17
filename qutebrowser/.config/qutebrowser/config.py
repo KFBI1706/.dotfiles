@@ -10,7 +10,7 @@ c.url.searchengines = {
     "g": "https://github.com/search?q={}",
     "d": 'https://duckduckgo.com/?q={}',
     "c": 'https://boards.4chan.org/{}/',
-    "r": 'https://www.old.reddit.com/r/{}',
+    "sr": 'https://www.old.reddit.com/r/{}',
     "w": 'https://en.wikipedia.org/wiki/={}',
     "y": 'https://www.youtube.com/results?search_query={}',
 }

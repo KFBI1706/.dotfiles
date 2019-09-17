@@ -1,4 +1,5 @@
 
+c.colors.hints.bg = "yellow"
 c.colors.hints.fg = "black"
 
 c.tabs.position = "bottom"
@@ -22,12 +23,13 @@ c.aliases = {
     "pass": "spawn -d pass -c",
 }
 config.bind(' p', 'spawn --userscript qute-pass --dmenu-invocation dmenu')
+config.bind(' k', "spawn bash -c 'feh --zoom fill ~/Pictures/qutebrowser-cheatsheet.png'")
 
 monospace = "14px 'Hack'"
 
 c.editor.command = ['alacritty', '-e', 'nvim', '{}']
 
-c.fonts.hints = "18px 'Hack'"
+c.fonts.hints = "bold 20px 'Hack'"
 
 # Font used in the completion categories.
 c.fonts.completion.category = f"bold {monospace}"

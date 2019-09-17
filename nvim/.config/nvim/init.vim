@@ -121,6 +121,14 @@ set nobackup
 set noswapfile
 set undofile undodir=~/.vim/undo undolevels=999999 " undo options
 
+if has("persistent_undo")
+    set undodir=~/.vim/undodir
+    set undofile
+endif
+
+map <leader>U :UndotreeToggle<CR>
+
+
 set fileformats=unix,dos,mac
 
 if exists('$SHELL')

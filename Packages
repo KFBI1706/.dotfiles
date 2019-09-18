@@ -372,6 +372,9 @@ pasystray
 patch
 pavucontrol
 pciutils
+pdf-parser
+pdfid
+peepdf
 pepper-flash
 perl
 perl-alien-build

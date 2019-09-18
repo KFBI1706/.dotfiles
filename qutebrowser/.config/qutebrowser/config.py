@@ -2,6 +2,9 @@
 c.colors.hints.bg = "yellow"
 c.colors.hints.fg = "black"
 
+config.bind("gi", "hint inputs")
+config.bind("<ctrl+shift+c>", "inspector")
+
 c.tabs.position = "bottom"
 c.completion.shrink = True
 c.url.searchengines = {
@@ -27,6 +30,9 @@ c.aliases = {
 }
 config.bind(' p', 'spawn --userscript qute-pass --dmenu-invocation dmenu')
 config.bind(' k', "spawn bash -c 'feh --zoom fill ~/Pictures/qutebrowser-cheatsheet.png'")
+
+c.scrolling.bar = "always"
+c.content.user_stylesheets = ["user.css"]
 
 monospace = "14px 'Hack'"
 

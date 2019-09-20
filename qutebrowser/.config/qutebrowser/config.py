@@ -31,6 +31,8 @@ c.aliases = {
 config.bind(' p', 'spawn --userscript qute-pass --dmenu-invocation dmenu')
 config.bind(' k', "spawn bash -c 'feh --zoom fill ~/Pictures/qutebrowser-cheatsheet.png'")
 
+c.qt.args = ["autoplay-policy=user-gesture-required"]
+
 c.scrolling.bar = "always"
 c.content.user_stylesheets = ["user.css"]
 

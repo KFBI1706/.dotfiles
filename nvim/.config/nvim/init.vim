@@ -53,6 +53,14 @@ Plug 'vim-scripts/go.vim', {'for': ['go']}
 Plug 'buoto/gotests-vim', {'for': ['go']}
 Plug 'jodosha/vim-godebug', {'for': ['go']}
 "Plug 'stamblerre/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+"
+"Task / Wiki
+Plug 'vimwiki/vimwiki'
+Plug 'tbabej/taskwiki'
+""optional
+Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'majutsushi/tagbar'
+Plug 'blindFS/vim-taskwarrior'
 
 call plug#end()
 

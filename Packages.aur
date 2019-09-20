@@ -73,6 +73,7 @@ python-mulpyplexer-git
 python-multidict-gns3
 python-prompt_toolkit-gns3
 python-pytesseract-git
+python-tasklib
 python-yarl-gns3
 python2-guidata
 python2-guiqwt

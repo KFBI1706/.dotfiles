@@ -65,6 +65,7 @@ pdfminer
 pktstat
 profile-cleaner
 profile-sync-daemon
+protobuf-go
 pulseaudio-equalizer-ladspa-git
 pulseaudio-modules-bt-git
 python-ana-git

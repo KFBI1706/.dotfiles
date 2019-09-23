@@ -111,8 +111,9 @@ let g:LanguageClient_rootMarkers = {
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'go': ['bingo'],
-    \ 'python': ['/usr/bin/mspyls'],
     \ 'vue': ['vls']}
+
+"    \ 'python': ['/usr/bin/mspyls'],
 nmap <buffer> gd <plug>(lsp-definition)
 
 nmap <silent> <C-p> <Plug>(lsp-previous-error)

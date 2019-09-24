@@ -38,8 +38,11 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'EinfachToll/DidYouMean'   "Vim plugin which asks for the right file to open.
 Plug 'neomake/neomake'
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
+"Plug 'Shougo/neosnippet.vim'
+"Plug 'Shougo/neosnippet-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'tomasr/molokai'
 Plug 'posva/vim-vue'
@@ -519,19 +522,29 @@ set completeopt+=noselect
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 let g:deoplete#sources#go#source_importer = 1
 
-imap <expr><TAB>
-	 \ neosnippet#expandable_or_jumpable() ?
-	 \    "\<Plug>(neosnippet_expand_or_jump)" :
-         \ 	  pumvisible() ? "\<C-n>" : "\<TAB>"
 ""snipets
-let g:neosnippet#snippets_directory = ['~/.config/nvim/snippets/']
-let g:go_snippet_engine = "neosnippet"
-imap <C-e>     <Plug>(neosnippet_expand_or_jump)
-smap <C-e>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-e>     <Plug>(neosnippet_expand_target)
+"""imap <expr><TAB>
+"""	 \ neosnippet#expandable_or_jumpable() ?
+"""	 \    "\<Plug>(neosnippet_expand_or_jump)" :
+"""         \ 	  pumvisible() ? "\<C-n>" : "\<TAB>"
+"""let g:neosnippet#snippets_directory = ['~/.config/nvim/snippets/']
+"""let g:go_snippet_engine = "neosnippet"
+"""imap <C-e>     <Plug>(neosnippet_expand_or_jump)
+"""smap <C-e>     <Plug>(neosnippet_expand_or_jump)
+"""xmap <C-e>     <Plug>(neosnippet_expand_target)
+"""
+"""smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+"""\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+nmap <leader>ue :UltiSnipsEdit<cr>
 
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+let g:UltiSnipsExpandTrigger="<c-e>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/UltiSnips', 'UltiSnips']
 
 " For conceal markers.
 if has('conceal')

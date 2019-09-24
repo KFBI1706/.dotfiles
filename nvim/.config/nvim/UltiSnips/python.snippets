@@ -1,0 +1,31 @@
+snippet fmatter
+---
+title: $1
+date: ${2:`date +%Y/%m/%d` 07:30 MST}
+tags: ${3: coding}
+---
+
+$0
+endsnippet
+
+snippet pwn
+from pwn import *
+from pwnlib.util.packing import *
+
+local = True
+
+elf = ELF("$1")
+
+if local:
+	r = elf.process()
+	libc = ELF('${2:/usr/lib32/libc.so.6}')
+else:
+	r = remote("remote",69)
+	libc = ELF('/usr/lib32/libc.so.6')
+
+
+
+$0
+
+endsnippet
+

@@ -287,6 +287,12 @@ imap <expr> <cr> pumvisible() ? deoplete#close_popup() : "\<cr>"
 ""source vim
 nnoremap <leader>R :source ~/.nvimrc<CR>:w<CR>
 
+
+augroup python
+    nnoremap <leader>r :w<CR> :silent exec "!chmod +x %"<CR> :!./%<CR>
+augroup END
+
+
 "Hide/show
 nnoremap <leader><esc> :let @/=''<cr>:noh<cr>       " clear search
 noremap <leader>`       :set relativenumber!<CR>

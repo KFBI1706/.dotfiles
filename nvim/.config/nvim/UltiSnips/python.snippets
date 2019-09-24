@@ -9,6 +9,8 @@ $0
 endsnippet
 
 snippet pwn
+
+#!/usr/bin/env python2
 from pwn import *
 from pwnlib.util.packing import *
 
@@ -20,12 +22,11 @@ if local:
 	r = elf.process()
 	libc = ELF('${2:/usr/lib32/libc.so.6}')
 else:
-	r = remote("remote",69)
-	libc = ELF('/usr/lib32/libc.so.6')
+	r = remote("${4:remote}",${5:69})
+	libc = ELF('${6:./libc}')
 
-
+print(r.recv())
 
 $0
-
 endsnippet
 

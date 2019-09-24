@@ -289,7 +289,7 @@ nnoremap <leader>R :source ~/.nvimrc<CR>:w<CR>
 
 
 augroup python
-    nnoremap <leader>r :w<CR> :silent exec "!chmod +x %"<CR> :!./%<CR>
+    nnoremap <leader>r :w<CR>:silent!chmod +x %<CR>:!./%<CR>
 augroup END
 
 

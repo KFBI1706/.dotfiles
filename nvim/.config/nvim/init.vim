@@ -26,7 +26,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'zchee/deoplete-go', { 'do': 'make'}
 let g:deoplete#enable_at_startup = 1
 Plug 'luochen1990/rainbow'
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 Plug 'sebdah/vim-delve'
 Plug 'lambdalisue/suda.vim'
 Plug 'whiteinge/diffconflicts'

@@ -81,6 +81,7 @@ python-yarl-gns3
 python2-guidata
 python2-guiqwt
 python2-pandas
+python2-pwntools
 python2-pythonqwt
 python35
 python36

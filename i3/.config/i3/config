@@ -143,6 +143,8 @@ bar {
 for_window [class=".*"] border pixel 1
 for_window [class="scratchpad"] floating enable, scratchpad show, move position center, resize set 1200 px 800 px;
 for_window [class="scratchpad"] move scratchpad;
+for_window [class="scratchpad"] sticky enable;
+
 bindsym $mod+t exec "~/Projects/scripts/restartApps.sh"; [class="scratchpad"] scratchpad show, move position center;
 #Audio keybinds
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +10%; pkill -RTMIN+1 i3blocks"

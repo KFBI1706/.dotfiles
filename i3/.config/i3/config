@@ -141,7 +141,7 @@ bar {
 }
 #exec_always --no-startup-id ~/Projects/scripts/polybar.sh &
 for_window [class=".*"] border pixel 1
-for_window [class="scratchpad"] floating enable, scratchpad show, move position center, resize set 1200 px 800 px;
+for_window [class="scratchpad"] floating enable, scratchpad show, move position center, resize set 1080 px 800 px;
 for_window [class="scratchpad"] move scratchpad;
 for_window [class="scratchpad"] sticky enable;
 

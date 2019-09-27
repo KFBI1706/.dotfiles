@@ -409,6 +409,7 @@ pulseeffects
 pwntools
 pyrit
 python-anytree
+python-cfscrape
 python-cookiecutter
 python-flask-sqlalchemy
 python-fonttools
@@ -423,6 +424,7 @@ python-lz4
 python-matplotlib
 python-numpy
 python-pip
+python-pipenv
 python-progressbar
 python-pycryptodome
 python-pyenchant

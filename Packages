@@ -57,6 +57,7 @@ binwalk
 bison
 blackarch-keyring
 bleah
+bliss
 blueman
 bluez-tools
 boopsuite
@@ -75,12 +76,18 @@ cgmanager
 chaosreader
 chromium
 cmatrix
+coin-or-cbc
+coin-or-cgl
+coin-or-clp
+coin-or-coinutils
+coin-or-osi
 composer
 compton
 coreutils
 corkscrew
 cower
 cowsay
+coxeter
 cpio
 cpupower
 create_ap
@@ -267,6 +274,7 @@ lib32-libcurl-gnutls
 lib32-libva
 lib32-vulkan-icd-loader
 lib32-vulkan-intel
+libfes
 libreoffice-fresh
 libtool
 libva-intel-driver
@@ -298,6 +306,7 @@ man-db
 man-pages
 mana
 mariadb-clients
+mcqd
 mdadm
 mdk3
 mesa
@@ -402,6 +411,7 @@ pngcheck
 polkit-gnome
 postgresql
 powertop
+primecount
 privoxy
 procps-ng
 psmisc
@@ -412,8 +422,12 @@ pyrit
 python-anytree
 python-cfscrape
 python-cookiecutter
+python-cvxopt
+python-cypari2
+python-cysignals
 python-flask-sqlalchemy
 python-fonttools
+python-fpylll
 python-frida
 python-frida-tools
 python-future
@@ -426,6 +440,8 @@ python-matplotlib
 python-numpy
 python-pip
 python-pipenv
+python-pkgconfig
+python-pplpy
 python-progressbar
 python-pycryptodome
 python-pyenchant
@@ -434,6 +450,8 @@ python-pynvim
 python-pysocks
 python-pywal
 python-ropper
+python-rpy2
+python-scipy
 python-scruffington
 python-selenium
 python-tldextract
@@ -463,6 +481,7 @@ qt5-charts
 qutebrowser
 radamsa
 ranger
+ratpoints
 rclone
 reaver
 reiserfsprogs
@@ -481,7 +500,6 @@ rsync
 rustup
 rxvt-unicode
 s-nail
-sagemath
 sbt
 scala
 screen
@@ -492,8 +510,10 @@ sed
 set
 setconf
 shadow
+shared_meataxe
 shellcheck
 simplify
+sirocco
 sl
 sleuthkit
 smartmontools
@@ -527,6 +547,7 @@ task
 tcpdump
 tcpextract
 tcpflow
+tdlib
 telegram-desktop
 terminus-font
 termite

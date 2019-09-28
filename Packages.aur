@@ -69,7 +69,6 @@ profile-sync-daemon
 protobuf-go
 pulseaudio-equalizer-ladspa-git
 pulseaudio-modules-bt-git
-pynac-python3
 python-ana-git
 python-archinfo-git
 python-cooldict-git

@@ -5,7 +5,7 @@ core18             20190904         1144  stable    canonical*             base
 discord            0.0.9            93    stable    snapcrafters           -
 gnome-3-26-1604    3.26.0.20190830  92    stable    canonical*             -
 gtk-common-themes  0.1-22-gab0a26b  1313  stable    canonical*             -
-heroku             v7.30.1          3808  stable    heroku*                classic
+heroku             v7.31.0          3816  stable    heroku*                classic
 postman            6.7.5            93    stable    postman-inc*           -
 powershell         6.2.3            39    stable    microsoft-powershell*  classic
 slack              4.0.2            17    stable    slack*                 classic

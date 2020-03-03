@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ -z $1 ]]; then
+    sudo docker run -it --rm -v "$(pwd):/data" --user="0:1000" dominicbreuker/stego-toolkit "/bin/bash"
+else
+    sudo docker run -it --rm -v "$(pwd):/data" --user="0:1000" dominicbreuker/stego-toolkit "$1"
+fi

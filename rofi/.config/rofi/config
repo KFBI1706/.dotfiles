@@ -1,5 +1,5 @@
 rofi.combi-modi:    window,drun,ssh
-rofi.font:          hack 14
+rofi.font:          FuraCode Nerd Font Mono 14
 rofi.modi:          combi
 rofi.terminal:  st
 rofi.theme: /usr/share/rofi/themes/glue_pro_blue.rasi

@@ -58,7 +58,7 @@ scrolling:
   # to allow mouse scrolling for applications like `man`.
   #
   # Specifying `0` will disable faux scrolling.
-  faux_multiplier: 3
+  # faux_multiplier: 3
 
   # Scroll to the bottom when new text is written to the terminal.
   auto_scroll: false
@@ -89,6 +89,7 @@ tabspaces: 8
 # Please see these resources for more information on how to use fontconfig:
 #   - https://wiki.archlinux.org/index.php/font_configuration#Fontconfig_configuration
 #   - file:///usr/share/doc/fontconfig/fontconfig-user.html
+
 font:
   # Normal (roman) font face
   normal:
@@ -109,7 +110,7 @@ font:
     #style: Italic
 
   # Point size
-  size: 7.0
+  size: 10.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.

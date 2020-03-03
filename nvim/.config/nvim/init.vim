@@ -16,17 +16,29 @@ if !filereadable(vimplug_exists)
 endif
 
 call plug#begin(expand('~/.vim/plugged'))
-"Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+
+" Semantic language support
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install()}}
+
+" Syntactic language support
+Plug 'cespare/vim-toml'
+Plug 'stephpy/vim-yaml'
+Plug 'rust-lang/rust.vim'
+"Plug 'fatih/vim-go'
+Plug 'dag/vim-fish'
+Plug 'godlygeek/tabular'
+"Plug 'plasticboy/vim-markdown'
+
+"Plug 'autozimu/LanguageClient-neovim', {
+"    \ 'branch': 'next',
+"    \ 'do': 'bash install.sh',
+"    \ }
 "Plug 'aurieh/discord.nvim', { 'do': ':UpdateRemotePlugins'}
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'zchee/deoplete-go', { 'do': 'make'}
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
 Plug 'luochen1990/rainbow'
-"Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 Plug 'sebdah/vim-delve'
 Plug 'lambdalisue/suda.vim'
 Plug 'whiteinge/diffconflicts'
@@ -34,8 +46,11 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'Raimondi/delimitMate'
+
+"Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
 Plug 'EinfachToll/DidYouMean'   "Vim plugin which asks for the right file to open.
 Plug 'neomake/neomake'
 "Plug 'Shougo/neosnippet.vim'
@@ -43,7 +58,7 @@ Plug 'neomake/neomake'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-Plug 'patstockwell/vim-monokai-tasty'
+"Plug 'patstockwell/vim-monokai-tasty'
 Plug 'tomasr/molokai'
 Plug 'posva/vim-vue'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -57,13 +72,13 @@ Plug 'buoto/gotests-vim', {'for': ['go']}
 Plug 'jodosha/vim-godebug', {'for': ['go']}
 "Plug 'stamblerre/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 "
-"Task / Wiki
-Plug 'vimwiki/vimwiki'
-Plug 'tbabej/taskwiki'
+""Task / Wiki
+"Plug 'vimwiki/vimwiki'
+"Plug 'tbabej/taskwiki'
 ""optional
 Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'majutsushi/tagbar'
-Plug 'blindFS/vim-taskwarrior'
+"Plug 'blindFS/vim-taskwarrior'
 
 call plug#end()
 
@@ -107,14 +122,14 @@ let mapleader=' '
 "" Enable hidden buffers
 set hidden
 
-let g:LanguageClient_rootMarkers = {
-        \ 'go': ['.git', 'go.mod'],
-        \ }
-"    \ 'go': ['gopls'],
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'go': ['bingo'],
-    \ 'vue': ['vls']}
+"let g:LanguageClient_rootMarkers = {
+"        \ 'go': ['.git', 'go.mod'],
+"        \ }
+""    \ 'go': ['gopls'],
+"let g:LanguageClient_serverCommands = {
+"    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+"    \ 'go': ['bingo'],
+"    \ 'vue': ['vls']}
 
 "    \ 'python': ['/usr/bin/mspyls'],
 nmap <buffer> gd <plug>(lsp-definition)
@@ -148,6 +163,46 @@ if exists('$SHELL')
 else
     set shell=/bin/sh
 endif
+
+
+  " Coc.nvim
+let g:coc_global_extensions = ['coc-rls', 'coc-emoji', 'coc-eslint', 'coc-prettier','coc-tsserver', 'coc-tslint', 'coc-tslint-plugin','coc-css', 'coc-json', 'coc-pyls', 'coc-yaml']
+
+" Better display for messages
+set cmdheight=2
+" Smaller updatetime for CursorHold & CursorHoldI
+set updatetime=300
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+" always show signcolumns
+set signcolumn=yes
+
+" Use `lp` and `ln` for navigate diagnostics
+nmap <silent> <leader>lp <Plug>(coc-diagnostic-prev)
+nmap <silent> <leader>ln <Plug>(coc-diagnostic-next)
+
+" Remap keys for gotos
+nmap <silent> <leader>ld <Plug>(coc-definition)
+nmap <silent> <leader>lt <Plug>(coc-type-definition)
+nmap <silent> <leader>li <Plug>(coc-implementation)
+nmap <silent> <leader>lf <Plug>(coc-references)
+
+" Remap for rename current word
+nmap <leader>lr <Plug>(coc-rename)
+
+" Use K for show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "*****************************************************************************
 "" Visual Settings
@@ -266,7 +321,7 @@ augroup END
 
 "" go build on save
 "autocmd BufWritePre *.go :GoBuild
-autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
+"autocmd BufWritePre *.go :call LanguageClient#textDocument_formatting_sync()
 "
 "remove whitespaces
 autocmd BufWritePre * %s/\s\+$//e
@@ -280,12 +335,9 @@ set autoread                                     " reload on external file chang
 "*****************************************************************************
 "" Mappings
 "*****************************************************************************
-" deoplete
-imap <expr> <tab>   pumvisible() ? "\<c-n>" : "\<tab>"
-imap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<tab>"
-imap <expr> <cr> pumvisible() ? deoplete#close_popup() : "\<cr>"
+
 ""source vim
-nnoremap <leader>R :source ~/.nvimrc<CR>:w<CR>
+nnoremap <leader>R :source ~/.config/nvim/init.vim<CR>:w<CR>
 
 
 augroup python
@@ -468,8 +520,8 @@ noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
 
 "" Resize windows
-nnoremap <silent> <Leader>J :exe "resize " . (winheight(0) + 20)<CR>
-nnoremap <silent> <Leader>K :exe "resize " . (winheight(0) - 20)<CR>
+nnoremap <silent> <Leader>J :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> <Leader>K :exe "resize " . (winheight(0) * 2/3)<CR>
 nnoremap <silent> <Leader>H :exe "vertical resize " . (winwidth(0) - 30)<CR>
 nnoremap <silent> <Leader>L :exe "vertical resize " . (winwidth(0) + 30)<CR>
 "" Reset window sizes
@@ -528,6 +580,25 @@ set completeopt+=noselect
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 let g:deoplete#sources#go#source_importer = 1
 
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+" Use <c-.> to trigger completion.
+inoremap <silent><expr> <c-.> coc#refresh()
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+" inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Or use `complete_info` if your vim support it, like:
+inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+
+
+
 ""snipets
 """imap <expr><TAB>
 """	 \ neosnippet#expandable_or_jumpable() ?
@@ -553,9 +624,9 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories = ['~/.config/nvim/UltiSnips', 'UltiSnips']
 
 " For conceal markers.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
+" if has('conceal')
+"   set conceallevel=2 concealcursor=niv
+" endif
 
 augroup completion_preview_close
   autocmd!

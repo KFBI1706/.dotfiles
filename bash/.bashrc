@@ -30,8 +30,8 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 export GOPATH=$HOME/Projects/go
 export PATH="$HOME/.bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
-export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
-export PATH=$PATH:/snap/bin
+export PATH="$PATH:$GOPATH/bin:/usr/local/go/bin"
+export PATH="$PATH:/var/lib/snapd/snap/bin"
 #export PATH="$HOME/.yarn/bin:$PATH"
 export EDITOR=vim
 
@@ -131,6 +131,13 @@ if [ -d $HOME/Projects/scripts/functions ]; then
     done
 fi
 
+mcd() {
+    if [ ! -z "$1" ]; then
+        mkdir -p -- "$1";
+        cd -- "$1";
+    fi
+}
+
 
 ## Docker functions - crez Duniel
 dip() {
@@ -190,6 +197,7 @@ dki() {
     # docker - run container and enter interactively
     docker run -tiP "$1" /bin/sh
 }
+
 
 # MAC OS X
 

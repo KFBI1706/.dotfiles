@@ -5,7 +5,7 @@ set $term alacritty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:FuraCode Nerd Font Mono 6
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -19,12 +19,13 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec "rofi -show run"
 # "dmenu -nf '#F3F4F5' -nb '#2F343F' -sb '#1793D1' -sf '#f3f4f5' -fn 'monospace-16' -p 'run:'"
-bindsym $mod+s exec "albert show"
 bindsym $mod+y exec --no-startup-id ~/Projects/scripts/mpv.sh
 
 bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $mod+grave exec --no-startup-id ~/Projects/scripts/emoji.sh
 #bindsym $mod+d exec dmenu_run -fn 'DroidSansMono:bold:pixelsize=16' -nb '#fdf6e3' -nf '#586c75' -sf '#fdf6e3' -sb '#FFAF00'
+
+bindsym $mod+space exec "albert show"
 
 bindsym $mod+Shift+y exec dmenu-lpass
 bindsym $mod+backslash exec passmenu
@@ -59,7 +60,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+s mode_toggle
 
 mode "move ws" {
  bindsym k move workspace to output up
@@ -80,11 +81,11 @@ workspace_layout tabbed
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Web"
-set $ws2 "2: Dev"
-set $ws3 "3: Dev"
-set $ws4 "4: Chat"
-set $ws5 "5: Mail"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -116,7 +117,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 bindsym $mod+Tab workspace back_and_forth
-workspace_auto_back_and_forth yes
+#workspace_auto_back_and_forth yes
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -132,20 +133,20 @@ bindsym $mod+o resize shrink height 10 px or 10 ppt
 bindsym $mod+p resize grow width 10 px or 10 ppt
 
 bar {
-        tray_output primary
-		height 25
-        #status_command i3status
-        status_command i3blocks
-        position bottom
-		i3bar_command i3bar -t
+ 	font pango:FuraCode Nerd Font Mono 14
+    mode dock #hide
+    modifier none
+    tray_output primary
+	height 25
+    status_command i3blocks
+    position bottom
 }
-#exec_always --no-startup-id ~/Projects/scripts/polybar.sh &
-for_window [class=".*"] border pixel 1
-for_window [class="scratchpad"] floating enable, scratchpad show, move position center, resize set 1080 px 800 px;
-for_window [class="scratchpad"] move scratchpad;
-for_window [class="scratchpad"] sticky enable;
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-bindsym $mod+t exec "~/Projects/scripts/restartApps.sh"; [class="scratchpad"] scratchpad show, move position center;
+for_window [class=".*"] border pixel 1
+
+bindsym $mod+t bar mode toggle
+
 #Audio keybinds
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +10%; pkill -RTMIN+1 i3blocks"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -10%; pkill -RTMIN+1 i3blocks"
@@ -162,15 +163,15 @@ bindsym XF86PowerOff exec "~/Projects/scripts/poweroff.sh"
 #really weird hack where the i3lock screen is shown on the next workspace switch, so i just do a quick workspace switch after i3lock has exited
 bindsym $mod+BackSpace exec i3lock -c 44bbff; workspace back_and_forth; focus;workspace back_and_forth;
 #Brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 #keyboard/mouse
 #exec --no-startup-id ckb-next
 
 #Floating
-#for_window [class="mpv"] floating enable, sticky enable, border pixel 0, move position 1080 px 1460 px, resize set 1200 px 800 px;
-#for_window [class="mpv"] focus parent, focus left, layout splitv;
-#no_focus [class="mpv"]
+for_window [class="mpv"] floating enable, sticky enable, border pixel 0, move position 1080 px 1460 px, resize set 1200 px 800 px;
+for_window [class="mpv"] focus parent, focus left, layout splitv;
+no_focus [class="mpv"]
 
 #Focus
 assign [class="discord"] $ws4
@@ -209,27 +210,32 @@ bindsym $mod+Shift+b exec ~/Projects/scripts/bluetoothConnect.sh
 bindsym $mod+m exec ~/Projects/scripts/micToggle.sh
 ###i3 layouts
 
-exec --no-startup-id "i3-msg 'workspace 2: Dev; append_layout ~/.i3/workspace-2.json'"
-exec --no-startup-id "i3-msg 'workspace 4: Chat; append_layout ~/.i3/workspace-4.json'"
+exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.i3/workspace-2.json'"
+exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.i3/workspace-4.json'"
 
 #i3 startup-programs
 #exec --no-startup-id /usr/bin/firefox -P Slack --class=slackFirefox; workspace $ws2;
 
 exec --no-startup-id thunderbird #&& birdtray
-exec --no-startup-id slack
+exec --no-startup-id birdtray
+exec - no-startup-id slack
 exec --no-startup-id discord
 exec --no-startup-id caprine
 exec --no-startup-id sleep 2 && $term --class=Terminal -e ~/Projects/scripts/TmuxNewOrReattach.sh
 exec --no-startup-id nm-applet
+exec --no-startup-id "udiskie -t2 -c ~/.config/udiskie/config.yml"
 exec --no-startup-id pa-applet
+#exec --no-startup-id pasystray
 exec --no-startup-id pasystray
 exec --no-startup-id mictray
 exec --no-startup-id blueman-applet
 exec --no-startup-id dropbox
-exec --no-startup-id compton
+exec --no-startup-id "picom --config ~/.config/picom/picom.conf"
 exec --no-startup-id greenclip daemon
-exec --no-startup-id albert;
+exec_always --no-startup-id albert;
+exec --no-startup-id "autokey-gtk"
 
+exec --no-startup-id "qutebrowser"
 #exec --no-startup-id "firefox -P Personal"
 #exec --no-startup-id 'profile-cleaner f; firefox' #-P Personal --class=personal'
 #exec --no-startup-id 'emacsclient -nc' #-P Personal --class=personal'
@@ -237,18 +243,12 @@ exec --no-startup-id albert;
 #monitoring
 
 #i3 background programs
-exec_always --no-startup-id ~/Projects/scripts/autorandr.sh;
-exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+#exec_always --no-startup-id ~/Projects/scripts/autorandr.sh;
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec_always --no-startup-id /home/kb/Projects/scripts/dunst.sh
 #exec_always --no-startup-id unproductive | tee -a ~/activity-log.txt
 exec_always --no-startup-id rescuetime
 
-exec_always --no-startup-id sleep 30 && ~/Projects/scripts/restartApps.sh;
+#exec_always --no-startup-id sleep 30 && ~/Projects/scripts/restartApps.sh;
 #keyboard config
 exec_always --no-startup-id ~/Projects/scripts/keyboardSetup.sh
-bindsym --release $altMod+apostrophe    exec --no-startup-id "sleep 0.1; xdotool key U00E6"
-bindsym --release $altMod+Shift+apostrophe    exec --no-startup-id "sleep 0.1; xdotool key U00C6"
-bindsym --release $altMod+o     exec --no-startup-id "sleep 0.1; xdotool key U00F8"
-bindsym --release $altMod+Shift+o     exec --no-startup-id "sleep 0.1; xdotool key U00D8"
-bindsym --release $altMod+a   exec --no-startup-id "sleep 0.1; xdotool key U00E5"
-bindsym --release $altMod+Shift+a   exec --no-startup-id "sleep 0.1; xdotool key U00C5"

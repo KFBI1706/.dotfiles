@@ -1,9 +1,12 @@
 
 c.colors.hints.bg = "yellow"
 c.colors.hints.fg = "black"
+c.colors.webpage.prefers_color_scheme_dark
 
 config.bind("gi", "hint inputs")
 config.bind("<ctrl+shift+c>", "inspector")
+
+config.bind(" d", 'config-cycle content.user_stylesheets ~/.config/qutebrowser/gruvbox.css ""')
 
 c.tabs.position = "bottom"
 c.completion.shrink = True
@@ -31,7 +34,10 @@ c.aliases = {
 config.bind(' p', 'spawn --userscript qute-pass --dmenu-invocation dmenu')
 config.bind(' k', "spawn bash -c 'feh --zoom fill ~/Pictures/qutebrowser-cheatsheet.png'")
 
-c.qt.args = ["autoplay-policy=user-gesture-required"]
+c.qt.args = [
+   "autoplay-policy=user-gesture-required",
+   "blink-settings=darkMode=4,darkModeImagePolicy=0,darkModeEnabled=True"
+]
 
 c.scrolling.bar = "always"
 c.content.user_stylesheets = ["user.css"]

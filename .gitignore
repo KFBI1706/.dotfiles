@@ -1,0 +1,9 @@
+firefox/.mozilla/firefox/profile.Personal/*
+!firefox/.mozilla/firefox/profile.Personal/prefs.js
+
+firefox/.mozilla/firefox/Crash Reports/*
+!firefox/.mozilla/firefox/Crash Reports/.gitkeep
+
+firefox/.mozilla/firefox/Pending Pings/*
+!firefox/.mozilla/firefox/Pending Pings/.gitkeep
+

@@ -16,6 +16,7 @@ reload-time 20
 reload-threads 2
 #show-read-articles no
 #show-read-feeds no
+max-items 0
 
 bind-key j down
 bind-key k up
@@ -29,7 +30,7 @@ bind-key d pagedown
 bind-key u pageup
 bind-key l open
 bind-key h quit
-bind-key a toggle-article-read
+bind-key m toggle-article-read
 bind-key n next-unread
 bind-key p prev-unread
 bind-key D pb-download
@@ -60,6 +61,5 @@ color listnormal_unread white default
 color listfocus                                             default  default bold
 color listnormal                                            color240    default
 
-browser linkhandler
 macro , open-in-browser
-macro y set browser "i3 exec mpv %u"; open-in-browser ; set browser linkhandler
+macro y set browser "~/.config/newsboat/mpv.sh" ; open-in-browser-and-mark-read ; set browser $BROWSER

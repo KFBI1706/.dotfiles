@@ -4,10 +4,10 @@
 [user]
 	email = kb@kfbi.xyz
 	name = Kasper Furnes Bernhoff
-    signingkey = 9BEF81ADDA75009A71AB26A4FB89EEDFDF031185
+    #signingkey = 9BEF81ADDA75009A71AB26A4FB89EEDFDF031185
 [commit]
       template = ~/.gitmessage
-	gpgsign = true
+	#gpgsign = true
 [includeIf "gitdir:~/Projects/uia"]
 	email = kaspeb17@student.uia.no
 [includeIf "gitdir:~/Projects/AutoAUR"]

@@ -1,6 +1,8 @@
 firefox/.mozilla/firefox/profile.Personal/*
 !firefox/.mozilla/firefox/profile.Personal/prefs.js
 
+firefox/.mozilla/firefox/1d1otb0n.dev-edition-default-1581219677011/
+
 firefox/.mozilla/firefox/Crash Reports/*
 !firefox/.mozilla/firefox/Crash Reports/.gitkeep
 

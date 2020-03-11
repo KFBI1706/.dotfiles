@@ -18,6 +18,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec "rofi -show run"
+bindsym $mod+Shift+d exec "i3-dmenu-desktop --dmenu='rofi -dmenu'"
 # "dmenu -nf '#F3F4F5' -nb '#2F343F' -sb '#1793D1' -sf '#f3f4f5' -fn 'monospace-16' -p 'run:'"
 bindsym $mod+y exec --no-startup-id ~/Projects/scripts/mpv.sh
 

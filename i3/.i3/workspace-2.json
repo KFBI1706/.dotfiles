@@ -1,0 +1,97 @@
+[
+    {
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1573,
+               "width": 1278,
+               "x": 0,
+               "y": 0
+            },
+            "name": "OneTab - Mozilla Firefox",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^firefox$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 1558,
+               "width": 1278,
+               "x": 1,
+               "y": 20
+            },
+            "name": "Arch Linux - i3-wm 4.17.1-1 (x86_64) - qutebrowser",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^qutebrowser$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+},
+
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 436,
+               "width": 724,
+               "x": 0,
+               "y": 0
+            },
+            "name": "0:NPST:/home/kb/.dotfiles",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^Alacritty$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 436,
+               "width": 724,
+               "x": 0,
+               "y": 0
+            },
+            "name": "Alacritty",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^Alacritty$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+]

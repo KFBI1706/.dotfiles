@@ -252,4 +252,4 @@ exec_always --no-startup-id rescuetime
 
 #exec_always --no-startup-id sleep 30 && ~/Projects/scripts/restartApps.sh;
 #keyboard config
-exec_always --no-startup-id /home/kb/.bin/keyboardSetup
+exec_always --no-startup-id ~/.bin/keyboardSetup

@@ -1,0 +1,34 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+
+
+
+    {
+        "key": "ctrl+shift+b",
+        "command": "cargo.build",
+        "when": "editorLangId == rust"
+    },
+    {
+        "key": "ctrl+shift+b",
+        "command": "latex-workshop.recipes",
+        "when": "editorLangId == latex"
+    },
+
+]

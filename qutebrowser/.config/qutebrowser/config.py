@@ -1,12 +1,11 @@
 
 c.colors.hints.bg = "yellow"
 c.colors.hints.fg = "black"
-c.colors.webpage.prefers_color_scheme_dark
-
+#c.colors.webpage.prefers_color_scheme_dark = True 
 config.bind("gi", "hint inputs")
 config.bind("<ctrl+shift+c>", "inspector")
 
-config.bind(" d", 'config-cycle content.user_stylesheets ~/.config/qutebrowser/gruvbox.css ""')
+#config.bind(" d", 'config-cycle content.user_stylesheets ~/.config/qutebrowser/gruvbox.css ""')
 
 c.tabs.position = "bottom"
 c.completion.shrink = True
@@ -40,7 +39,7 @@ c.qt.args = [
 ]
 
 c.scrolling.bar = "always"
-c.content.user_stylesheets = ["user.css"]
+#c.content.user_stylesheets = ["user.css"]
 
 monospace = "14px 'Hack'"
 

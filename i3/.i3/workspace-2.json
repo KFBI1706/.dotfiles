@@ -16,7 +16,6 @@
                "x": 0,
                "y": 0
             },
-            "name": "OneTab - Mozilla Firefox",
             "percent": 0.5,
             "swallows": [
                {
@@ -35,7 +34,6 @@
                "x": 1,
                "y": 20
             },
-            "name": "Arch Linux - i3-wm 4.17.1-1 (x86_64) - qutebrowser",
             "percent": 0.5,
             "swallows": [
                {
@@ -64,7 +62,6 @@
                "x": 0,
                "y": 0
             },
-            "name": "0:NPST:/home/kb/.dotfiles",
             "percent": 0.5,
             "swallows": [
                {
@@ -83,7 +80,6 @@
                "x": 0,
                "y": 0
             },
-            "name": "Alacritty",
             "percent": 0.5,
             "swallows": [
                {

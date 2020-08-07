@@ -3,7 +3,7 @@ export ZSH="/home/kb/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 DISABLE_MAGIC_FUNCTIONS=true
 
-plugins=(git history zsh-autosuggestions kubectl)
+plugins=(git history kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -50,6 +50,9 @@ alias df="df -x squashfs"
 alias lsblk="lsblk | grep -v loop"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+## CTF
+alias apkd="sudo docker run -ti -v $(pwd):/apk duolabs/apk2java \"/apk/$1\""
 
 # functions
 

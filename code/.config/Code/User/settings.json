@@ -1,8 +1,10 @@
 {
-    "window.zoomLevel": 2,
-    "workbench.colorTheme": "One Dark Darker",
+    "window.zoomLevel": 3,
+    "workbench.colorTheme": "Material Theme Ocean",
     "editor.fontFamily": "'FuraCode Nerd Font Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
+    "markdown.preview.scrollPreviewWithEditor": true,
+    "markdown.preview.scrollEditorWithPreview": true,
 
     "python.formatting.provider": "black",
     "latex-workshop.latex.recipe.default": "lastUsed",
@@ -95,9 +97,24 @@
     "vim.leader": "<space>",
     "vim.handleKeys": {
       "<C-a>": false,
-      "<C-f>": false
+      "<C-f>": false,
+      "<C-w>": false,
+      "<C-b>": false
     },
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
-    "latex-workshop.message.update.show": false
+    "latex-workshop.message.update.show": false,
+    "extensions.ignoreRecommendations": false,
+    "files.autoSave": "onFocusChange",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "terminal.integrated.shell.linux": "/home/kb/.bin/code-shell",
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.confirmDragAndDrop": false,
+    "workbench.activityBar.visible": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.statusBar.visible": true,
+    "update.mode": "none",
+    "python.languageServer": "Pylance"
+
 }

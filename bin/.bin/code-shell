@@ -1,0 +1,3 @@
+#!/bin/bash
+SESSION="$(basename "$PWD" )"
+tmux attach-session -d -t "$SESSION" || tmux new-session -s "$SESSION" 

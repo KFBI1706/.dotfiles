@@ -243,7 +243,7 @@ exec --no-startup-id pasystray
 exec --no-startup-id mictray
 exec --no-startup-id blueman-applet
 exec --no-startup-id dropbox
-exec --no-startup-id solaar
+exec --no-startup-id sleep 5 && solaar
 exec --no-startup-id "picom --config ~/.config/picom/picom.conf"
 exec --no-startup-id greenclip daemon
 exec_always --no-startup-id albert;
@@ -262,6 +262,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec_always --no-startup-id /home/kb/Projects/scripts/dunst.sh
 #exec_always --no-startup-id unproductive | tee -a ~/activity-log.txt
 exec_always --no-startup-id rescuetime
+exec --no-startup-id picom
 
 #exec_always --no-startup-id sleep 30 && ~/Projects/scripts/restartApps.sh;
 #keyboard config

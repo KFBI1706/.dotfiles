@@ -112,8 +112,9 @@
     "workbench.startupEditor": "newUntitledFile",
     "explorer.confirmDragAndDrop": false,
     "workbench.activityBar.visible": false,
-    "window.menuBarVisibility": "toggle",
-    "workbench.statusBar.visible": true,
+    "workbench.statusBar.visible": false,
+    "workbench.menuBar.visible":false,
+    "window.menuBarVisibility": "hidden",
     "update.mode": "none",
     "python.languageServer": "Pylance"
 

@@ -77,9 +77,6 @@ c.fonts.prompts = monospace
 # Font used in the statusbar.
 c.fonts.statusbar = monospace
 
-# Font used in the tab bar.
-c.fonts.tabs = monospace
-
 # Chars used for hint strings.
 c.hints.chars = "asdfghjklie"
 

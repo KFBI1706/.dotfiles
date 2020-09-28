@@ -10,11 +10,12 @@ config.bind("<ctrl+shift+c>", "inspector")
 c.tabs.position = "bottom"
 c.completion.shrink = True
 c.url.searchengines = {
-    "DEFAULT": "https://google.com/search?q={}",
+    "DEFAULT": 'https://duckduckgo.com/?q={}',
+    "go": "https://google.com/search?q={}",
     "wa": "https://wiki.archlinux.org/?search={}",
     "g": "https://github.com/search?q={}",
     "d": 'https://duckduckgo.com/?q={}',
-    "c": 'https://boards.4chan.org/{}/',
+#    "c": 'https://boards.4chan.org/{}/',
     "sr": 'https://www.old.reddit.com/r/{}',
     "w": 'https://en.wikipedia.org/wiki/={}',
     "y": 'https://www.youtube.com/results?search_query={}',
@@ -22,6 +23,7 @@ c.url.searchengines = {
 
 c.content.headers.accept_language = 'en-US,en;q=0.5'
 c.content.headers.custom = {"accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"}
+c.content.headers.user_agent = "Mozilla/5.0 (X11; Linux x86_64; rv:79.0) Gecko/20100101 Firefox/79.0"
 
 c.aliases = {
     "q": "tab-close",
@@ -92,3 +94,5 @@ c.url.start_pages = "https://news.ycombinator.com"
 c.zoom.default = '175%'
 
 c.auto_save.session = True
+
+c.auto_save.interval = 15000

@@ -147,7 +147,7 @@ bar {
     modifier none
     tray_output primary
 	height 25
-    status_command i3blocks
+    status_command i3status
     position bottom
 }
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -170,7 +170,7 @@ bindsym XF86KbdBrightnessDown exec kb-light.py - 20
 bindsym XF86PowerOff exec "~/Projects/scripts/poweroff.sh"
 
 #really weird hack where the i3lock screen is shown on the next workspace switch, so i just do a quick workspace switch after i3lock has exited
-bindsym $mod+BackSpace exec xsecurelock
+bindsym $mod+BackSpace exec "XSECURELOCK_COMPOSITE_OBSCURER=0 xsecurelock"
 #~/Projects/scripts/lock.sh; workspace back_and_forth; focus;workspace back_and_forth;
 #Brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
@@ -229,13 +229,12 @@ exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.i3/workspace-4.json'
 
 exec --no-startup-id thunderbird #&& birdtray
 exec --no-startup-id birdtray
-exec - no-startup-id slack
-exec --no-startup-id discord
-exec --no-startup-id slack
+#exec --no-startup-id discord
+#exec --no-startup-id slack
 exec --no-startup-id telegram-desktop
 exec --no-startup-id caprine
 exec --no-startup-id sleep 2 && $term --class=Terminal -e ~/Projects/scripts/TmuxNewOrReattach.sh
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 exec --no-startup-id "udiskie -t2 -c ~/.config/udiskie/config.yml"
 exec --no-startup-id pa-applet
 #exec --no-startup-id pasystray
@@ -259,7 +258,8 @@ exec --no-startup-id "qutebrowser"
 #i3 background programs
 #exec_always --no-startup-id ~/Projects/scripts/autorandr.sh;
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-exec_always --no-startup-id /home/kb/Projects/scripts/dunst.sh
+#exec_always --no-startup-id /home/kb/Projects/scripts/dunst.sh
+exec_always /usr/bin/dunst
 #exec_always --no-startup-id unproductive | tee -a ~/activity-log.txt
 exec_always --no-startup-id rescuetime
 exec --no-startup-id picom

@@ -1,0 +1,197 @@
+{
+    "window.menuBarVisibility": "default",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "window.zoomLevel": 2,
+    "workbench.colorTheme": "Material Theme Ocean",
+    "editor.fontFamily": "'FuraCode Nerd Font Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "markdown.preview.scrollPreviewWithEditor": true,
+    "markdown.preview.scrollEditorWithPreview": true,
+    "python.formatting.provider": "black",
+    "indentRainbow.colors": [
+        "rgba(255,255,64,0.10)",
+        "rgba(127,255,127,0.10)",
+        "rgba(255,127,255,0.10)",
+        "rgba(79,236,236,0.10)"
+    ],
+    "indentRainbow.errorColor": "rgba(128,32,32,0.10)",
+    "indentRainbow.tabmixColor": "rgba(128,32,96,0.10)",
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk 🔃",
+            "tools": [
+                "latexmk"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-lualatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        }
+    ],
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "d"
+            ],
+            "after": [
+                "d",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "v"
+            ],
+            "commands": [
+                "workbench.action.splitEditor",
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "b"
+            ],
+            "commands": [
+                "workbench.action.splitEditorOrthogonal",
+            ]
+        },
+        {
+            "before": [
+                ":",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.closeWindow",
+            ]
+        },
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-w>": false,
+        "<C-X>": false,
+        "<C-u>": false,
+        "<C-U>": false,
+        "<C-b>": false
+    },
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "latex-workshop.message.update.show": false,
+    "extensions.ignoreRecommendations": false,
+    "files.autoSave": "onFocusChange",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "terminal.integrated.shell.linux": "/home/kb/.bin/code-shell",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorCustomizations": {
+        //"editor.lineHighlightBackground": "#1399d891",
+        "editor.lineHighlightBorder": "#ffffff59",
+        //"selection.background": "#ff0000",
+        //"menu.selectionBackground": "#ff0000",
+        //"editorSuggestWidget.selectedBackground": "#1399d891",
+        "editorSuggestWidget.foreground": "#ff0000",
+        "editor.selectionHighlightBackground": "#cc0f0f"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": false,
+    "workbench.menuBar.visible": false,
+    "window.menuBarVisibility": "hidden",
+    "update.mode": "none",
+    "python.languageServer": "Pylance",
+    "editor.formatOnSave": true,
+    "kite.showWelcomeNotificationOnStartup": false,
+    "python.formatting.blackPath": "/usr/bin/black",
+    "settings.cycle": [
+        {
+            "id": "lineNumbers",
+            "values": [
+                {
+                    "editor.lineNumbers": "off",
+                    "editor.folding": false,
+                    "editor.glyphMargin": false
+                },
+                {
+                    "editor.lineNumbers": "on",
+                    "editor.folding": true,
+                    "editor.glyphMargin": true
+                }
+            ]
+        }
+    ],
+    "editor.lineNumbers": "on",
+    "editor.folding": true,
+    "editor.glyphMargin": true,
+    "python.coverageView.highlight": "rgba(200,200,200,.35)",
+    "python.coverageView.highlightMode": "covered",
+    "python.linting.pylintArgs": [
+        "--enable=F,E,W",
+        "--disable=W1618"
+    ],
+    "coverage-gutters.showGutterCoverage": true,
+    "coverage-gutters.xmlname": "cov.xml",
+    "coverage-gutters.showLineCoverage": true,
+    "coverage-gutters.showRulerCoverage": true,
+    "python.showStartPage": false
+}

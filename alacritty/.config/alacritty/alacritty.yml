@@ -51,18 +51,6 @@ scrolling:
   # scrollback is enabled (history > 0).
   multiplier: 3
 
-  # Faux Scrolling
-  #
-  # The `faux_multiplier` setting controls the number of lines the terminal
-  # should scroll when the alternate screen buffer is active. This is used
-  # to allow mouse scrolling for applications like `man`.
-  #
-  # Specifying `0` will disable faux scrolling.
-  # faux_multiplier: 3
-
-  # Scroll to the bottom when new text is written to the terminal.
-  #  auto_scroll: false
-
 # Spaces per Tab (changes require restart)
 #
 # This setting defines the width of a tab in cells.
@@ -92,25 +80,25 @@ scrolling:
 
 font:
   # Normal (roman) font face
-  normal:
-    family: FuraCode Nerd Font Mono
+  #normal:
+  #  family: FuraCode Nerd Font Mono
     # The `style` can be specified to pick a specific face.
     #style: Regular
 
   # Bold font face
-  bold:
-    family: FuraCode Nerd Font Mono
-    # The `style` can be specified to pick a specific face.
-    #style: Bold
+  #bold:
+  #  family: FuraCode Nerd Font Mono
+  #  # The `style` can be specified to pick a specific face.
+  #  #style: Bold
 
-  # Italic font face
-  italic:
-    family: FuraCode Nerd Font Mono
+  ## Italic font face
+  #italic:
+  #  family: FuraCode Nerd Font Mono
     # The `style` can be specified to pick a specific face.
     #style: Italic
 
   # Point size
-  size: 10.0
+  size: 6.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -189,9 +177,9 @@ colors:
 #   - Linear
 #
 # Specifying a `duration` of `0` will disable the visual bell.
-visual_bell:
-  animation: EaseOutExpo
-  duration: 0
+#visual_bell:
+#  animation: EaseOutExpo
+#  duration: 0
 
 # Background opacity
 #
@@ -250,7 +238,7 @@ selection:
   # clipboard.
   save_to_clipboard: false
 
-dynamic_title: true
+  #dynamic_title: true
 
 cursor:
   # Cursor style

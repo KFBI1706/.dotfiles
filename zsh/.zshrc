@@ -19,6 +19,12 @@ export PATH="$PATH:/var/lib/snapd/snap/bin"
 #export PATH="$HOME/.yarn/bin:$PATH"
 export EDITOR=vim
 
+NPM_PACKAGES="${HOME}/.npm-packages"
+
+export PATH="$PATH:$NPM_PACKAGES/bin"
+
+export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude node_modules'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -171,5 +177,5 @@ dki() {
 
 setopt share_history
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 #PS1="%{%F{red}%}%n%{%f%}@%{%F{blue}%}%m %~ %{$%f%}%% "

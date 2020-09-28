@@ -4,7 +4,7 @@
     "modes": [
         3
     ],
-    "usageCount": 2,
+    "usageCount": 9,
     "prompt": false,
     "omitTrigger": false,
     "matchCase": false,
@@ -21,7 +21,7 @@
         "modifiers": [
             "<alt>"
         ],
-        "hotKey": ";"
+        "hotKey": "'"
     },
     "filter": {
         "regex": null,

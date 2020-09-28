@@ -2,7 +2,7 @@
 [core]
     editor = 'nvim'
 [user]
-	email = kb@kfbi.xyz
+	email = kfbi@protonmail.com
 	name = Kasper Furnes Bernhoff
     #signingkey = 9BEF81ADDA75009A71AB26A4FB89EEDFDF031185
 [commit]

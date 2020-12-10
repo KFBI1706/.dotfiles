@@ -11,6 +11,10 @@ source $ZSH/oh-my-zsh.sh
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
+prompt_hashcolor=$(hostname|cksum|awk '{print $1%256}')
+HOSTNAME=$(hostname)
+export PROMPT="[%{$fg[yellow]%}%n%{$reset_color%}@%F{${prompt_hashcolor}}$HOSTNAME%F %{$fg[green]%}%c%{$reset_color%}]$ "
+
 export GOPATH=$HOME/Projects/go
 export PATH="$HOME/.bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
@@ -60,6 +64,8 @@ alias lsblk="lsblk | grep -v loop"
 ## CTF
 alias apkd="sudo docker run -ti -v $(pwd):/apk duolabs/apk2java \"/apk/$1\""
 
+# networking
+alias ip="ip -c"
 # functions
 
 function localMigrate {

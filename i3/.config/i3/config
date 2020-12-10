@@ -170,7 +170,7 @@ bindsym XF86KbdBrightnessDown exec kb-light.py - 20
 bindsym XF86PowerOff exec "~/Projects/scripts/poweroff.sh"
 
 #really weird hack where the i3lock screen is shown on the next workspace switch, so i just do a quick workspace switch after i3lock has exited
-bindsym $mod+BackSpace exec "XSECURELOCK_COMPOSITE_OBSCURER=0 xsecurelock"
+bindsym $mod+BackSpace exec "XSECURELOCK_COMPOSITE_OBSCURER=0 XSECURELOCK_SAVER=saver_xscreensaver xsecurelock"
 #~/Projects/scripts/lock.sh; workspace back_and_forth; focus;workspace back_and_forth;
 #Brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
@@ -267,3 +267,5 @@ exec --no-startup-id picom
 #exec_always --no-startup-id sleep 30 && ~/Projects/scripts/restartApps.sh;
 #keyboard config
 exec_always --no-startup-id ~/.bin/keyboardSetup
+
+exec_always firefox

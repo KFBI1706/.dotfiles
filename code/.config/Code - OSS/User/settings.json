@@ -154,7 +154,7 @@
         "editor.selectionHighlightBackground": "#cc0f0f"
     },
     "explorer.confirmDragAndDrop": false,
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "workbench.statusBar.visible": false,
     "workbench.menuBar.visible": false,
     "window.menuBarVisibility": "hidden",

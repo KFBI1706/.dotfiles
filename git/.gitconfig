@@ -1,6 +1,6 @@
 [alias]
 [core]
-    editor = 'nvim'
+    editor = 'vim'
 [user]
 	email = kfbi@protonmail.com
 	name = Kasper Furnes Bernhoff
@@ -39,3 +39,5 @@
 	helper = cache
 [diff]
 	algorithm = histogram
+[color]
+	ui = auto

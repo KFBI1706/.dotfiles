@@ -2,7 +2,7 @@
     "window.menuBarVisibility": "default",
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 3,
     "workbench.colorTheme": "Material Theme Ocean",
     "editor.fontFamily": "'FuraCode Nerd Font Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
@@ -135,8 +135,6 @@
         "<C-U>": false,
         "<C-b>": false
     },
-    "go.formatTool": "goimports",
-    "go.useLanguageServer": true,
     "latex-workshop.message.update.show": false,
     "extensions.ignoreRecommendations": false,
     "files.autoSave": "onFocusChange",
@@ -154,7 +152,7 @@
         "editor.selectionHighlightBackground": "#cc0f0f"
     },
     "explorer.confirmDragAndDrop": false,
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "workbench.statusBar.visible": false,
     "workbench.menuBar.visible": false,
     "window.menuBarVisibility": "hidden",
@@ -193,5 +191,5 @@
     "coverage-gutters.xmlname": "cov.xml",
     "coverage-gutters.showLineCoverage": true,
     "coverage-gutters.showRulerCoverage": true,
-    "python.showStartPage": false
+    "python.showStartPage": false,
 }

@@ -169,7 +169,7 @@ bindsym XF86KbdBrightnessDown exec kb-light.py - 20
 bindsym XF86PowerOff exec "~/Projects/scripts/poweroff.sh"
 
 #really weird hack where the i3lock screen is shown on the next workspace switch, so i just do a quick workspace switch after i3lock has exited
-bindsym $mod+BackSpace exec "XSECURELOCK_COMPOSITE_OBSCURER=0 xsecurelock"
+bindsym $mod+BackSpace exec "XSECURELOCK_COMPOSITE_OBSCURER=0 XSECURELOCK_SAVER=saver_xscreensaver xsecurelock"
 #~/Projects/scripts/lock.sh; workspace back_and_forth; focus;workspace back_and_forth;
 #Brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
@@ -188,6 +188,8 @@ assign [class="Slack"] $ws4
 assign [class="slackFirefox"] $ws4
 assign [class="Caprine"] $ws4
 assign [class="IRC"] $ws4
+assign [class="selenium"] $ws1
+assign [class="asdf"] $ws7
 assign [class="messengerChromium"] $ws4
 for_window [class="messengerChromium"] fullscreen disable
 assign [class="Thunderbird"] $ws5

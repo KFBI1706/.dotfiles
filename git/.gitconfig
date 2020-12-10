@@ -1,6 +1,6 @@
 [alias]
 [core]
-    editor = 'nvim'
+    editor = 'vim'
 [user]
 	email = kfbi@protonmail.com
 	name = Kasper Furnes Bernhoff
@@ -44,3 +44,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[color]
+	ui = auto

@@ -9,3 +9,4 @@ firefox/.mozilla/firefox/Crash Reports/*
 firefox/.mozilla/firefox/Pending Pings/*
 !firefox/.mozilla/firefox/Pending Pings/.gitkeep
 
+autokey/.config/autokey/data/chars/\.*

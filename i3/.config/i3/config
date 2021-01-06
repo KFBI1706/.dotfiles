@@ -122,6 +122,7 @@ workspace $ws4 output HDMI-0
 workspace $ws5 output DVI-D-0
 workspace $ws2 output DP-1
 workspace $ws6 output DVI-I-1
+workspace $ws1 output DVI-D-0
 
 
 bindsym $mod+Tab workspace back_and_forth
@@ -142,7 +143,6 @@ bindsym $mod+p resize grow width 10 px or 10 ppt
 
 bar {
  	font pango:FuraCode Nerd Font Mono 14
-    mode dock #hide
     modifier none
     tray_output primary
 	height 25
@@ -189,6 +189,7 @@ assign [class="slackFirefox"] $ws4
 assign [class="Caprine"] $ws4
 assign [class="IRC"] $ws4
 assign [class="selenium"] $ws1
+assign [class="org.remmina.Remmina"] $ws1
 assign [class="asdf"] $ws7
 assign [class="messengerChromium"] $ws4
 for_window [class="messengerChromium"] fullscreen disable
@@ -257,6 +258,7 @@ exec --no-startup-id "qutebrowser"
 
 #monitoring
 
+exec --no-startup-id "remmina -c ~/.local/share/remmina/group_rdp_win10_127-0-0-1.remmina"
 #i3 background programs
 #exec_always --no-startup-id ~/Projects/scripts/autorandr.sh;
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -264,10 +266,9 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec_always /usr/bin/dunst
 #exec_always --no-startup-id unproductive | tee -a ~/activity-log.txt
 #exec_always --no-startup-id rescuetime
-exec --no-startup-id picom
+#exec --no-startup-id picom
 
 #exec_always --no-startup-id sleep 30 && ~/Projects/scripts/restartApps.sh;
 #keyboard config
 exec_always --no-startup-id ~/.bin/keyboardSetup
 
-exec_always firefox

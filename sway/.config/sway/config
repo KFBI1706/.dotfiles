@@ -1,0 +1,257 @@
+set $mod Mod4
+set $altMod Mod1
+set $mod3 Mod3
+set $menu bemenu-run -m all -i -l 8 -n -P '>' --fn 'FuraCode Nerd Font Mono 14'
+set $term alacritty
+
+#font pango:FuraCode Nerd Font Mono 6
+font pango:DejaVu Sans Mono 0
+titlebar_border_thickness 0                                                     
+titlebar_padding 2
+
+floating_modifier $mod
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+q kill
+
+bindsym $mod+d exec $menu
+
+exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
+bindsym $mod+c exec clipman pick -t wofi --histpath ~/.local/share/clipman-primary.json
+
+bindsym $mod+space exec "albert show"
+
+bindsym $mod+Shift+y exec dmenu-lpass
+bindsym $mod+backslash exec passmenu
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# split in horizontal orientation
+bindsym $mod+v split h
+
+# split in vertical orientation
+bindsym $mod+b split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+#bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+s mode_toggle
+
+mode "move ws" {
+ bindsym k move workspace to output up
+ bindsym j move workspace to output down
+ bindsym h move workspace to output left
+ bindsym l move workspace to output right
+
+ bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+m mode "move ws"
+
+# focus the parent container
+bindsym $mod+a focus parent
+bindsym $mod+x focus child
+
+workspace_layout tabbed
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+
+workspace $ws4 output HDMI-A-2
+workspace $ws5 output DP-3
+workspace $ws2 output DP-2
+workspace $ws6 output DP-4
+workspace $ws1 output DP-3
+
+
+bindsym $mod+Tab workspace back_and_forth
+#workspace_auto_back_and_forth yes
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Ctrl+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+
+# resize window (you can also use the mouse for that)
+bindsym $mod+u resize shrink width 10 px or 10 ppt
+bindsym $mod+i resize grow height 10 px or 10 ppt
+bindsym $mod+o resize shrink height 10 px or 10 ppt
+bindsym $mod+p resize grow width 10 px or 10 ppt
+
+exec_always ~/.config/waybar/waybar.sh
+
+for_window [class=".*"] border pixel 1
+
+bindsym $mod+t bar mode toggle
+
+
+bindsym XF86KbdBrightnessUp exec kb-light.py + 20
+bindsym XF86KbdBrightnessDown exec kb-light.py - 20
+#Power
+bindsym XF86PowerOff exec "~/Projects/scripts/poweroff.sh"
+
+bindsym $mod+BackSpace exec swaylock -i ~/Pictures/aenmiart4k/northern_lights_UltraHD.png
+#~/Projects/scripts/lock.sh; workspace back_and_forth; focus;workspace back_and_forth;
+#Brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+#keyboard/mouse
+#exec  ckb-next
+
+#Floating
+#for_window [class="mpv"] floating enable, sticky enable, border pixel 0, move position 1080 px 1460 px, resize set 1200 px 800 px;
+#for_window [class="mpv"] focus parent, focus left, layout splitv;
+#no_focus [class="mpv"]
+
+#Focus
+assign [class="discord"] $ws4
+assign [class="Slack"] $ws4
+assign [class="slackFirefox"] $ws4
+assign [class="Caprine"] $ws4
+assign [class="IRC"] $ws4
+assign [class="selenium"] $ws1
+assign [class="org.remmina.Remmina"] $ws1
+assign [class="asdf"] $ws7
+assign [class="messengerChromium"] $ws4
+for_window [class="messengerChromium"] fullscreen disable
+assign [class="Thunderbird"] $ws5
+#assign [class="Firefox"] $ws2
+assign [class="Gcr-prompter"] $ws2
+assign [class="plexmediaplayer"] $ws6
+for_window [class="Gcr-prompter"] move position 0 px 0 px
+for_window [class="^.*"] border pixel $border_width
+for_window [class="albert"] border pixel 0
+for_window [class="Yad"] floating enable #no focus #no_focus [class=".*"] #preventing slack from stealing focus upon restarts
+#focus_on_window_activation none
+#no_focus [tiling]
+
+#application shortcuts
+bindsym $mod+Shift+f exec firefox -P Personal
+bindsym $mod+Shift+e exec qutebrowser
+bindsym $mod+Shift+a exec pavucontrol
+bindsym $mod+Shift+w exec emacsclient -nc
+bindsym $mod+Shift+d exec "~/Projects/scripts/obsidian.sh"
+#command shortcuts
+bindsym --release $mod+Shift+x exec xkill
+
+bindsym --release $mod+n exec /home/kb/Projects/scripts/screenshot.sh
+bindsym Ctrl+Space exec makoctl dismiss
+
+bindsym --release $mod+Shift+n exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+#background
+exec_always  "feh --bg-scale --randomize ~/Pictures/aenmiart4k/*"
+#script shortcuts TODO: script variable
+bindsym $mod+Shift+p exec ~/Projects/scripts/selectScreen.sh
+bindsym $mod+Shift+s exec ~/Projects/scripts/workspaceSwitch.py
+bindsym $mod+Shift+b exec ~/Projects/scripts/bluetoothConnect.sh
+#audio / mic control
+bindsym $mod+m exec ~/Projects/scripts/micToggle.sh
+###i3 layouts
+
+exec  "i3-msg 'workspace 2; append_layout ~/.i3/workspace-2.json'"
+exec  "i3-msg 'workspace 4; append_layout ~/.i3/workspace-4.json'"
+
+#i3 startup-programs
+#exec  /usr/bin/firefox -P Slack --class=slackFirefox; workspace $ws2;
+
+exec discord
+exec caprine
+exec sleep 2 && $term --class=Terminal -e ~/Projects/scripts/TmuxNewOrReattach.sh
+exec blueman-applet
+exec nm-applet --indicator
+exec  sleep 5 && solaar
+exec_always  albert;
+
+exec  "firefox -P Personal"
+
+exec thunderbird
+exec "_JAVA_AWT_WM_NONREPARENTING=1 jetbrains-toolbox"
+
+#exec  "remmina -c ~/.local/share/remmina/group_rdp_win10_127-0-0-1.remmina"
+#i3 background programs
+exec  /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+#exec_always  unproductive | tee -a ~/activity-log.txt
+
+input * {
+	xkb_options "compose:ralt,ctrl:nocaps"
+ 	repeat_delay 200
+ 	repeat_rate 30
+}
+
+output * {
+	bg ~/Pictures/aenmiart4k/northern_lights_UltraHD.png fill
+}
+
+output DP-2 {
+	pos 1920 1655
+}
+
+output DP-3 {
+	pos 2939 575
+}
+
+output HDMI-A-2 {
+	pos 840 1781
+	transform 270
+}
+
+output DP-4 {
+	pos 5760 2081
+}

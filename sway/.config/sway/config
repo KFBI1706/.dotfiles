@@ -147,7 +147,7 @@ bindsym XF86KbdBrightnessDown exec kb-light.py - 20
 #Power
 bindsym XF86PowerOff exec "~/Projects/scripts/poweroff.sh"
 
-bindsym $mod+BackSpace exec swaylock -i ~/Pictures/aenmiart4k/northern_lights_UltraHD.png
+bindsym $mod+BackSpace exec swaylock -i ~/.config/sway/background
 #~/Projects/scripts/lock.sh; workspace back_and_forth; focus;workspace back_and_forth;
 #Brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5

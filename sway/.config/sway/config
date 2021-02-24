@@ -111,11 +111,11 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 
-workspace $ws4 output HDMI-A-2
-workspace $ws5 output DP-3
-workspace $ws2 output DP-2
-workspace $ws6 output DP-4
-workspace $ws1 output DP-3
+workspace $ws4 output HDMI-A-1
+workspace $ws5 output DP-2
+workspace $ws6 output DP-3
+workspace $ws1 output DP-2
+workspace $ws2 output DP-1
 
 
 bindsym $mod+Tab workspace back_and_forth
@@ -165,6 +165,7 @@ assign [class="discord"] $ws4
 assign [class="Slack"] $ws4
 assign [class="slackFirefox"] $ws4
 assign [class="Caprine"] $ws4
+assign [class="Signal"] $ws4
 assign [class="IRC"] $ws4
 assign [class="selenium"] $ws1
 assign [class="org.remmina.Remmina"] $ws1
@@ -211,9 +212,11 @@ exec  "i3-msg 'workspace 4; append_layout ~/.i3/workspace-4.json'"
 #i3 startup-programs
 #exec  /usr/bin/firefox -P Slack --class=slackFirefox; workspace $ws2;
 
-#exec discord
-#exec caprine
 exec signal-desktop
+exec discord
+exec slack
+exec_always signal-desktop
+exec caprine
 exec sleep 2 && $term --class=Terminal -e ~/Projects/scripts/TmuxNewOrReattach.sh
 exec blueman-applet
 exec nm-applet --indicator
@@ -221,14 +224,18 @@ exec  sleep 5 && solaar
 exec_always  albert;
 
 exec  "firefox -P Personal"
+exec owncloud
 
 exec thunderbird
 exec "_JAVA_AWT_WM_NONREPARENTING=1 jetbrains-toolbox"
 
-#exec  "remmina -c ~/.local/share/remmina/group_rdp_win10_127-0-0-1.remmina"
+exec "GDK_BACKEND=x11 remmina -c ~/.local/share/remmina/group_rdp_win10_127-0-0-1.remmina"
+#exec "GDK_BACKEND=x11 remmina -c ~/.local/share/remmina/group_rdp_ubuntu_127-0-0-1-3390.remmina"
+
 #i3 background programs
 exec  /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 #exec_always  unproductive | tee -a ~/activity-log.txt
+exec_always ~/Projects/scripts/keyring.sh
 
 input * {
 	xkb_options "compose:ralt,ctrl:nocaps"
@@ -240,19 +247,20 @@ output * {
 	bg ~/.config/sway/background fill
 }
 
+output DP-1 {
+	pos 4859 3575
+}
+
+
 output DP-2 {
-	pos 1920 1655
+	pos 5792 2495
 }
 
 output DP-3 {
-	pos 2939 575
+	pos 8699 4071
 }
 
-output HDMI-A-2 {
-	pos 840 1781
+output HDMI-A-1 {
+	pos 3779 3699
 	transform 270
-}
-
-output DP-4 {
-	pos 5760 2081
 }

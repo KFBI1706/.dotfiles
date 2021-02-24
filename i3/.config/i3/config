@@ -118,11 +118,11 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 
-workspace $ws4 output HDMI-A-1
-workspace $ws5 output DisplayPort-2
-workspace $ws2 output DisplayPort-1
-workspace $ws6 output DisplayPort-3
-workspace $ws1 output DisplayPort-2
+workspace $ws4 output HDMI-A-0
+workspace $ws5 output DisplayPort-1
+workspace $ws2 output DisplayPort-0
+workspace $ws6 output DisplayPort-2
+workspace $ws1 output DisplayPort-1
 
 
 bindsym $mod+Tab workspace back_and_forth
@@ -225,50 +225,22 @@ bindsym $mod+m exec ~/Projects/scripts/micToggle.sh
 ###i3 layouts
 
 exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/.i3/workspace-2.json'"
-exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.i3/workspace-4.json'"
-
-#i3 startup-programs
-#exec --no-startup-id /usr/bin/firefox -P Slack --class=slackFirefox; workspace $ws2;
+#exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/.i3/workspace-4.json'"
 
 exec --no-startup-id thunderbird #&& birdtray
-exec --no-startup-id birdtray
-#exec --no-startup-id discord
-#exec --no-startup-id slack
-exec --no-startup-id telegram-desktop
+exec --no-startup-id discord
 exec --no-startup-id caprine
 exec --no-startup-id sleep 2 && $term --class=Terminal -e ~/Projects/scripts/TmuxNewOrReattach.sh
-#exec --no-startup-id nm-applet
-exec --no-startup-id "udiskie -t2 -c ~/.config/udiskie/config.yml"
-exec --no-startup-id pa-applet
-#exec --no-startup-id pasystray
-exec --no-startup-id pasystray
-exec --no-startup-id mictray
 exec --no-startup-id blueman-applet
-exec --no-startup-id dropbox
 exec --no-startup-id sleep 5 && solaar
 exec --no-startup-id "picom --config ~/.config/picom/picom.conf"
 exec --no-startup-id greenclip daemon
 exec_always --no-startup-id albert;
 exec --no-startup-id "autokey-gtk"
 
-exec --no-startup-id "qutebrowser"
-#exec --no-startup-id "firefox -P Personal"
-#exec --no-startup-id 'profile-cleaner f; firefox' #-P Personal --class=personal'
-#exec --no-startup-id 'emacsclient -nc' #-P Personal --class=personal'
-
 #monitoring
 
 exec --no-startup-id "remmina -c ~/.local/share/remmina/group_rdp_win10_127-0-0-1.remmina"
-#i3 background programs
-#exec_always --no-startup-id ~/Projects/scripts/autorandr.sh;
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-#exec_always --no-startup-id /home/kb/Projects/scripts/dunst.sh
 exec_always /usr/bin/dunst
-#exec_always --no-startup-id unproductive | tee -a ~/activity-log.txt
-#exec_always --no-startup-id rescuetime
-#exec --no-startup-id picom
-
-#exec_always --no-startup-id sleep 30 && ~/Projects/scripts/restartApps.sh;
-#keyboard config
 exec_always --no-startup-id ~/.bin/keyboardSetup
-

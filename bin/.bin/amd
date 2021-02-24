@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+sudo grub-reboot 3 && sudo reboot

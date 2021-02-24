@@ -209,9 +209,6 @@ bindsym $mod+m exec ~/Projects/scripts/micToggle.sh
 exec  "i3-msg 'workspace 2; append_layout ~/.i3/workspace-2.json'"
 exec  "i3-msg 'workspace 4; append_layout ~/.i3/workspace-4.json'"
 
-#i3 startup-programs
-#exec  /usr/bin/firefox -P Slack --class=slackFirefox; workspace $ws2;
-
 exec signal-desktop
 exec discord
 exec slack
@@ -220,7 +217,7 @@ exec caprine
 exec sleep 2 && $term --class=Terminal -e ~/Projects/scripts/TmuxNewOrReattach.sh
 exec blueman-applet
 exec nm-applet --indicator
-exec  sleep 5 && solaar
+exec sleep 5 && solaar
 exec_always  albert;
 
 exec  "firefox -P Personal"
@@ -243,24 +240,4 @@ input * {
  	repeat_rate 30
 }
 
-output * {
-	bg ~/.config/sway/background fill
-}
-
-output DP-1 {
-	pos 4859 3575
-}
-
-
-output DP-2 {
-	pos 5792 2495
-}
-
-output DP-3 {
-	pos 8699 4071
-}
-
-output HDMI-A-1 {
-	pos 3779 3699
-	transform 270
-}
+include output

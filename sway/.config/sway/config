@@ -191,7 +191,7 @@ bindsym $mod+Shift+d exec "~/Projects/scripts/obsidian.sh"
 #command shortcuts
 bindsym --release $mod+Shift+x exec xkill
 
-bindsym --release $mod+n exec /home/kb/Projects/scripts/screenshot.sh
+bindsym --release $mod+n exec ~/Projects/scripts/screenshot.sh
 bindsym Ctrl+Space exec makoctl dismiss
 
 bindsym --release $mod+Shift+n exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
@@ -211,8 +211,9 @@ exec  "i3-msg 'workspace 4; append_layout ~/.i3/workspace-4.json'"
 #i3 startup-programs
 #exec  /usr/bin/firefox -P Slack --class=slackFirefox; workspace $ws2;
 
-exec discord
-exec caprine
+#exec discord
+#exec caprine
+exec signal-desktop
 exec sleep 2 && $term --class=Terminal -e ~/Projects/scripts/TmuxNewOrReattach.sh
 exec blueman-applet
 exec nm-applet --indicator

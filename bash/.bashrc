@@ -53,7 +53,7 @@ shopt -s autocd
 
 # PROMPT
 PROMPT_COMMAND='COLOR=$(context-color)'
-PS1='\[\e[1m\]\u\[$COLOR\]@\[\e[0m\]\[\e[1;32m\]\W\[\e[0m\]: '
+#PS1='\[\e[1m\]\u\[$COLOR\]@\[\e[0m\]\[\e[1;32m\]\W\[\e[0m\]: '
 
 [ -r "/etc/bashrc_$TERM_PROGRAM" ] && . "/etc/bashrc_$TERM_PROGRAM"
 

@@ -8,11 +8,11 @@ output DP-1 {
 
 
 output DP-2 {
-	pos 5792 2495
+	pos 8699 2495
 }
 
 output DP-3 {
-	pos 8699 4071
+	pos 8699 3575
 }
 
 output HDMI-A-1 {

@@ -5,15 +5,20 @@ DISABLE_MAGIC_FUNCTIONS=true
 
 plugins=(git history kubectl)
 
+DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 
+
+bindkey -v 
+bindkey "^R" history-incremental-search-backward
 # EXPORT
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 prompt_hashcolor=$(hostname|cksum|awk '{print $1%256}')
 HOSTNAME=$(hostname)
-export PROMPT="[%{$fg[yellow]%}%n%{$reset_color%}@%F{${prompt_hashcolor}}$HOSTNAME%F %{$fg[green]%}%c%{$reset_color%}]$ "
+#export PROMPT="[%{$fg[yellow]%}%n%{$reset_color%}@%F{${prompt_hashcolor}}$HOSTNAME%F %{$fg[green]%}%c%{$reset_color%}]$ "
+PROMPT='%{$fg[green]%}%~%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%} '
 
 export GOPATH=$HOME/Projects/go
 export PATH="$HOME/.bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
@@ -182,6 +187,8 @@ dki() {
 }
 
 setopt share_history
+unsetopt correct
+unsetopt HIST_VERIFY
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 #PS1="%{%F{red}%}%n%{%f%}@%{%F{blue}%}%m %~ %{$%f%}%% "

@@ -165,6 +165,7 @@ assign [class="discord"] $ws4
 assign [class="Slack"] $ws4
 assign [class="slackFirefox"] $ws4
 assign [class="Caprine"] $ws4
+assign [class="Element"] $ws4
 assign [class="Signal"] $ws4
 assign [class="IRC"] $ws4
 assign [class="selenium"] $ws1
@@ -210,6 +211,8 @@ exec  "i3-msg 'workspace 2; append_layout ~/.i3/workspace-2.json'"
 exec  "i3-msg 'workspace 4; append_layout ~/.i3/workspace-4.json'"
 
 exec signal-desktop
+exec element-desktop
+exec element-desktop --profile private
 exec discord
 exec slack
 exec_always signal-desktop
@@ -232,7 +235,9 @@ exec "GDK_BACKEND=x11 remmina -c ~/.local/share/remmina/group_rdp_win10_127-0-0-
 #exec "GDK_BACKEND=x11 remmina -c ~/.local/share/remmina/group_rdp_ubuntu_127-0-0-1-3390.remmina"
 
 #i3 background programs
-exec  /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec_always  /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec_always eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+exec_always export SSH_AUTH_SOCK
 #exec_always  unproductive | tee -a ~/activity-log.txt
 exec_always ~/Projects/scripts/keyring.sh
 

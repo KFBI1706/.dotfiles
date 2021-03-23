@@ -220,7 +220,9 @@ exec nm-applet --indicator
 exec sleep 5 && solaar
 exec_always  albert;
 
-exec  "firefox -P Personal"
+exec_always mako;
+
+exec  "MOZ_ENABLE_WAYLAND=1 firefox -P Personal"
 exec owncloud
 
 exec thunderbird

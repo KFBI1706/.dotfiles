@@ -135,7 +135,7 @@ bindsym $mod+i resize grow height 10 px or 10 ppt
 bindsym $mod+o resize shrink height 10 px or 10 ppt
 bindsym $mod+p resize grow width 10 px or 10 ppt
 
-exec_always ~/.config/waybar/waybar.sh
+exec ~/.config/waybar/waybar.sh
 
 for_window [class=".*"] border pixel 1
 
@@ -147,8 +147,18 @@ bindsym XF86KbdBrightnessDown exec kb-light.py - 20
 #Power
 bindsym XF86PowerOff exec "~/Projects/scripts/poweroff.sh"
 
-bindsym $mod+BackSpace exec swaylock -i ~/.config/sway/background
-#~/Projects/scripts/lock.sh; workspace back_and_forth; focus;workspace back_and_forth;
+set $lockscreen sh ~/.config/sway/lockscreen.sh
+set $lockscreen_lock_after  1800
+set $lockscreen_turnoff_after   10
+
+exec swayidle -w \
+timeout $lockscreen_lock_after '$lockscreen' \
+timeout $lockscreen_turnoff_after 'if pgrep swaylock; then swaymsg "output * dpms off"; fi' \
+resume 'swaymsg "output * dpms on"' \
+before-sleep '$lockscreen'
+
+bindsym $mod+BackSpace exec $lockscreen
+
 #Brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5

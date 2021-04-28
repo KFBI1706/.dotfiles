@@ -113,7 +113,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 workspace $ws4 output HDMI-A-1
 workspace $ws5 output DP-2
-workspace $ws6 output DP-3
+workspace $ws3 output DP-3
 workspace $ws1 output DP-2
 workspace $ws2 output DP-1
 
@@ -135,7 +135,22 @@ bindsym $mod+i resize grow height 10 px or 10 ppt
 bindsym $mod+o resize shrink height 10 px or 10 ppt
 bindsym $mod+p resize grow width 10 px or 10 ppt
 
-exec ~/.config/waybar/waybar.sh
+#exec ~/.config/waybar/waybar.sh
+bar {
+    position bottom
+
+    font pango:DejaVu Sans Mono 10
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
+}
+
 
 for_window [class=".*"] border pixel 1
 
@@ -179,7 +194,6 @@ assign [class="Element"] $ws4
 assign [class="Signal"] $ws4
 assign [class="IRC"] $ws4
 assign [class="selenium"] $ws1
-assign [class="org.remmina.Remmina"] $ws1
 assign [class="asdf"] $ws7
 assign [class="messengerChromium"] $ws4
 for_window [class="messengerChromium"] fullscreen disable
@@ -195,11 +209,12 @@ for_window [class="Yad"] floating enable #no focus #no_focus [class=".*"] #preve
 #no_focus [tiling]
 
 #application shortcuts
-bindsym $mod+Shift+f exec "MOZ_ENABLE_WAYLAND=1 firefox -P Personal"
+#bindsym $mod+Shift+f exec "MOZ_ENABLE_WAYLAND=1 firefox -P Personal"
+bindsym $mod+Shift+f exec "firefox -P Personal"
 bindsym $mod+Shift+e exec qutebrowser
 bindsym $mod+Shift+a exec pavucontrol
 bindsym $mod+Shift+w exec emacsclient -nc
-bindsym $mod+Shift+d exec "~/Projects/scripts/obsidian.sh"
+bindsym $mod+Shift+d exec ~/Projects/scripts/obsidian.sh
 #command shortcuts
 bindsym --release $mod+Shift+x exec xkill
 
@@ -235,14 +250,11 @@ exec_always  albert;
 
 exec_always mako;
 
-exec  "MOZ_ENABLE_WAYLAND=1 firefox -P Personal"
+exec  "firefox -P Personal"
 exec owncloud
 
 exec thunderbird
 exec "_JAVA_AWT_WM_NONREPARENTING=1 jetbrains-toolbox"
-
-exec "GDK_BACKEND=x11 remmina -c ~/.local/share/remmina/group_rdp_win10_127-0-0-1.remmina"
-#exec "GDK_BACKEND=x11 remmina -c ~/.local/share/remmina/group_rdp_ubuntu_127-0-0-1-3390.remmina"
 
 #i3 background programs
 exec_always  /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

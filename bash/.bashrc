@@ -6,6 +6,8 @@ export HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
+set -o vi 
+
 # AUTOCOMPLETE / COMPLETION
 _ssh()
 {
@@ -53,7 +55,7 @@ shopt -s autocd
 
 # PROMPT
 PROMPT_COMMAND='COLOR=$(context-color)'
-#PS1='\[\e[1m\]\u\[$COLOR\]@\[\e[0m\]\[\e[1;32m\]\W\[\e[0m\]: '
+PS1='\[\e[1m\]\u\[$COLOR\]@\[\e[0m\]\[\e[1;32m\]\W\[\e[0m\]: '
 
 [ -r "/etc/bashrc_$TERM_PROGRAM" ] && . "/etc/bashrc_$TERM_PROGRAM"
 
@@ -198,7 +200,3 @@ dki() {
     docker run -tiP "$1" /bin/sh
 }
 
-
-# MAC OS X
-
-[ -x /usr/bin/keychain ] && [ `id -u` -ne 0 ] && eval `keychain -q -Q --eval id_rsa`

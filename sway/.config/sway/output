@@ -2,20 +2,20 @@ output * {
 	bg ~/.config/sway/background fill
 }
 
-output DP-1 {
+output 'Dell Inc. DELL U2720Q FHD3W13' {
 	pos 4859 3575
 }
 
 
-output DP-2 {
+output 'Ancor Communications Inc ASUS VS247 F9LMTF094152' {
 	pos 8699 2495
 }
 
-output DP-3 {
+output 'Goldstar Company Ltd LG Ultra HD 0x0000B225' {
 	pos 8699 3575
 }
 
-output HDMI-A-1 {
+output 'Ancor Communications Inc ASUS VS247 F9LMTF094042' {
 	pos 3779 3699
 	transform 270
 }

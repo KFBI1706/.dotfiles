@@ -1,9 +1,13 @@
 
+config.load_autoconfig(False)
 c.colors.hints.bg = "yellow"
 c.colors.hints.fg = "black"
 #c.colors.webpage.prefers_color_scheme_dark = True 
 config.bind("gi", "hint inputs")
 config.bind("<ctrl+shift+c>", "inspector")
+
+config.bind("j", "scroll-px 0 100")
+config.bind("k", "scroll-px 0 -100")
 
 #config.bind(" d", 'config-cycle content.user_stylesheets ~/.config/qutebrowser/gruvbox.css ""')
 

@@ -202,8 +202,8 @@ for_window [class="Yad"] floating enable #no focus #no_focus [class=".*"] #preve
 #no_focus [tiling]
 
 #application shortcuts
-#bindsym $mod+Shift+f exec "MOZ_ENABLE_WAYLAND=1 firefox -P Personal"
-bindsym $mod+Shift+f exec "firefox -P Personal"
+bindsym $mod+Shift+f exec "MOZ_ENABLE_WAYLAND=1 firefox -P Personal"
+#bindsym $mod+Shift+f exec "firefox -P Personal"
 bindsym $mod+Shift+e exec qutebrowser
 bindsym $mod+Shift+a exec pavucontrol
 bindsym $mod+Shift+w exec emacsclient -nc
